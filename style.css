@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 50px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -12,9 +12,48 @@ body{
     animation: blink 1s linear infinite;
 }
 #LEFT{
-    animation: blink 1s linear infinite;
+    /*animation: blink 1s linear infinite;*/
 }
 @keyframes blink{
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+#layer1{
+    animation: mov 5s 2;
+    animation-direction: alternate;
+}
+div{
+    position: relative;
+    animation: move 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+    /*animation-direction: alternate;*/
+}
+
+@keyframes move {
+    /*0%{ transform: translate(0)}*/
+    /*25%{  transform: translate(300px)}*/
+    /*50%{ transform: translate(600px)rotate(90deg)}*/
+    /*75%{transform: translate(100px)}*/
+    0%    {top: 0; left: 0;transform: rotate(90deg) }
+    25%   {top: 0; left: 100%;}
+    40%   {transform: rotate(90deg)}
+    50%   {top: 100%; left: 100%;}
+    70%   {transform: rotate(90deg)}
+    75%   {top: 100%; left: 0px;}
+    90%   {transform: rotate(90deg)}
+    100%  {top: 0px; left: 0px;}
+
+
+
+    /*0%{ transform: translate(100px)}*/
+    /*75%{ transform: translate(300px)}*/
+    /*100%{transform: translate(0px)}*/
+
+    /*0%{ left: 0px; top: 0px;}*/
+    /*25%{  left: 1000px; top: 0px;}*/
+    /*50%{ left: 1000px; top: 1000px;}*/
+    /*75%{ left: 0px; top: 1000px;}*/
+    /*100%{left: 0px; top: 0px;}*/
 }
