@@ -7,6 +7,7 @@ body{
     text-align: center;
     width: 300px;
     height: 400px;
+    background-image: url("Crossroads/krizovatka_bez_nicoho.png");
 }
 #rIGHT{
     /*animation: blink 1s linear infinite;*/
