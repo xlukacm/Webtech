@@ -6,11 +6,21 @@
     <script src="meninyJS.js"></script>
 </head>
     <body>
-    <label id="meniny input">
-        <input type="date">
+    <p id="meninyDnes"></p>
+    <label>
+        <input id="meninyInput" type="date">
+        <button id="meninyButton" onclick="choseMeniny()">Najdi meniny v tento den</button>
+        <p id="meninyText">Zvolte datum a stlacte tlacidlo</p>
     </label>
-    <div id="meninyText">
-        <p>empty  </p>
-    </div>
+<br>
+    <label>
+        <input id="nameInput" type="text">
+        <button id="nameButton" onclick="findDate()">Nájdi kedy ma toto meno meniny</button>
+        <p id="datumText">Napiste meno a stlacte tlacidlo</p>
+    </label>
+
+    <script>
+        loadDoc();
+    </script>
 </body>
 </html>
