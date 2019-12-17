@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-    <script src="javascript.js"></script>
+
 
 </head>
 <body>
@@ -82,18 +82,17 @@
     </div>
 </article>
 </body>
-<script>
-  //  let svg = document.getElementById("#svg2");
-  TweenLite.defaultEase = Linear.easeNone;
-      let animation = gsap.timeline();
-        TweenLite.defaultEase = Linear.easeNone;
-        animation .set("#svg2", {duration: 0, ease: "none", x:0})
-            .to("#svg2", 1,{duration: 0, ease: "none",x:100})
-            .to("#svg2", 1,{duration: 0, ease: "none",x:200})
-            .to("#svg2", 1,{duration: 0, ease: "none",x:300, rotation:"-45_short"})
-            .to("#svg2", 1,{ease: "none", x:360, rotation:"-70_short"})
-            .to("#svg2", 1,{ease: "none", y:"-=160", rotation:"-90_short"})
-            .to("#svg2", 1,{ease: "none", y:"-=190"})
-            .to("#svg2", 1,{ease: "none", y:"-=220"})
-</script>
+<!--<script>-->
+<!--  //  let svg = document.getElementById("#svg2");-->
+<!--      let animation = gsap.timeline();-->
+<!--        animation .set("#svg2", {duration: 0, ease: "none", x:0})-->
+<!--            .to("#svg2", 1,{duration: 0, ease: "none",x:100})-->
+<!--            .to("#svg2", 1,{duration: 0, ease: "none",x:200})-->
+<!--            .to("#svg2", 1,{duration: 0, ease: "none",x:300, rotation:"-45_short"})-->
+<!--            .to("#svg2", 1,{ease: "none", x:360, rotation:"-70_short"})-->
+<!--            .to("#svg2", 1,{ease: "none", y:"-=160", rotation:"-90_short"})-->
+<!--            .to("#svg2", 1,{ease: "none", y:"-=190"})-->
+<!--            .to("#svg2", 1,{ease: "none", y:"-=220"})-->
+<!--</script>-->
+<script src="javascript.js"></script>
 </html>
