@@ -1,5 +1,5 @@
 *{
-    margin: 5px;
+
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,6 +11,7 @@ body {
 .krizovatka{
     width: 851px;
     height: 851px;
+    margin: 5px;
     background-image: url("Crossroads/krizovatka_bez_nicoho.png");
 }
 .radsej_neotvaraj{
@@ -41,6 +42,12 @@ div{
     animation-timing-function: linear;
     animation-direction: alternate;
     /*animation-direction: alternate;*/
+
+    /*-webkit-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
+    /*-moz-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
+    /*-o-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
+    /*transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645); !* custom *!*/
+
 }
 
 @keyframes move {
@@ -51,17 +58,17 @@ div{
 
 /*top 0, left 50*/
 
-    from  {top: 140px; left: 270px; }
-    10%{top: 180px; left: 270px;}
+    from {top: 140px; left: 270px; }
+    15%{top: 180px; left: 270px;}
     20% {top: 220px; left: 270px;transform: rotate(90deg);}
-    30% {top: 260px; left: 270px;transform: rotate(90deg);}
-    40%{ top: 300px; left: 270px;transform: rotate(90deg);}
-    50%{ top: 340px; left: 270px;transform: rotate(80deg);}
-    60% {top: 380px; left: 290px;transform: rotate(60deg);}
-    70% {top: 420px; left: 330px;transform: rotate(40deg);}
-    80%{top: 430px; left: 380px;transform: rotate(20deg);}
-    90%{top: 440px; left: 430px;transform: rotate(10deg);}
-    95%{top: 450px; left: 470px;transform: rotate(0deg);}
+    25% {top: 260px; left: 270px;transform: rotate(90deg);}
+    30%{ top: 300px; left: 270px;transform: rotate(90deg);}
+    35%{ top: 340px; left: 270px;transform: rotate(80deg);}
+    40% {top: 380px; left: 290px;transform: rotate(60deg);}
+    45% {top: 420px; left: 330px;transform: rotate(40deg);}
+    50%{top: 430px; left: 380px;transform: rotate(20deg);}
+    55%{top: 440px; left: 430px;transform: rotate(10deg);}
+    60%{top: 450px; left: 470px;transform: rotate(0deg);}
     to {top: 450px; left: 520px;transform: rotate(0deg);}
 
    /*from  {top: 0; left: 0%;transform: rotate(90deg) }*/
