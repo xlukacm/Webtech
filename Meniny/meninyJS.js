@@ -57,11 +57,11 @@ function findDate() {
             pomoc = pomoc.toLowerCase();
             if(pomoc.includes(text)){
                 let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
-                let day = x.substr(0,2);
+                let day = x.substr(2,2);
                 day = day.replace("0","");
-                let month = x.substr(2,2);
+                let month = x.substr(0,2);
                 month = month.replace("0","");
-                x = day + "." + month + ".";
+                x = day + "." + month+ ".";
                 document.getElementById("datumText").innerText = "Toto meno ma meniny " + x;
             }
         }
