@@ -20,12 +20,22 @@ body {
     height: 851px;
     background-image: url("krizovatka_bez_nicoho.png");
 }
+.krizovatka2{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka5 .svg");
+}
+.radsej_neotvaraj2{
+    top: 720px;
+    left: 455px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
 .radsej_neotvaraj{
     top: 140px;
     left: 270px;
     transform: rotate(90deg);
     width: 180px;
-
 }
 #rIGHT{
     /*animation: blink 1s linear infinite;*/
