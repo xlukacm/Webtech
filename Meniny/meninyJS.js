@@ -19,7 +19,10 @@ function addZero(number){
 }
 
 function choseMeniny() {
-    let date = new Date(document.getElementById("meninyInput").value);
+    let meninyInput = document.getElementById("meninyInput").value;
+    if (!meninyInput)
+        return document.getElementById("meninyText").innerText = "Nesprávny vstup.";
+    let date = new Date(meninyInput);
     document.getElementById("meninyText").innerText = "V tento den má meniny: " + findMeniny(date);
 }
 
