@@ -45,24 +45,41 @@ function findMeniny(date) {
     }
 }
 
+function xmlDateToNormal(x) {
+    let day = x.substr(2,2);
+    day = day.replace("0","");
+    let month = x.substr(0,2);
+    month = month.replace("0","");
+    return day + "." + month+ ".";
+}
+
+function normalizaciaStringu(pomoc) {
+    pomoc = pomoc.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    pomoc = pomoc.toLowerCase();
+    return pomoc;
+}
+
 function findDate() {
     let text = document.getElementById("nameInput").value;
-    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    text = text.toLowerCase();
+    text = normalizaciaStringu(text);
 
     for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
         if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0]){
+
             let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
-            pomoc = pomoc.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            pomoc = pomoc.toLowerCase();
+            pomoc = normalizaciaStringu(pomoc);
+            pomoc = pomoc.replace(" ", "");
+            pomoc = pomoc.split(",");
+            console.dir(pomoc);
+
             if(pomoc.includes(text)){
                 let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
-                let day = x.substr(2,2);
-                day = day.replace("0","");
-                let month = x.substr(0,2);
-                month = month.replace("0","");
-                x = day + "." + month+ ".";
+                x = xmlDateToNormal(x);
                 document.getElementById("datumText").innerText = "Toto meno ma meniny " + x;
+                return 1;
+            }
+            else {
+                document.getElementById("datumText").innerText = "Toto meno neexistuje.";
             }
         }
     }

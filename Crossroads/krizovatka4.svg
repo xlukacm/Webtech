@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 850.39 850.39" style="enable-background:new 0 0 850.39 850.39;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#666666;}
+	.st1{fill:#999999;}
+	.st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:#333333;}
+</style>
+<g id="Layer_1">
+</g>
+<g id="pozadie">
+	<rect x="0" y="0" class="st0" width="850.39" height="850.39"/>
+</g>
+<g id="cesta">
+	<g>
+		<polygon class="st1" points="428,81 427,0 111,0 110,850 428,850 428,308 851,308 851,81 		"/>
+	</g>
+</g>
+<g id="prechod">
+	<rect x="684.5" y="95.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="130.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="165.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="200.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="235.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="270.5" class="st2" width="116" height="23"/>
+</g>
+<g id="trat">
+	<g>
+		<path class="st3" d="M851,185.5H427.5c-116.71-1.47-196.76,84.25-198,205.27l1,460.23"/>
+		<path class="st3" d="M851,209.5H427.5c-103.75,0-178.8,68.72-172,205.27V851"/>
+	</g>
+	<line class="st4" x1="230" y1="381" x2="230" y2="0"/>
+	<line class="st4" x1="255.5" y1="380" x2="255.5" y2="0"/>
+</g>
+<g id="semafor">
+	<line class="st5" x1="497" y1="520" x2="489" y2="520"/>
+	
+		<image style="overflow:visible;" width="52" height="146" xlink:href="data:image/png;base64,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" transform="matrix(1 0 0 1 446 321)">
+	</image>
+</g>
+</svg>

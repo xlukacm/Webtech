@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 850.39 850.39" style="enable-background:new 0 0 850.39 850.39;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#666666;}
+	.st1{fill:#999999;}
+	.st2{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:#333333;}
+</style>
+<g id="Layer_1">
+</g>
+<g id="pozadie">
+	<rect x="0" y="0" class="st0" width="850.39" height="850.39"/>
+</g>
+<g id="cesta">
+	<g>
+		<polygon class="st1" points="428,81 427,0 111,0 110,850 428,850 428,308 851,308 851,81 		"/>
+	</g>
+</g>
+<g id="prechod">
+	<rect x="684.5" y="95.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="130.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="165.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="200.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="235.5" class="st2" width="116" height="23"/>
+	<rect x="684.5" y="270.5" class="st2" width="116" height="23"/>
+</g>
+<g id="trat">
+	<g>
+		<path class="st3" d="M851,185.5H427.5c-116.71-1.47-196.76,84.25-198,205.27l1,460.23"/>
+		<path class="st3" d="M851,209.5H427.5c-103.75,0-178.8,68.72-172,205.27V851"/>
+	</g>
+	<line class="st4" x1="230" y1="381" x2="230" y2="0"/>
+	<line class="st4" x1="255.5" y1="380" x2="255.5" y2="0"/>
+</g>
+<g id="stopka">
+	<line class="st5" x1="497" y1="520" x2="489" y2="520"/>
+</g>
+</svg>
