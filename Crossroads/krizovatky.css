@@ -23,7 +23,33 @@ body {
 .krizovatka2{
     width: 851px;
     height: 851px;
-    background-image: url("krizovatka5 .svg");
+    background-image: url("krizovatka2 .svg");
+}
+.krizovatka3{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka3.svg");
+}
+.krizovatka4{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka4.svg");
+}
+.krizovatka5{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka5.svg");
+}
+.krizovatka6{
+    width: 851px;
+    height: 851px;
+    /*background-image: url("krizovatka5.svg");*/
+}
+.radsej_neotvaraj3{
+    top: 375px;
+    left: 275px;
+    transform: rotate(-90deg);
+    width: 180px;
 }
 .radsej_neotvaraj2{
     top: 720px;
@@ -37,12 +63,16 @@ body {
     transform: rotate(90deg);
     width: 180px;
 }
+.autoBlack3{
+    width: 180px;
+}
 #rIGHT{
     /*animation: blink 1s linear infinite;*/
     visibility: hidden;
 }
 #LEFT{
-    animation: blink 1s linear infinite;
+    /*animation: blink 1s linear infinite;*/
+    visibility: hidden;
 }
 @keyframes blink{
     0%{opacity: 0;}
@@ -69,7 +99,7 @@ div{
 }
 
 @keyframes move {
-
+    /*najprv sme to pracovali v CSS ale nakoniec sme nasli lepsi sposob cez zelenu ponozku*/
     /*from {top: 140px; left: 270px; }*/
     /*15%{top: 180px; left: 270px;}*/
     /*20% {top: 220px; left: 270px;transform: rotate(90deg);}*/
