@@ -6,6 +6,7 @@ function loadDoc() {
         if (this.readyState === 4 && this.status === 200) {
             xmlDoc = this.responseXML;
             meninyDnes();
+            clearDisplay();
         }
     };
     xhttp.open("GET", "meniny.xml", true);
@@ -18,20 +19,42 @@ function addZero(number){
     return number;
 }
 
+function clearDisplay() {
+    let countries = document.getElementById("countries");
+    let input_countries = countries.getElementsByTagName("input");
+    for (let i=0, length = input_countries.length; i<length; i++){
+        let str = 'date'+input_countries[i].value;
+        document.getElementById(str).style.display="none";
+    }
+}
+
+
 function choseMeniny() {
-    let meninyInput = document.getElementById("meninyInput").value;
-    if (!meninyInput)
-        return document.getElementById("meninyText").innerText = "Nesprávny vstup.";
-    let date = new Date(meninyInput);
-    document.getElementById("meninyText").innerText = "V tento deň má meniny: " + findMeniny(date);
+    let namedayInput = document.getElementById("namedayInput").value;
+    document.getElementById("namedayText").style.display="block";
+    if (!namedayInput) {
+        clearDisplay();
+        return document.getElementById("namedayText").innerText = "Nesprávny vstup.";
+    }
+    let countries = document.getElementById("countries");
+    let input_countries = countries.getElementsByTagName("input");
+    for (let i=0, length = input_countries.length; i<length; i++){
+        let date = new Date(namedayInput);
+        let str = 'date'+input_countries[i].value;
+
+        str = str.replace(/^\s+|\s+$/g,"");
+        document.getElementById(str).style.display="block";
+        document.getElementById(str).innerText =  input_countries[i].value+":" + findMeniny(date,input_countries[i].value);
+        document.getElementById("namedayText").style.display="none";
+    }
 }
 
 function meninyDnes() {
     let date = new Date();
-    document.getElementById("meninyDnes").innerText = "Dnes má meniny: " + findMeniny(date);
+    document.getElementById("namedayToday").innerText = "Dnes má meniny: " + findToday(date);
 }
 
-function findMeniny(date) {
+function findMeniny(date,states) {
     let month = date.getMonth() + 1;
     let day = date.getDate();
 
@@ -39,8 +62,27 @@ function findMeniny(date) {
     month = addZero(month);
 
     for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
-        let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
-        if (pomoc === month+day){
+        let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
+        if (tmp === month+day){
+            if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0]){
+                tmp=xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0].childNodes[0].nodeValue;
+                tmp = tmp.replace(/(?:\r\n|\r|\n)/g, "");
+                return tmp;
+            }
+            else return "V tento deň nemá nikto meniny.";
+        }
+    }
+}
+function findToday(date) {
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+
+    day = addZero(day);
+    month = addZero(month);
+
+    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
+        let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
+        if (tmp === month+day){
             if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0])
                 return xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
             else return "V tento deň nemá nikto meniny.";
@@ -58,24 +100,24 @@ function xmlDateToNormal(x) {
     return day + "." + month+ ".";
 }
 
-function normalizaciaStringu(pomoc) {
-    pomoc = pomoc.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    pomoc = pomoc.toLowerCase();
-    return pomoc;
+function normalizaciaStringu(tmp) {
+    tmp = tmp.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    tmp = tmp.toLowerCase();
+    return tmp;
 }
 
 function findName(text,input) {
     for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++) {
         if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0]) {
 
-            let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
-            pomoc = normalizaciaStringu(pomoc);
-            pomoc = pomoc.replace(/ /g, "");
-            pomoc = pomoc.replace(" ", "");
-            pomoc = pomoc.replace(/(?:\r\n|\r|\n)/g, "");
-            pomoc = pomoc.split(",");
+            let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
+            tmp = normalizaciaStringu(tmp);
+            tmp = tmp.replace(/ /g, "");
+            tmp = tmp.replace(" ", "");
+            tmp = tmp.replace(/(?:\r\n|\r|\n)/g, "");
+            tmp = tmp.split(",");
 
-            if (pomoc.includes(text)) {
+            if (tmp.includes(text)) {
                 let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
                 x = xmlDateToNormal(x);
                 document.getElementById("datumText").innerText = "Toto meno má meniny " + x;
@@ -94,17 +136,17 @@ function findDate() {
         return document.getElementById("datumText").innerText = "Nesprávny vstup";
     }
     text = normalizaciaStringu(text);
-    let staty = document.getElementById("staty");
-    let input_staty = staty.getElementsByTagName("input");
+    let countries = document.getElementById("countries");
+    let input_countries = countries.getElementsByTagName("input");
     let checkbox = 0;
-    for (let i=0, length = input_staty.length; i<length; i++){
-        if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true)
+    for (let i=0, length = input_countries.length; i<length; i++){
+        if (input_countries[i].type === 'checkbox' && input_countries[i].checked===true)
             checkbox++;
     }
     if (checkbox>0)
-        for (let i=0, length = input_staty.length; i<length; i++) {
-            if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true) {
-                findName(text,input_staty[i].value);
+        for (let i=0, length = input_countries.length; i<length; i++) {
+            if (input_countries[i].type === 'checkbox' && input_countries[i].checked===true) {
+                findName(text,input_countries[i].value);
             }
         }
     else{

@@ -28,11 +28,18 @@
             </div>
         </nav>
     </header>
-    <p id="meninyDnes"></p>
+    <p id="namedayToday"></p>
     <label>
-        <input id="meninyInput" type="date">
-        <button id="meninyButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button>
-        <p id="meninyText">Zvoľte dátum a stlačte tlačidlo</p>
+        <input id="namedayInput" type="date">
+        <button id="namedayButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button>
+        <p id="namedayText">Zvoľte dátum a stlačte tlačidlo</p>
+        <p id="dateSK" ></p>
+        <p id="dateSKd" ></p>
+        <p id="dateCZ" ></p>
+        <p id="dateHU" ></p>
+        <p id="datePL" ></p>
+        <p id="dateAT" ></p>
+
     </label>
 <br>
     <label>
@@ -41,15 +48,15 @@
         <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
     </label>
 
-    <div id ="staty">
+    <div id ="countries">
         <div>Vyberte si zoznam,kde hľadať:</div>
             <div>
-                <label for="SK"></label><input id="SK" type="checkbox" value="SK" checked >SK<br>
-                <label for="SKd"></label><input id="SKd" type="checkbox" value="SKd" checked>SKd<br>
-                <label for="CZ"></label><input id="CZ" type="checkbox" value="CZ" >CZ<br>
-                <label for="HU"></label><input id="HU" type="checkbox" value="HU" >HU<br>
-                <label for="PL"></label><input id="PL" type="checkbox" value="PL" >PL<br>
-                <label for="AT"></label><input id="AT" type="checkbox" value="AT" >AT<br>
+                <label for="SK"></label><input id="SK" type="checkbox" value="SK" checked >SK
+                <label for="SKd"></label><input id="SKd" type="checkbox" value="SKd" checked>SKd
+                <label for="CZ"></label><input id="CZ" type="checkbox" value="CZ" >CZ
+                <label for="HU"></label><input id="HU" type="checkbox" value="HU" >HU
+                <label for="PL"></label><input id="PL" type="checkbox" value="PL" >PL
+                <label for="AT"></label><input id="AT" type="checkbox" value="AT" >AT
             </div>
     </div>
     <script>
