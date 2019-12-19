@@ -50,9 +50,11 @@ function findMeniny(date) {
 
 function xmlDateToNormal(x) {
     let day = x.substr(2,2);
-    day = day.replace("0","");
+    if (day <10)
+        day = day.replace("0","");
     let month = x.substr(0,2);
-    month = month.replace("0","");
+    if (month <10)
+        month = month.replace("0","");
     return day + "." + month+ ".";
 }
 
@@ -94,10 +96,18 @@ function findDate() {
     text = normalizaciaStringu(text);
     let staty = document.getElementById("staty");
     let input_staty = staty.getElementsByTagName("input");
-    for (let i=0, length = input_staty.length; i<length; i++) {
-        if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true) {
-            findName(text,input_staty[i].value);
+    let checkbox = 0;
+    for (let i=0, length = input_staty.length; i<length; i++){
+        if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true)
+            checkbox++;
+    }
+    if (checkbox>0)
+        for (let i=0, length = input_staty.length; i<length; i++) {
+            if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true) {
+                findName(text,input_staty[i].value);
+            }
         }
-
+    else{
+        document.getElementById("datumText").innerText = "Nebol vybraný žiaden kalendár.";
     }
 }
