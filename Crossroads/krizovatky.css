@@ -43,7 +43,13 @@ body {
 .krizovatka6{
     width: 851px;
     height: 851px;
-    /*background-image: url("krizovatka5.svg");*/
+    background-image: url("krizovatka6.svg");
+}
+.radsej_neotvaraj4{
+    top: 280px;
+    left: 400px;
+    transform: rotate(-90deg);
+    width: 180px;
 }
 .radsej_neotvaraj3{
     top: 375px;
@@ -58,13 +64,29 @@ body {
     width: 180px;
 }
 .radsej_neotvaraj{
-    top: 140px;
-    left: 270px;
-    transform: rotate(90deg);
+    top: 30px;
+    left: 100px;
     width: 180px;
 }
-.autoBlack3{
-    width: 100px;
+.autoBlack1{
+    top: 580px;
+    left: 445px;
+    width: 103px;
+}
+.autoZlt6{
+    top: 30px;
+    left: 100px;
+    width: 80px;
+    transform: rotate(145deg);
+}
+.autoWhite1{
+    top: 10px;
+    left: 310px;
+    /*webkit-transform: rotate(90deg);*/
+    /*-moz-transform: rotate(90deg);*/
+    /*-ms-transform: rotate(90deg);*/
+    /*-o-transform: rotate(90deg);*/
+    /*transform: rotate(90deg);*/
 }
 #rIGHT{
     /*animation: blink 1s linear infinite;*/
