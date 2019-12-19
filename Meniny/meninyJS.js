@@ -64,6 +64,9 @@ function normalizaciaStringu(pomoc) {
 
 function findDate() {
     let text = document.getElementById("nameInput").value;
+    if (!text) {
+        return document.getElementById("datumText").innerText = "Nesprávny vstup";
+    }
     text = normalizaciaStringu(text);
 
     for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
@@ -78,7 +81,7 @@ function findDate() {
             if(pomoc.includes(text)){
                 let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
                 x = xmlDateToNormal(x);
-                document.getElementById("datumText").innerText = "Toto meno ma meniny " + x;
+                document.getElementById("datumText").innerText = "Toto meno má meniny " + x;
                 return 1;
             }
             else {
