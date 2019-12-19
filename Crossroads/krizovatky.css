@@ -64,8 +64,8 @@ body {
     width: 180px;
 }
 .radsej_neotvaraj{
-    top: 30px;
-    left: 100px;
+    top: 60px;
+    left: 90px;
     width: 180px;
 }
 .autoBlack1{
@@ -78,6 +78,12 @@ body {
     left: 100px;
     width: 80px;
     transform: rotate(145deg);
+}
+.autoZlt1{
+    top: -120px;
+    left: 315px;
+    width: 80px;
+    transform: rotate(180deg);
 }
 .autoWhite1{
     top: 10px;

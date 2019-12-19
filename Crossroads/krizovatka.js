@@ -39,16 +39,17 @@ function moveZ(){
          .to(svgb, 0.7,{ease: "none", y:-720, })
          .to(svgb, 0.7,{ease: "none", y:-840, });
  }
- function move1W() {
+ function move1ZL() {
      let animation3w = gsap.timeline();
-     animation3w .set(svgW, {ease: "none",      y:0})
+     animation3w .set(svgW, {ease: "none",     y:0})
          .to(svgW, 1,{ease: "none",   y:100,})
-         .to(svgW, 1,{ease: "none",   y:180, x:"+=20",  rotation:"40_short"})
-         .to(svgW, 0.8,{ease: "none", y:220, x:"+=60",  rotation:"70_short"})
-         .to(svgW, 0.7,{ease: "none", y:230, x:"+=120", rotation:"90_short"})
-         .to(svgW, 0.7,{ease: "none", y:230,               x:"+=180", rotation:"90_short"})
-         .to(svgW, 0.8,{ease: "none", y:230,               x:"+=220", rotation:"90_short"})
-         .to(svgW, 1,{ease: "none",   y:230,               x:"+=250", rotation:"90_short"});
+         .to(svgW, 0.7,{ease: "none", y:180, x:"+=40",  rotation:"140_short"})
+         .to(svgW, 0.7,{ease: "none", y:220, x:"+=60",  rotation:"130_short"})
+         .to(svgW, 0.7,{ease: "none", y:260, x:"+=100", rotation:"120_short"})
+         .to(svgW, 0.7,{ease: "none", y:320,               x:"+=140", rotation:"110_short"})
+         .to(svgW, 0.8,{ease: "none", y:340,               x:"+=170", rotation:"90_short"})
+         .to(svgW, 0.8,{ease: "none", y:330,               x:"+=210", rotation:"90_short"})
+         .to(svgW, 1,{ease: "none",   y:330,               x:"+=250", rotation:"90_short"});
  }
  function move3to5Z(){
      let animation3 = gsap.timeline();
