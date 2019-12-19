@@ -58,9 +58,9 @@ body {
     width: 180px;
 }
 .radsej_neotvaraj2{
-    top: 720px;
-    left: 455px;
-    transform: rotate(-90deg);
+    top: -170px;
+    left: 650px;
+    transform: rotate(-180deg);
     width: 180px;
 }
 .radsej_neotvaraj{
@@ -73,11 +73,22 @@ body {
     left: 445px;
     width: 103px;
 }
+.autoBlack2{
+    top: -10px;
+    left: 270px;
+    width: 80px;
+    transform: rotate(180deg);
+}
 .autoZlt6{
     top: 30px;
     left: 100px;
     width: 80px;
     transform: rotate(145deg);
+}
+.autoZlt2{
+    top: 430px;
+    left: 505px;
+    width: 100px;
 }
 .autoZlt1{
     top: -120px;
