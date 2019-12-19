@@ -68,9 +68,8 @@ function findName(text,input) {
 
             let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
             pomoc = normalizaciaStringu(pomoc);
-            pomoc = pomoc.replace(" ", "");
+            pomoc = pomoc.replace(/ /g, "");
             pomoc = pomoc.split(",");
-            console.dir(pomoc);
 
             if (pomoc.includes(text)) {
                 let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
