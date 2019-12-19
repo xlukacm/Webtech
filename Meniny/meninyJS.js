@@ -23,7 +23,7 @@ function choseMeniny() {
     if (!meninyInput)
         return document.getElementById("meninyText").innerText = "Nesprávny vstup.";
     let date = new Date(meninyInput);
-    document.getElementById("meninyText").innerText = "V tento den má meniny: " + findMeniny(date);
+    document.getElementById("meninyText").innerText = "V tento deň má meniny: " + findMeniny(date);
 }
 
 function meninyDnes() {
@@ -62,32 +62,41 @@ function normalizaciaStringu(pomoc) {
     return pomoc;
 }
 
+function findName(text,input) {
+    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++) {
+        if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0]) {
+
+            let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
+            pomoc = normalizaciaStringu(pomoc);
+            pomoc = pomoc.replace(" ", "");
+            pomoc = pomoc.split(",");
+            console.dir(pomoc);
+
+            if (pomoc.includes(text)) {
+                let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
+                x = xmlDateToNormal(x);
+                document.getElementById("datumText").innerText = "Toto meno má meniny " + x;
+                return 1;
+            } else {
+                document.getElementById("datumText").innerText = "Toto meno neexistuje.";
+            }
+        }
+    }
+    return -1;
+}
+
 function findDate() {
     let text = document.getElementById("nameInput").value;
     if (!text) {
         return document.getElementById("datumText").innerText = "Nesprávny vstup";
     }
     text = normalizaciaStringu(text);
-
-    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
-        if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0]){
-
-            let pomoc = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
-            pomoc = normalizaciaStringu(pomoc);
-            pomoc = pomoc.replace(" ", "");
-            pomoc = pomoc.split(",");
-            console.dir(pomoc);
-
-            if(pomoc.includes(text)){
-                let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
-                x = xmlDateToNormal(x);
-                document.getElementById("datumText").innerText = "Toto meno má meniny " + x;
-                return 1;
-            }
-            else {
-                document.getElementById("datumText").innerText = "Toto meno neexistuje.";
-            }
+    let staty = document.getElementById("staty");
+    let input_staty = staty.getElementsByTagName("input");
+    for (let i=0, length = input_staty.length; i<length; i++) {
+        if (input_staty[i].type === 'checkbox' && input_staty[i].checked===true) {
+            findName(text,input_staty[i].value);
         }
+
     }
-    return -1;
 }
