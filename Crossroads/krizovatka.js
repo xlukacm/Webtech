@@ -138,3 +138,30 @@ function move1Z(){  //zelene auto
          .to(svgz, 0.5, {ease: "none", y: -240, x: "-=70", rotation: "-130_short"})
          .to(svgz, 0.5, {ease: "none", y: -200, x: "-=60", rotation: "-140_short"})
  }
+
+ function move7z() {
+     let animation7 = gsap.timeline();
+     animation7.set(svgz, {ease: "none", x: 0,})
+         .to(svgz, 0.7,{ease: "none",   y:"-100"})
+         .to(svgz, 0.7,{ease: "none",   y:"-180"})
+         .to(svgz, 0.7,{ease: "none", y:"-260"})
+         .to(svgz, 0.7,{ease: "none", y:"-340"})
+         .to(svgz, 0.7,{ease: "none",y:"-420"})
+         .to(svgz, 0.7,{ease: "none",y:"-500"})
+         .to(svgz, 0.7,{ease: "none",y:"-580"})
+         .to(svgz, 0.7,{ease: "none",y:"-660"})
+         .to(svgz, 0.7,{ease: "none",y:"-740"})
+         .to(svgz, 0.7,{ease: "none",y:"-820"})
+ }
+ function move7() {
+     let animation7 = gsap.timeline();
+     animation7.set(svg, {ease: "none", y: 0,})
+         .to(svg, 1,{ease: "none",   x:100})
+         .to(svg, 1,{ease: "none",   x:200, y:"-=20",  rotation:"-20_short"})
+         .to(svg, 0.8,{ease: "none", x:260, y:"-=40",  rotation:"-40_short"})
+         .to(svg, 0.8,{ease: "none", x:320, y:"-=60",  rotation:"-55_short"})
+         .to(svg, 0.7,{ease: "none", x:370, y:"-=80",  rotation:"-70_short"})
+         .to(svg, 0.7,{ease: "none",x:420, y:"-=160", rotation:"-90_short"})
+         .to(svg, 0.8,{ease: "none",y:"-=220"})
+         .to(svg, 1,{ease: "none",y:"-=250"});
+ }

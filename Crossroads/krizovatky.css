@@ -72,6 +72,12 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(-90deg);
     width: 180px;
 }
+.radsej_neotvaraj5{
+    top: 430px;
+    left: 380px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
 .radsej_neotvaraj3{
     top: 80px;
     left: 275px;
@@ -117,6 +123,13 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(180deg);
 }
+.autoZlt7{
+    top: 330px;
+    left: 90px;
+    width: 80px;
+    transform: rotate(+90deg);
+}
+
 .tram3{
     top: 360px;
     left: 208px;
