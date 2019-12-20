@@ -10,7 +10,7 @@ body {
 
 }
 .outer{
-    margin: 5px;
+    margin: 10px;
     width: 851px;
     height: 851px;
     overflow: hidden;
@@ -48,6 +48,21 @@ potom sa tu aj definuju krizovatky obrazky. */
     height: 851px;
     background-image: url("krizovatka6.svg");
 }
+.krizovatka7{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka7.svg");
+}
+.krizovatka8{
+    width: 851px;
+    height: 851px;
+    background-image: url("krizovatka8.svg");
+}
+.krizovatka9{
+     width: 851px;
+     height: 851px;
+     background-image: url("krizovatka9.svg");
+ }
 
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
@@ -58,7 +73,7 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 180px;
 }
 .radsej_neotvaraj3{
-    top: 375px;
+    top: 80px;
     left: 275px;
     transform: rotate(-90deg);
     width: 180px;
@@ -102,7 +117,11 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(180deg);
 }
-
+.tram3{
+    top: 360px;
+    left: 208px;
+    width: 80px;
+}
 
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
