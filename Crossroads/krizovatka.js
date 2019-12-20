@@ -1,12 +1,17 @@
- let svg = document.querySelector("#svg2");
+ let svg = document.querySelector("#svg2"); //pomocou Jqery si najdeme v html dokumente idecko auta
  let svgb = document.querySelector("#svgB");
- let svgW = document.querySelector("#svgW");
+ let svgzl = document.querySelector("#svgW");
  let svgz = document.querySelector("#svgZ");
-// var linijaDevelopment = document.querySelector(".linija-development");
 
-function moveZ(){
+///1. krizovatka/ 3 auta ////////////////////////////////////////////////////////////////////////
+
+function move1Z(){  //zelene auto
     let animation = gsap.timeline();
+    //toto je green sock funkcia ktoru volame o riadok nizsie
+
     animation .set(svg, {ease: "none",       x:0})
+        //animacie su jednoduche, spravis autu path skrze x a y suradnice a popritom otacas
+        //vyskusajte si nejaku krizovatku u seba a pomente tieto suradnice a pozerajte ako to bude reagovat auto
         .to(svg, 1,{ease: "none",   x:100})
         .to(svg, 1,{ease: "none",   x:180, y:"-=20",  rotation:"-20_short"})
         .to(svg, 0.8,{ease: "none", x:220, y:"-=60",  rotation:"-40_short"})
@@ -14,19 +19,21 @@ function moveZ(){
         .to(svg, 0.7,{ease: "none",               x:330, y:"-=180", rotation:"-90_short"})
         .to(svg, 0.8,{ease: "none",                      y:"-=220"})
         .to(svg, 1,{ease: "none",                        y:"-=250"});
+    //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
 }
-
- function move1Z(){
-     let animation2 = gsap.timeline();
-     animation2 .set(svg, {ease: "none",      x:0})
-         .to(svg, 1,{ease: "none",   x:100,})
-         .to(svg, 1,{ease: "none",   x:180, y:"+=20",  rotation:"40_short"})
-         .to(svg, 0.8,{ease: "none", x:190, y:"+=60",  rotation:"70_short"})
-         .to(svg, 0.7,{ease: "none", x:190, y:"+=120", rotation:"90_short"})
-         .to(svg, 0.7,{ease: "none", x:190,               y:"+=180"})
-         .to(svg, 0.8,{ease: "none", x:190,               y:"+=220"})
-         .to(svg, 1,{ease: "none",   x:190,               y:"+=250"});
+ function move1ZL() {
+     let animation3w = gsap.timeline();
+     animation3w .set(svgzl, {ease: "none",     y:0})
+         .to(svgzl, 1,{ease: "none",   y:100,})
+         .to(svgzl, 0.7,{ease: "none", y:180, x:"+=40",  rotation:"140_short"})
+         .to(svgzl, 0.7,{ease: "none", y:220, x:"+=60",  rotation:"130_short"})
+         .to(svgzl, 0.7,{ease: "none", y:260, x:"+=100", rotation:"120_short"})
+         .to(svgzl, 0.7,{ease: "none", y:320,               x:"+=140", rotation:"110_short"})
+         .to(svgzl, 0.8,{ease: "none", y:340,               x:"+=170", rotation:"90_short"})
+         .to(svgzl, 0.8,{ease: "none", y:330,               x:"+=210", rotation:"90_short"})
+         .to(svgzl, 1,{ease: "none",   y:330,               x:"+=250", rotation:"90_short"});
  }
+
  function move1B() {
      let animation3b = gsap.timeline();
      animation3b .set(svgb, {ease: "none",      y:0})
@@ -38,6 +45,7 @@ function moveZ(){
          .to(svgb, 0.7,{ease: "none", y:-720, })
          .to(svgb, 0.7,{ease: "none", y:-840, });
  }
+ ///2. krizovatka/ 3 auta ///////////////////////////////////////////////////////////////////////////////////
  function move2B() {
      let animation2b = gsap.timeline();
      animation2b .set(svgb, {ease: "none",      y:0})
@@ -49,29 +57,30 @@ function moveZ(){
          .to(svgb, 0.7,{ease: "none", y:720, })
          .to(svgb, 0.7,{ease: "none", y:840, });
  }
- function move1ZL() {
-     let animation3w = gsap.timeline();
-     animation3w .set(svgW, {ease: "none",     y:0})
-         .to(svgW, 1,{ease: "none",   y:100,})
-         .to(svgW, 0.7,{ease: "none", y:180, x:"+=40",  rotation:"140_short"})
-         .to(svgW, 0.7,{ease: "none", y:220, x:"+=60",  rotation:"130_short"})
-         .to(svgW, 0.7,{ease: "none", y:260, x:"+=100", rotation:"120_short"})
-         .to(svgW, 0.7,{ease: "none", y:320,               x:"+=140", rotation:"110_short"})
-         .to(svgW, 0.8,{ease: "none", y:340,               x:"+=170", rotation:"90_short"})
-         .to(svgW, 0.8,{ease: "none", y:330,               x:"+=210", rotation:"90_short"})
-         .to(svgW, 1,{ease: "none",   y:330,               x:"+=250", rotation:"90_short"});
+ function move2Z(){
+     let animation2 = gsap.timeline();
+     animation2 .set(svg, {ease: "none",      x:0})
+         .to(svg, 1,{ease: "none",   x:100,})
+         .to(svg, 1,{ease: "none",   x:180, y:"+=20",  rotation:"40_short"})
+         .to(svg, 0.8,{ease: "none", x:190, y:"+=60",  rotation:"70_short"})
+         .to(svg, 0.7,{ease: "none", x:190, y:"+=120", rotation:"90_short"})
+         .to(svg, 0.7,{ease: "none", x:190,               y:"+=180"})
+         .to(svg, 0.8,{ease: "none", x:190,               y:"+=220"})
+         .to(svg, 1,{ease: "none",   x:190,               y:"+=250"});
  }
+
  function move2ZL() {
      let animation2w = gsap.timeline();
-     animation2w .set(svgW, {ease: "none",     y:0})
-         .to(svgW, 1,{ease: "none",   y:-100,})
-         .to(svgW, 1,{ease: "none",   y:-180, x:"+=20",  rotation:"40_short"})
-         .to(svgW, 0.8,{ease: "none", y:-210, x:"+=60",  rotation:"70_short"})
-         .to(svgW, 0.7,{ease: "none", y:-210, x:"+=120", rotation:"90_short"})
-         .to(svgW, 0.7,{ease: "none", y:-210,               x:"+=180"})
-         .to(svgW, 0.8,{ease: "none", y:-210,               x:"+=220"})
-         .to(svgW, 1,{ease: "none",   y:-210,               x:"+=250"});
+     animation2w .set(svgzl, {ease: "none",     y:0})
+         .to(svgzl, 1,{ease: "none",   y:-100,})
+         .to(svgzl, 1,{ease: "none",   y:-180, x:"+=20",  rotation:"40_short"})
+         .to(svgzl, 0.8,{ease: "none", y:-210, x:"+=60",  rotation:"70_short"})
+         .to(svgzl, 0.7,{ease: "none", y:-210, x:"+=120", rotation:"90_short"})
+         .to(svgzl, 0.7,{ease: "none", y:-210,               x:"+=180"})
+         .to(svgzl, 0.8,{ease: "none", y:-210,               x:"+=220"})
+         .to(svgzl, 1,{ease: "none",   y:-210,               x:"+=250"});
  }
+ ///3. az 5. krizovatka/ 1 auto + elektricka Tram ////////////////////////////////////////////////////////////////////////
  function move3to5Z(){
      let animation3 = gsap.timeline();
      animation3 .set(svg, {ease: "none",      x:0})
@@ -84,6 +93,7 @@ function moveZ(){
          .to(svg, 0.5,{ease: "none", x:470,  })
          .to(svg, 0.5,{ease: "none", x:570,  })
  }
+ ///6. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
  function move6(){
      let animation4 = gsap.timeline();
      animation4 .set(svg, {ease: "none",      x:0, })

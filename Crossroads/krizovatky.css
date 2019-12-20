@@ -15,6 +15,9 @@ body {
     height: 851px;
     overflow: hidden;
 }
+/*tu sa aj ja niekedy stracam, treba kazde auto na kazdej krizovatke definovat jeho prvotne postavenie,
+potom sa tu aj definuju krizovatky obrazky. */
+
 .krizovatka{
     width: 851px;
     height: 851px;
@@ -45,6 +48,9 @@ body {
     height: 851px;
     background-image: url("krizovatka6.svg");
 }
+
+/*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
+    na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
 .radsej_neotvaraj4{
     top: 280px;
     left: 400px;
@@ -96,6 +102,11 @@ body {
     width: 80px;
     transform: rotate(180deg);
 }
+
+
+
+/*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
+
 .autoWhite1{
     top: 10px;
     left: 310px;
