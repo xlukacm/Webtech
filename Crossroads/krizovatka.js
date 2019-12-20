@@ -165,3 +165,45 @@ function move1Z(){  //zelene auto
          .to(svg, 0.8,{ease: "none",y:"-=220"})
          .to(svg, 1,{ease: "none",y:"-=250"});
  }
+
+
+
+ function move8B() {
+     let animation8 = gsap.timeline();
+     animation8.set(svgz, {ease: "none", y: 0,})
+         .to(svgb, 0.7,{ease: "none",   y:100})
+         .to(svgb, 0.7,{ease: "none",   y:180})
+         .to(svgb, 0.7,{ease: "none",   y:260})
+         .to(svgb, 0.7,{ease: "none",   y:340})
+         .to(svgb, 0.7,{ease: "none",y:420})
+         .to(svgb, 0.7,{ease: "none",y:500})
+         .to(svgb, 0.7,{ease: "none",y:580})
+         .to(svgb, 0.7,{ease: "none",y:660})
+         .to(svgb, 0.7,{ease: "none",y:740})
+         .to(svgb, 0.7,{ease: "none",y:820})
+         .to(svgb, 0.7,{ease: "none",y:880})
+ }
+ function move8z() {
+     let animation8 = gsap.timeline();
+     animation8.set(svgz, {ease: "none", y: 0,})
+         .to(svgz, 1,{ease: "none",   y:"-100"})
+         .to(svgz, 1,{ease: "none",   y:"-180", x:"-=20",  rotation:"-30_short"})
+         .to(svgz, 0.8,{ease: "none", y:"-240", x:"-=60",  rotation:"-50_short"})
+         .to(svgz, 0.7,{ease: "none", y:"-280", x:"-=120", rotation:"-70_short"})
+         .to(svgz, 0.7,{ease: "none",y:"-320",x:"-=180",rotation:"-90_short"})
+         .to(svgz, 0.8,{ease: "none",               x:"-=220"})
+         .to(svgz, 1,{ease: "none",                 x:"-=250"});
+
+ }
+ function move8() {
+     let animation8 = gsap.timeline();
+     animation8.set(svg, {ease: "none", x: 0,})
+         .to(svg, 1,{ease: "none",   x:100})
+         .to(svg, 1,{ease: "none",   x:180, y:"-=20",  rotation:"-20_short"})
+         .to(svg, 0.8,{ease: "none", x:240, y:"-=40",  rotation:"-40_short"})
+         .to(svg, 0.8,{ease: "none", x:290, y:"-=60",  rotation:"-55_short"})
+         .to(svg, 0.7,{ease: "none", x:340, y:"-=80",  rotation:"-70_short"})
+         .to(svg, 0.7,{ease: "none",x:380, y:"-=160", rotation:"-90_short"})
+         .to(svg, 0.8,{ease: "none",y:"-=220"})
+         .to(svg, 1,{ease: "none",y:"-=250"});
+ }

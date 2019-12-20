@@ -78,6 +78,12 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(-90deg);
     width: 180px;
 }
+.radsej_neotvaraj6{
+    top: 300px;
+    left: 390px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
 .radsej_neotvaraj3{
     top: 80px;
     left: 275px;
@@ -106,6 +112,12 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(180deg);
 }
+.autoBlack3{
+    top: 10px;
+    left: 320px;
+    width: 80px;
+    transform: rotate(180deg);
+}
 .autoZlt6{
     top: 30px;
     left: 100px;
@@ -130,6 +142,12 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(+90deg);
 }
 
+.autoZlt8{
+    top: 60px;
+    left:640px;
+    width: 80px;
+    transform: rotate(-90deg);
+}
 .tram3{
     top: 360px;
     left: 208px;
