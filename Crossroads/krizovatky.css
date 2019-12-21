@@ -101,6 +101,12 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(-90deg);
     width: 180px;
 }
+.carGreen9{
+    top: 250px;
+    left: 460px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
 
 .carBlack1{
     top: 580px;
@@ -142,12 +148,17 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(+90deg);
 }
-
 .carYellow8{
     top: 60px;
     left:640px;
     width: 80px;
     transform: rotate(-90deg);
+}
+.carYellow9{
+    top: -300px;
+    left:170px;
+    width: 80px;
+    transform: rotate(-180deg);
 }
 .tram3{
     top: 360px;
@@ -159,6 +170,7 @@ potom sa tu aj definuju krizovatky obrazky. */
     left: 385px;
     width: 80px;
 }
+
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
 
