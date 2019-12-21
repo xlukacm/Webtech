@@ -2,7 +2,7 @@
  let svgBlackC = document.querySelector("#svgBlackCar");
  let svgzl = document.querySelector("#svgW");
  let svgYellowCar = document.querySelector("#svgYellowCar");
- let svgT = document.querySelector("#tram");
+ let svgTram = document.querySelector("#tram");
 
 ///1. krizovatka/ 3 auta ////////////////////////////////////////////////////////////////////////
 
@@ -84,15 +84,15 @@ function move1Z(){  //zelene auto
  ///3. az 5. krizovatka/ 1 auto + elektricka Tram ////////////////////////////////////////////////////////////////////////
  function moveTram3to5() {
      let animationT = gsap.timeline();
-     animationT .set(svgT, {ease: "none",     y:0})
-         .to(svgT, 1,{ease: "none",   y:-100,})
-         .to(svgT, 1,{ease: "none",   y:-180, x:"+=20",  rotation:"20_short"})
-         .to(svgT, 0.8,{ease: "none", y:-220, x:"+=40",  rotation:"45_short"})
-         .to(svgT, 0.8,{ease: "none", y:-290, x:"+=60",  rotation:"70_short"})
-         .to(svgT, 0.7,{ease: "none", y:-312, x:"+=120", rotation:"90_short"})
-         .to(svgT, 0.7,{ease: "none", y:-312,               x:"+=180"})
-         .to(svgT, 0.8,{ease: "none", y:-312,               x:"+=220"})
-         .to(svgT, 1,{ease: "none",   y:-312,               x:"+=250"});
+     animationT .set(svgTram, {ease: "none",     y:0})
+         .to(svgTram, 1,{ease: "none",   y:-100,})
+         .to(svgTram, 1,{ease: "none",   y:-180, x:"+=20",  rotation:"20_short"})
+         .to(svgTram, 0.8,{ease: "none", y:-220, x:"+=40",  rotation:"45_short"})
+         .to(svgTram, 0.8,{ease: "none", y:-290, x:"+=60",  rotation:"70_short"})
+         .to(svgTram, 0.7,{ease: "none", y:-312, x:"+=120", rotation:"90_short"})
+         .to(svgTram, 0.7,{ease: "none", y:-312,               x:"+=180"})
+         .to(svgTram, 0.8,{ease: "none", y:-312,               x:"+=220"})
+         .to(svgTram, 1,{ease: "none",   y:-312,               x:"+=250"});
  }
  function move3to5Z(){
      let animation3 = gsap.timeline();
