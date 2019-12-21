@@ -132,7 +132,7 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 180px;
 }
 .carGreen9{
-    top: 250px;
+    top: 230px;
     left: 460px;
     transform: rotate(-90deg);
     width: 180px;
@@ -231,23 +231,23 @@ potom sa tu aj definuju krizovatky obrazky. */
     left: 385px;
     width: 80px;
 }
-.pesant1{
+.pedestrian1{
     top: 530px;
     left: 500px;
     width: 80px;
     /*transform: rotate(60deg);*/
 }
-.pesant2{
+.pedestrian2{
     top: 330px;
     left: 580px;
     width: 80px;
 }
-.cykle1{
+.cycle1{
     top: 280px;
     left: 660px;
     width: 80px;
     height: 80px;
-    transform: rotate(100deg);
+    transform: rotate(115deg);
 }
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
