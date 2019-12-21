@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 850.39 850.39" style="enable-background:new 0 0 850.39 850.39;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#666666;}
+	.st1{fill:#999999;}
+	.st2{fill:none;}
+	.st3{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:47.0104,47.0104,47.0104,47.0104;}
+	
+		.st5{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:47.0104,47.0104,47.0104,47.0104,47.0104,47.0104;}
+</style>
+<g id="background">
+</g>
+<g id="sive_pozadie">
+	<rect class="st0" width="850.39" height="850.39"/>
+</g>
+<g id="cesty">
+	<polygon class="st1" points="131.5,0.5 511.13,0.5 511.13,302.48 850.5,302.48 850.5,546.12 511.13,546.12 511.13,850.5 
+		131.5,850.5 	"/>
+</g>
+<g id="ciara">
+	<g>
+		<path class="st2" d="M425.35,0.5"/>
+	</g>
+	<path class="st3" d="M281.25,567.75"/>
+	<g>
+		<g>
+			<line class="st3" x1="321.91" y1="0.99" x2="321.91" y2="25.99"/>
+			<line class="st4" x1="321.91" y1="73" x2="321.91" y2="237.53"/>
+			<line class="st5" x1="321.91" y1="261.04" x2="321.91" y2="801.66"/>
+			<line class="st3" x1="321.91" y1="825.16" x2="321.91" y2="850.16"/>
+		</g>
+	</g>
+	<path class="st3" d="M275.83,298.35"/>
+</g>
+</svg>

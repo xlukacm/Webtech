@@ -3,6 +3,9 @@ let svgBlackC = document.querySelector("#svgBlackCar");
 let svgzl = document.querySelector("#svgW");
 let svgYellowCar = document.querySelector("#svgYellowCar");
 let svgTram = document.querySelector("#tram");
+let pesant = document.querySelector("#pesant1");
+let pesante = document.querySelector("#pesant2");
+let bike = document.querySelector("#cyckle");
 
 ///1. krizovatka/ 3 auta ////////////////////////////////////////////////////////////////////////
 
@@ -245,8 +248,34 @@ function moveTram9(){
         .to(svgTram, 0.5,{ease: "none", y:-800,  })
         .to(svgTram, 0.5,{ease: "none", y:-900,  })
 }
-///10. krizovatka/ 2 auta / 1 elektricka ////////////////////////////////////////////////////////////////////////
 
+///10. krizovatka/ 2 auta / 1 elektricka ////////////////////////////////////////////////////////////////////////
+function move10z() {
+    let animation10y = gsap.timeline();
+    animation10y.set(svgYellowCar, {ease: "none", y: 0,})
+        .to(svgYellowCar, 0.7,{ease: "none",     y:"-100"})
+        .to(svgYellowCar, 0.5,{ease: "none",   y:"-150", x:"+=20",  rotation:"30_short"})
+        .to(svgYellowCar, 0.5,{ease: "none",   y:"-180", x:"+=40",  rotation:"50_short"})
+        .to(svgYellowCar, 0.5,{ease: "none",   y:"-200", x:"+=60", rotation:"70_short"})
+        .to(svgYellowCar, 0.5,{ease: "none",x:"+=70",rotation:"90_short"})
+        .to(svgYellowCar, 0.5,{ease: "none",               x:"+=100"})
+        .to(svgYellowCar, 1,{ease: "none",                 x:"+=200"})
+        .to(svgYellowCar, 1,{ease: "none",                 x:"+=300"});
+}
+function move10() {
+    let animation10 = gsap.timeline();
+    animation10.set(svgGreenCar, {ease: "none", x: 0,})
+        .to(svgGreenCar, 0.7, {ease: "none", x: 100})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 150})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 200})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 280, y: "-=40", rotation: "-20_short"})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 340, y: "-=60", rotation: "-40_short"})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 360, y: "-=100", rotation: "-70_short"})
+        .to(svgGreenCar, 0.7, {ease: "none", y: "-=140", rotation: "-80_short"})
+        .to(svgGreenCar, 0.7, {ease: "none",  y: "-=160", rotation: "-90_short"})
+        .to(svgGreenCar, 0.8, {ease: "none", y: "-=220"})
+        .to(svgGreenCar, 1, {ease: "none", y: "-=250"});
+}
 
 ///11. krizovatka/ 1 auta / ludia + cyklista ////////////////////////////////////////////////////////////////////////
 function move11() {
@@ -260,7 +289,29 @@ function move11() {
         .to(svgGreenCar, 0.5,{ease: "none", x:720, })
         .to(svgGreenCar, 0.5,{ease: "none", x:840, });
 }
-//TODO cyklista + chodci dvaja
+function move11Pesant(){
+    let animation11p = gsap.timeline();
+    animation11p .set(pesant, {ease: "none",      x:0, rotation:"60_short"})
+        .to(pesant, 1,{ease: "none",   y:120,})
+        .to(pesant, 1,{ease: "none",   y:180, })
+}
+function move11Pesant2(){
+    let animation11pe = gsap.timeline();
+    animation11pe .set(pesante, {ease: "none",      x:0, rotation:"100_short"})
+        .to(pesante, 1,{ease: "none",   y:-120,})
+        .to(pesante, 1,{ease: "none",   y:-180, })
+        .to(pesante, 0.8,{ease: "none",   y:-250, })
+}
+function moveBike1(){
+    let animation11b = gsap.timeline();
+    animation11b .set(bike, {ease: "none",      x:0, rotation:"0_short"})
+        .to(bike, 1,{ease: "none",   x:100, y: "-=10", rotation:"-20_short"})
+        .to(bike, 1,{ease: "none",   x:200,y: "-=10" })
+        .to(bike, 0.8,{ease: "none",   x:300,y: "-=10" })
+        .to(bike, 0.8,{ease: "none",   x:380,y: "-=10"})
+}
+
+//TODO cyklista + chodec
 
 ///12. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
 function move12(){
@@ -279,8 +330,8 @@ function move12(){
         .to(svgGreenCar, 0.5,{ease: "none", x:600, y:"+=10"})
 }
 function move12z() {
-    let animation4 = gsap.timeline();
-    animation4.set(svgYellowCar, {ease: "none", y: 0,})
+    let animation12u = gsap.timeline();
+    animation12u.set(svgYellowCar, {ease: "none", y: 0,})
         .to(svgYellowCar, 1, {ease: "none", y: -100,x: "-=10", rotation: "-20_short"})
         .to(svgYellowCar, 0.5, {ease: "none", y: -150, x: "-=30", rotation: "-30_short"})
         .to(svgYellowCar, 0.5, {ease: "none", y: -200, x: "-=40", rotation: "-45_short"})
@@ -294,3 +345,5 @@ function move12z() {
         .to(svgYellowCar, 0.5, {ease: "none", y: -240, x: "-=70", rotation: "-130_short"})
         .to(svgYellowCar, 0.5, {ease: "none", y: -200, x: "-=60", rotation: "-140_short"})
 }
+
+//krizovatka 13 je cyklista ide zarovno s autom, ale cyklista ma prednost, ak auto zataca
