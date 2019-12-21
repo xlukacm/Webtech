@@ -66,83 +66,84 @@ potom sa tu aj definuju krizovatky obrazky. */
 
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
-.radsej_neotvaraj4{
-    top: 280px;
-    left: 400px;
-    transform: rotate(-90deg);
+.carGreen{
+    top: 60px;
+    left: 90px;
     width: 180px;
 }
-.radsej_neotvaraj5{
-    top: 430px;
-    left: 380px;
-    transform: rotate(-90deg);
-    width: 180px;
-}
-.radsej_neotvaraj6{
-    top: 300px;
-    left: 390px;
-    transform: rotate(-90deg);
-    width: 180px;
-}
-.radsej_neotvaraj3{
-    top: 80px;
-    left: 275px;
-    transform: rotate(-90deg);
-    width: 180px;
-}
-.radsej_neotvaraj2{
+.carGreen2{
     top: -170px;
     left: 650px;
     transform: rotate(-180deg);
     width: 180px;
 }
-.radsej_neotvaraj{
-    top: 60px;
-    left: 90px;
+.carGreen3{
+    top: 80px;
+    left: 275px;
+    transform: rotate(-90deg);
     width: 180px;
 }
-.autoBlack1{
+.carGreen4{
+    top: 280px;
+    left: 400px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
+.carGreen5{
+    top: 430px;
+    left: 380px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
+.carGreen6{
+    top: 300px;
+    left: 390px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
+
+.carBlack1{
     top: 580px;
     left: 445px;
     width: 103px;
 }
-.autoBlack2{
+.carBlack2{
     top: -10px;
     left: 270px;
     width: 80px;
     transform: rotate(180deg);
 }
-.autoBlack3{
+.carBlack3{
     top: 10px;
     left: 320px;
     width: 80px;
     transform: rotate(180deg);
 }
-.autoZlt6{
-    top: 30px;
-    left: 100px;
-    width: 80px;
-    transform: rotate(145deg);
-}
-.autoZlt2{
-    top: 430px;
-    left: 505px;
-    width: 100px;
-}
-.autoZlt1{
+.carYellow1{
     top: -120px;
     left: 315px;
     width: 80px;
     transform: rotate(180deg);
 }
-.autoZlt7{
+.carYellow2{
+    top: 430px;
+    left: 505px;
+    width: 100px;
+}
+.carYellow6{
+    top: 30px;
+    left: 100px;
+    width: 80px;
+    transform: rotate(145deg);
+}
+.carYellow7{
     top: 330px;
     left: 90px;
     width: 80px;
     transform: rotate(+90deg);
 }
 
-.autoZlt8{
+.carYellow8{
     top: 60px;
     left:640px;
     width: 80px;
@@ -166,7 +167,7 @@ potom sa tu aj definuju krizovatky obrazky. */
     /*-o-transform: rotate(90deg);*/
     /*transform: rotate(90deg);*/
 }
-#rIGHT{
+#RIGHT{
     /*animation: blink 1s linear infinite;*/
     visibility: hidden;
 }
