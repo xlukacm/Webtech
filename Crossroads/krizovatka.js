@@ -311,8 +311,6 @@ function moveBike1(){
         .to(bike, 0.8,{ease: "none",   x:380,y: "-=10"})
 }
 
-//TODO cyklista + chodec
-
 ///12. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
 function move12(){
     let animation12 = gsap.timeline();
