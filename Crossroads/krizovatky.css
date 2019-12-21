@@ -154,7 +154,11 @@ potom sa tu aj definuju krizovatky obrazky. */
     left: 208px;
     width: 80px;
 }
-
+.tram9{
+    top: 580px;
+    left: 385px;
+    width: 80px;
+}
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
 
