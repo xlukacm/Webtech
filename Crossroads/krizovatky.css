@@ -9,6 +9,7 @@ body {
     height: 100%;
 
 }
+
 .outer{
     margin: 10px;
     width: 851px;
@@ -76,7 +77,7 @@ potom sa tu aj definuju krizovatky obrazky. */
 .krizovatka12{
     width: 851px;
     height: 851px;
-    background-image: url("krizovatka12.svg");
+    background-image: url("krizovatka12.png");
 }
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
@@ -128,14 +129,13 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 180px;
 }
 .carGreen11{
-    top: 250px;
-    left: 460px;
-    transform: rotate(-90deg);
-    width: 180px;
+    top: 470px;
+    left: 60px;
+    width: 300px;
 }
 .carGreen12{
-    top: 250px;
-    left: 460px;
+    top: 300px;
+    left: 390px;
     transform: rotate(-90deg);
     width: 180px;
 }
@@ -157,6 +157,7 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(180deg);
 }
+
 .carYellow1{
     top: -120px;
     left: 315px;
@@ -205,10 +206,10 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(-180deg);
 }
 .carYellow12{
-    top: -300px;
-    left:170px;
+    top: 30px;
+    left: 100px;
     width: 80px;
-    transform: rotate(-180deg);
+    transform: rotate(145deg);
 }
 .tram3{
     top: 360px;
