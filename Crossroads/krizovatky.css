@@ -18,80 +18,53 @@ body {
 }
 /*tu sa aj ja niekedy stracam, treba kazde auto na kazdej krizovatke definovat jeho prvotne postavenie,
 potom sa tu aj definuju krizovatky obrazky. */
-
-.krizovatka{
+article{
     width: 851px;
     height: 851px;
+}
+.krizovatka{
     background-image: url("krizovatka1.svg");
 }
 .krizovatka2{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka2.svg");
 }
 .krizovatka3{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka3.svg");
 }
 .krizovatka4{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka4.svg");
 }
 .krizovatka5{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka5.svg");
 }
 .krizovatka6{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka6.svg");
 }
 .krizovatka7{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka7.svg");
 }
 .krizovatka8{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka8.svg");
 }
 .krizovatka9{
-     width: 851px;
-     height: 851px;
      background-image: url("krizovatka9.svg");
  }
 .krizovatka10{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka10.svg");
 }
 .krizovatka11{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka11.svg");
 }
 .krizovatka12{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka12.png");
 }
 .krizovatka13{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka13.svg");
 }
 .krizovatka14{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka14.svg");
 }
 .krizovatka15{
-    width: 851px;
-    height: 851px;
     background-image: url("krizovatka15.svg");
 }
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr

@@ -6,7 +6,6 @@ let pedestrian = document.querySelector("#pedestrian1");
 let pedestrian2 = document.querySelector("#pedestrian2");
 let bike = document.querySelector("#cycle");
 
- window.inMove = false;
 
 ///1. krizovatka/ 3 auta ////////////////////////////////////////////////////////////////////////
 
@@ -51,8 +50,6 @@ function move1BlackCar() {
 
 ///2. krizovatka/ 3 auta ///////////////////////////////////////////////////////////////////////////////////
 function move2BlackCar() {
-    if(!inMove){
-        window.inMove = true; //nastavenie globalnej na true, ale aj tak to nejako nefunguje
         let animation2b = gsap.timeline();
         animation2b .set(svgBlackCar, {ease: "none",      y:0})
             .to(svgBlackCar, 0.6,{ease: "none",   y:120,})
@@ -62,14 +59,9 @@ function move2BlackCar() {
             .to(svgBlackCar, 0.6,{ease: "none", y:600, })
             .to(svgBlackCar, 0.6,{ease: "none", y:720, })
             .to(svgBlackCar, 0.6,{ease: "none", y:840, });
-        window.inMove = false;
-    }
-    else return 0;
 }
 function move2GreenCar() {
-    if (!inMove) {
         let animation2 = gsap.timeline();
-        inMove = true;
         animation2.set(svgGreenCar, {ease: "none", x: 0})
             .to(svgGreenCar,0.6, {ease: "none", x: 100,})
             .to(svgGreenCar,0.6, {ease: "none", x: 180, y: "+=20", rotation: "40_short"})
@@ -78,14 +70,9 @@ function move2GreenCar() {
             .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=180"})
             .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=220"})
             .to(svgGreenCar,0.6, {ease: "none", x: 190, y: "+=250"});
-        inMove = false;
-    }
-    else return 0;
 }
 function move2YellowCar() {
-    if (!inMove) {
         let animation2w = gsap.timeline();
-        inMove = true;
         animation2w.set(svgYellowCar, {ease: "none", y: 0})
             .to(svgYellowCar,0.6, {ease: "none", y: -100,})
             .to(svgYellowCar,0.6, {ease: "none", y: -180, x: "+=20", rotation: "40_short"})
@@ -94,9 +81,6 @@ function move2YellowCar() {
             .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=180"})
             .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=220"})
             .to(svgYellowCar,0.6, {ease: "none", y: -210, x: "+=250"});
-        inMove = false;
-    }
-    else return 0;
 }
 
 ///3. az 5. krizovatka/ 1 auto + elektricka Tram ////////////////////////////////////////////////////////////////////////
