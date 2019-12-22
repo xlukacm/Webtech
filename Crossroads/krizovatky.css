@@ -20,8 +20,8 @@ body {
 potom sa tu aj definuju krizovatky obrazky. */
 
 .krizovatka{
-    width: 551px;
-    height: 551px;
+    width: 851px;
+    height: 851px;
     background-image: url("krizovatka1.svg");
 }
 .krizovatka2{
@@ -97,9 +97,9 @@ potom sa tu aj definuju krizovatky obrazky. */
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
 .carGreen{
-    top: -100px;
-    left: 30px;
-    width: 130px;
+    top: 60px;
+    left: 90px;
+    width: 180px;
 }
 .carGreen2{
     top: -170px;
