@@ -291,23 +291,33 @@ function move11GreenCar() {
 function move11Pedestrian(){
     let animation11PE = gsap.timeline();
     animation11PE .set(pedestrian, {ease: "none",      x:0, rotation:"60_short"})
-        .to(pedestrian,0.6,{ease: "none",   y:120,})
-        .to(pedestrian,0.6,{ease: "none",   y:180, })
+        .to(pedestrian,0.6,{ease: "none",   y:100,})
+        .to(pedestrian,0.6,{ease: "none",   y:200,})
+        .to(pedestrian,0.6,{ease: "none",   y:300,})
+        .to(pedestrian,0.6,{ease: "none",   y:400,})
+        .to(pedestrian,0.6,{ease: "none",   y:500,})
+        .to(pedestrian,0.6,{ease: "none",   y:570,})
 }
 function move11Pedestrian2(){
     let animation11PE = gsap.timeline();
     animation11PE .set(pedestrian2, {ease: "none",      x:0, rotation:"100_short"})
-        .to(pedestrian2,0.6,{ease: "none",   y:-120,})
-        .to(pedestrian2,0.6,{ease: "none",   y:-180, })
-        .to(pedestrian2, 0.6,{ease: "none",   y:-250, })
+        .to(pedestrian2,0.6,{ease: "none",   y:-100,})
+        .to(pedestrian2,0.6,{ease: "none",   y:-200,})
+        .to(pedestrian2,0.6,{ease: "none",   y:-300,})
+        .to(pedestrian2,0.6,{ease: "none",   y:-400, })
+        .to(pedestrian2,0.6,{ease: "none",   y:-500, })
+        .to(pedestrian2, 0.6,{ease: "none",   y:-570, })
 }
-function moveBike1(){
+function move11Bike1(){
     let animation11B = gsap.timeline();
-    animation11B .set(bike, {ease: "none",      x:0, rotation:"0_short"})
-        .to(bike,0.6,{ease: "none",   x:100, y: "-=10", rotation:"-20_short"})
-        .to(bike,0.6,{ease: "none",   x:200,y: "-=10" })
-        .to(bike, 0.6,{ease: "none",   x:300,y: "-=10" })
-        .to(bike, 0.6,{ease: "none",   x:380,y: "-=10"})
+    animation11B .set(bike, {ease: "none",      y:0})
+        .to(bike,0.6,{ease: "none",   y:-100})
+        .to(bike,0.6,{ease: "none",   y:-200})
+        .to(bike, 0.6,{ease: "none",   y:-300})
+        .to(bike, 0.6,{ease: "none",   y:-400})
+        .to(bike, 0.6,{ease: "none",   y:-500})
+        .to(bike, 0.6,{ease: "none",   y:-600})
+        .to(bike, 0.6,{ease: "none",   y:-650})
 }
 
 //krizovatka 13 je cyklista ide zarovno s autom, ale cyklista ma prednost, ak auto zataca
@@ -322,17 +332,17 @@ function move13GreenCar(){
         .to(svgGreenCar, 0.6, {ease: "none", x: 180, y: "+=220"})
         .to(svgGreenCar,0.6, {ease: "none", x: 180, y: "+=250"});
 }
-function moveBike2(){
+function move13Bike2(){
     let animation13B = gsap.timeline();
-    animation13B .set(bike, {ease: "none",      x:0, rotation:"+=10_short"})
-        .to(bike,0.6,{ease: "none",   x:120,})
-        .to(bike,0.6,{ease: "none",   x:200, })
-        .to(bike,0.6,{ease: "none",   x:280, })
-        .to(bike,0.6,{ease: "none",   x:360, })
-        .to(bike,0.6,{ease: "none", x:440, })
-        .to(bike,0.6,{ease: "none", x:520, })
-        .to(bike,0.6,{ease: "none", x:600,  })
-        .to(bike,0.6 ,{ease: "none", x:700,  })
+    animation13B .set(bike, {ease: "none",      y:0})
+        .to(bike,0.6,{ease: "none",   y:-100,})
+        .to(bike,0.6,{ease: "none",   y:-200, })
+        .to(bike,0.6,{ease: "none",   y:-300, })
+        .to(bike,0.6,{ease: "none",   y:-400, })
+        .to(bike,0.6,{ease: "none", y:-500, })
+        .to(bike,0.6,{ease: "none", y:-600, })
+        .to(bike,0.6,{ease: "none", y:-700,  })
+        .to(bike,0.6 ,{ease: "none", y:-800,  })
 }
 ///14. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
 
