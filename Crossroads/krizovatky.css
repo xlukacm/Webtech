@@ -146,13 +146,30 @@ potom sa tu aj definuju krizovatky obrazky. */
 .carGreen11{
     top: 320px;
     left: 60px;
-    width: 270px;
+    width: 230px;
 }
 .carGreen12{
     top: 270px;
     left: 390px;
     transform: rotate(-90deg);
     width: 180px;
+}
+.carGreen13{
+    top: 540px;
+    left: 310px;
+    transform: rotate(-90deg);
+    width: 180px;
+}
+.carGreen14{
+    top: 50px;
+    left: 0;
+    width: 180px;
+}
+.carGreen15{
+    top: 300px;
+    left: 410px;
+    width: 180px;
+    transform: rotate(-90deg);
 }
 
 .carBlack1{
@@ -172,7 +189,19 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(180deg);
 }
+.carBlack4{
+    top: 10px;
+    left: 250px;
+    width: 90px;
+    transform: rotate(90deg);
+}
 
+.carBlack5{
+    top: 270px;
+    left: 650px;
+    width: 90px;
+    transform: rotate(-45deg);
+}
 .carYellow1{
     top: -120px;
     left: 315px;
@@ -221,6 +250,17 @@ potom sa tu aj definuju krizovatky obrazky. */
     width: 80px;
     transform: rotate(145deg);
 }
+.carYellow14{
+    top: 430px;
+    left: 505px;
+    width: 100px;
+}
+.carYellow15{
+    top: 220px;
+    left: 90px;
+    width: 80px;
+    transform: rotate(90deg);
+}
 .tram3{
     top: 360px;
     left: 208px;
@@ -242,6 +282,11 @@ potom sa tu aj definuju krizovatky obrazky. */
     left: 580px;
     width: 80px;
 }
+.pedestrian3{
+    top: 190px;
+    left: 660px;
+    width: 80px;
+}
 .cycle1{
     top: 280px;
     left: 660px;
@@ -250,6 +295,13 @@ potom sa tu aj definuju krizovatky obrazky. */
     transform: rotate(115deg);
 }
 
+.cycle2{
+    top: 600px;
+    left: 420px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-100deg);
+}
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
 
 .autoWhite1{

@@ -327,7 +327,47 @@ function moveBike1(){
 }
 
 //krizovatka 13 je cyklista ide zarovno s autom, ale cyklista ma prednost, ak auto zataca
-
+function move13GreenCar(){
+    let animation13g = gsap.timeline();
+    animation13g.set(svgGreenCar, {ease: "none", x: 0})
+        .to(svgGreenCar, 1, {ease: "none", x: 100,})
+        .to(svgGreenCar, 1, {ease: "none", x: 140, y: "+=20", rotation: "40_short"})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 180, y: "+=60", rotation: "70_short"})
+        .to(svgGreenCar, 0.7, {ease: "none", x: 180, y: "+=120", rotation: "90_short"})
+        .to(svgGreenCar, 0.7, {ease: "none", x: 180, y: "+=180"})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 180, y: "+=220"})
+        .to(svgGreenCar, 1, {ease: "none", x: 180, y: "+=250"});
+}
+function moveBike2(){
+    let animation13 = gsap.timeline();
+    animation13 .set(bike, {ease: "none",      x:0, rotation:"+=10_short"})
+        .to(bike, 1,{ease: "none",   x:120,})
+        .to(bike, 1,{ease: "none",   x:200, })
+        .to(bike, 1,{ease: "none",   x:280, })
+        .to(bike, 1,{ease: "none",   x:360, })
+        .to(bike, 1,{ease: "none", x:440, })
+        .to(bike, 1,{ease: "none", x:520, })
+        .to(bike, 1,{ease: "none", x:600,  })
+        .to(bike, 1 ,{ease: "none", x:700,  })
+}
 ///14. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
 
+function move14GreenCar(){
+    let animation14g = gsap.timeline();
+    animation14g.set(svgGreenCar, {ease: "none", x: 0})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 100,})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 300})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 500})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 700})
+        .to(svgGreenCar, 0.8, {ease: "none", x: 900})
+}
+function move14Pedestrian2(){
+    let animation11pe = gsap.timeline();
+    animation11pe .set(pedestrian2, {ease: "none",      x:0, rotation:"-70_short"})
+        .to(pedestrian2, 1,{ease: "none",   y:+120,})
+        .to(pedestrian2, 1,{ease: "none",   y:+200, })
+        .to(pedestrian2, 1,{ease: "none",   y:+280, })
+        .to(pedestrian2, 1,{ease: "none",   y:+360, })
+        .to(pedestrian2, 1,{ease: "none",   y:+440, })
+}
 ///15. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
