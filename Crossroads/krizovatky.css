@@ -102,13 +102,13 @@ article {
     transform: rotate(-90deg);
 }
 .carGreen9{
-    top: 230px;
-    left: 460px;
+    top: 70px;
+    left: 280px;
     transform: rotate(-90deg);
 }
 .carGreen10{
-    top: 320px;
-    left: 400px;
+    top: 220px;
+    left: 250px;
     transform: rotate(-90deg);
     width: 200px;
 }
@@ -196,13 +196,15 @@ article {
 }
 .carYellow9{
     top: -240px;
-    left:170px;
+    left:100px;
     transform: rotate(-180deg);
+    width: 60px;
 }
 .carYellow10{
-    top: 280px;
-    left:100px;
+    top: 158px;
+    left:40px;
     transform: rotate(90deg);
+    width: 82px;
 }
 
 .carYellow12{
@@ -220,15 +222,18 @@ article {
     transform: rotate(90deg);
 }
 
+#tram{
+    width: 55px;
+}
 .tram3{
     top: 360px;
     left: 208px;
     width: 80px;
 }
 .tram9{
-    top: 580px;
-    left: 385px;
-    width: 80px;
+    top: 305px;
+    left: 242px;
+    width: 50px;
 }
 .pedestrian1{
     top: 120px;
