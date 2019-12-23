@@ -370,8 +370,9 @@ function move15YellowCar(){
     animation15YC.set(svgYellowCar, {ease: "none", y: 0})
         .to(svgYellowCar, 0.6,{ease: "none",   y:"-=100"})
         .to(svgYellowCar, 0.6,{ease: "none",   y:"-=100", x:"-=20",  rotation:"-20_short"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-=80", x:"-=40",  rotation:"-40_short"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-=80", x:"-=60",  rotation:"-70_short"})
+        .to(svgYellowCar, 0.6,{ease: "none", y:"-=50", x:"-=40",  rotation:"-40_short"})
+        .to(svgYellowCar, 0.6,{ease: "none", y:"-=55", x:"-=50",  rotation:"-55_short"})
+        .to(svgYellowCar, 0.6,{ease: "none", y:"-=50", x:"-=60",  rotation:"-70_short"})
         .to(svgYellowCar, 0.6,{ease: "none",               y:"-=20", x:"-=60", rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"              })
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"                });
