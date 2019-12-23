@@ -60,23 +60,23 @@ function move2GreenCar() {
         let animation2 = gsap.timeline();
         animation2.set(svgGreenCar, {ease: "none", x: 0})
             .to(svgGreenCar,0.6, {ease: "none", x: 100,})
-            .to(svgGreenCar,0.6, {ease: "none", x: 180, y: "+=20", rotation: "40_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=60", rotation: "70_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=120", rotation: "90_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=180"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 190, y: "+=220"})
-            .to(svgGreenCar,0.6, {ease: "none", x: 190, y: "+=250"});
+            .to(svgGreenCar,0.6, {ease: "none", x: 140, y: "+=20", rotation: "40_short"})
+            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=60", rotation: "70_short"})
+            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=120", rotation: "90_short"})
+            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=180"})
+            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=220"})
+            .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
 }
 function move2YellowCar() {
         let animation2w = gsap.timeline();
         animation2w.set(svgYellowCar, {ease: "none", y: 0})
             .to(svgYellowCar,0.6, {ease: "none", y: -100,})
-            .to(svgYellowCar,0.6, {ease: "none", y: -180, x: "+=20", rotation: "40_short"})
-            .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=60", rotation: "70_short"})
-            .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=120", rotation: "90_short"})
-            .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=180"})
-            .to(svgYellowCar, 0.6, {ease: "none", y: -210, x: "+=220"})
-            .to(svgYellowCar,0.6, {ease: "none", y: -210, x: "+=250"});
+            .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=10", rotation: "20_short"})
+            .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=20", rotation: "40_short"})
+            .to(svgYellowCar, 0.4, {ease: "none", y: -150, x: "+=20", rotation: "70_short"})
+            .to(svgYellowCar, 0.3, {ease: "none", y: -150, x: "+=30", rotation: "90_short"})
+            .to(svgYellowCar, 0.6, {ease: "none", y: -150, x: "+=120"})
+            .to(svgYellowCar,0.6, {ease: "none", y: -150, x: "+=250"});
 }
 
 ///3. az 5. krizovatka/ 1 auto + elektricka Tram ////////////////////////////////////////////////////////////////////////
@@ -85,12 +85,12 @@ function move3to5Tram() {
     animationT .set(svgTram, {ease: "none",     y:0})
         .to(svgTram,0.6,{ease: "none",   y:-100,})
         .to(svgTram,0.6,{ease: "none",   y:-180, x:"+=20",  rotation:"20_short"})
-        .to(svgTram, 0.6,{ease: "none", y:-220, x:"+=40",  rotation:"45_short"})
-        .to(svgTram, 0.6,{ease: "none", y:-290, x:"+=60",  rotation:"70_short"})
-        .to(svgTram, 0.6,{ease: "none", y:-312, x:"+=120", rotation:"90_short"})
-        .to(svgTram, 0.6,{ease: "none", y:-312,               x:"+=180"})
-        .to(svgTram, 0.6,{ease: "none", y:-312,               x:"+=220"})
-        .to(svgTram,0.6,{ease: "none",   y:-312,               x:"+=250"});
+        .to(svgTram, 0.6,{ease: "none", y:-220, x:"+=40",  rotation:"55_short"})
+        .to(svgTram, 0.6,{ease: "none", y:-250, x:"+=50",  rotation:"70_short"})
+        .to(svgTram, 0.6,{ease: "none", y:-260, x:"+=110", rotation:"90_short"})
+        .to(svgTram, 0.6,{ease: "none", y:-260,               x:"+=180"})
+        .to(svgTram, 0.6,{ease: "none", y:-260,               x:"+=220"})
+        .to(svgTram,0.6,{ease: "none",   y:-260,               x:"+=250"});
 }
 function move3to5GreenCar(){
     let animation3 = gsap.timeline();
@@ -106,33 +106,35 @@ function move3to5GreenCar(){
 function move6GreenCar(){
     let animation4 = gsap.timeline();
     animation4 .set(svgGreenCar, {ease: "none",      x:0, })
-        .to(svgGreenCar,0.6,{ease: "none",   x:100})
-        .to(svgGreenCar, 0.6,{ease: "none", x:170, y:"+=30",  rotation:"30_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"+=40", rotation:"45_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:250, y:"+=50",  rotation:"50_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:300, y:"+=55", rotation:"40_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:350, y:"+=40",  rotation:"30_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:400, y:"+=30", rotation:"20_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:450, y:"+=20",  rotation:"10_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:500, y:"+=10"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=20",  rotation:"10_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:600, y:"+=10"})
+        .to(svgGreenCar,0.6,{ease: "none",   x:80})
+        .to(svgGreenCar, 0.6,{ease: "none", x:130, y:"+=30",  rotation:"30_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:180, y:"+=40", rotation:"45_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"+=40",  rotation:"50_short"})
+        .to(svgGreenCar, 0.4,{ease: "none", x:250, y:"+=20", rotation:"30_short"})
+        .to(svgGreenCar, 0.4,{ease: "none", x:280, y:"+=20",  rotation:"20_short"})
+        .to(svgGreenCar,0.4,{ease: "none", x:330, y:"+=10", rotation:"0_short"})
+        .to(svgGreenCar, 0.4,{ease: "none", x:380, y:"+=10",  rotation:"-10_short"})
+        .to(svgGreenCar, 0.5,{ease: "none", x:450, y:"-=20",rotation:"-10_short"})
+        .to(svgGreenCar, 0.5,{ease: "none", x:500,  rotation:"-10_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=10"})
 }
 function move6YellowCar() {
     let animation4 = gsap.timeline();
     animation4.set(svgYellowCar, {ease: "none", y: 0,})
-        .to(svgYellowCar,0.6, {ease: "none", y: -100,x: "-=10", rotation: "-20_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -150, x: "-=30", rotation: "-30_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -200, x: "-=40", rotation: "-45_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -250, x: "-=50", rotation: "-50_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -300, x: "-=55", rotation: "-60_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -320, x: "-=60", rotation: "-70_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -320, x: "-=70", rotation: "-80_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -320, x: "-=80", rotation: "-90_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -300, x: "-=90", rotation: "-100_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -270, x: "-=80", rotation: "-110_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -240, x: "-=70", rotation: "-130_short"})
-        .to(svgYellowCar, 0.6, {ease: "none", y: -200, x: "-=60", rotation: "-140_short"})
+        .to(svgYellowCar, 0.4,{ease: "none", y:-30,x:"-=10", rotation:"-10_short"})
+        .to(svgYellowCar, 0.3,{ease: "none", y:-60,x:"-=10", rotation:"-20_short"})
+        .to(svgYellowCar,0.3, {ease: "none", y: -80,x: "-=20", rotation: "-30_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -110, x: "-=30", rotation: "-45_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -130, x: "-=30", rotation: "-60_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -145, x: "-=30", rotation: "-75_short"})
+        .to(svgYellowCar, 0.5, {ease: "none", y: -160, x: "-=40", rotation: "-90_short"})
+        .to(svgYellowCar, 0.5, {ease: "none", y: -160, x: "-=40", rotation: "-100_short"})
+        .to(svgYellowCar, 0.5, {ease: "none", y: -150, x: "-=40", rotation: "-110_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -120, x: "-=45", rotation: "-120_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -100, x: "-=45", rotation: "-130_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -80, x: "-=30", rotation: "-140_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -60, x: "-=30", rotation: "-140_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -40, x: "-=30", rotation: "-140_short"})
 }
 ///7. krizovatka/ 2 auta ////////////////////////////////////////////////////////////////////////
 function move7YellowCar() {
@@ -153,11 +155,11 @@ function move7GreenCar() {
     let animation7 = gsap.timeline();
     animation7.set(svgGreenCar, {ease: "none", y: 0,})
         .to(svgGreenCar,0.6,{ease: "none",   x:100})
-        .to(svgGreenCar,0.6,{ease: "none",   x:200, y:"-=20",  rotation:"-20_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:260, y:"-=40",  rotation:"-40_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:320, y:"-=60",  rotation:"-55_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:370, y:"-=80",  rotation:"-70_short"})
-        .to(svgGreenCar, 0.6,{ease: "none",x:420, y:"-=160", rotation:"-90_short"})
+        .to(svgGreenCar,0.5,{ease: "none",   x:160, y:"-=20",  rotation:"-20_short"})
+        .to(svgGreenCar, 0.5,{ease: "none", x:190, y:"-=30",  rotation:"-40_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:220, y:"-=60",  rotation:"-55_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:250, y:"-=60",  rotation:"-70_short"})
+        .to(svgGreenCar, 0.6,{ease: "none",x:280, y:"-=160", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",y:"-=250"});
 }
@@ -180,11 +182,11 @@ function move8BlackCar() {
 function move8YellowCar() {
     let animation8 = gsap.timeline();
     animation8.set(svgYellowCar, {ease: "none", y: 0,})
-        .to(svgYellowCar,0.6,{ease: "none",   y:"-100"})
-        .to(svgYellowCar,0.6,{ease: "none",   y:"-180", x:"-=20",  rotation:"-30_short"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-240", x:"-=60",  rotation:"-50_short"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-280", x:"-=120", rotation:"-70_short"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-320",x:"-=180",rotation:"-90_short"})
+        .to(svgYellowCar,0.6,{ease: "none",   y:-70})
+        .to(svgYellowCar,0.5,{ease: "none",   y:-130, x:"-=20",  rotation:"-30_short"})
+        .to(svgYellowCar, 0.5,{ease: "none", y:-180, x:"-=40",  rotation:"-50_short"})
+        .to(svgYellowCar, 0.5,{ease: "none", y:-200, x:"-=40", rotation:"-70_short"})
+        .to(svgYellowCar, 0.6,{ease: "none",y:-220,x:"-=80",rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",               x:"-=220"})
         .to(svgYellowCar,0.6,{ease: "none",                 x:"-=250"});
 
@@ -192,14 +194,15 @@ function move8YellowCar() {
 function move8GreenCar() {
     let animation8 = gsap.timeline();
     animation8.set(svgGreenCar, {ease: "none", x: 0,})
-        .to(svgGreenCar,0.6, {ease: "none", x: 100})
-        .to(svgGreenCar,0.6, {ease: "none", x: 180, y: "-=20", rotation: "-20_short"})
-        .to(svgGreenCar, 0.6, {ease: "none", x: 240, y: "-=40", rotation: "-40_short"})
-        .to(svgGreenCar, 0.6, {ease: "none", x: 290, y: "-=60", rotation: "-55_short"})
-        .to(svgGreenCar, 0.6, {ease: "none", x: 340, y: "-=80", rotation: "-70_short"})
-        .to(svgGreenCar, 0.6, {ease: "none", x: 380, y: "-=160", rotation: "-90_short"})
-        .to(svgGreenCar, 0.6, {ease: "none", y: "-=220"})
-        .to(svgGreenCar,0.6, {ease: "none", y: "-=250"});
+        .to(svgGreenCar,0.6, {ease: "none", x: 70})
+        .to(svgGreenCar,0.4, {ease: "none", x: 100, y: "-=20",rotation:"-15_short"})
+        .to(svgGreenCar,0.4, {ease: "none", x: 130, y: "-=20", rotation: "-30_short"})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 170, y: "-=30", rotation: "-50_short"})
+        .to(svgGreenCar, 0.5, {ease: "none", x: 210, y: "-=40", rotation: "-70_short"})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 230, y: "-=50", rotation: "-90_short"})
+        .to(svgGreenCar, 0.6, {ease: "none", y: "-=120"})
+        .to(svgGreenCar,0.6, {ease: "none", y: "-=100"})
+        .to(svgGreenCar,0.6, {ease: "none", y: "-=100"});
 }
 ///9. krizovatka/ 2 auta / 1 elektricka ////////////////////////////////////////////////////////////////////////
 function move9YellowCar() {

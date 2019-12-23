@@ -77,13 +77,13 @@ article {
     left: 20px;
 }
 .carGreen2{
-    top: -170px;
-    left: 450px;
+    top: -250px;
+    left: 440px;
     transform: rotate(-180deg);
 }
 .carGreen3{
-    top: 80px;
-    left: 275px;
+    top: 100px;
+    left: 160px;
     transform: rotate(-90deg);
 }
 .carGreen4{
@@ -97,18 +97,28 @@ article {
     transform: rotate(-90deg);
 }
 .carGreen6{
-    top: 300px;
-    left: 390px;
+    top: 140px;
+    left: 250px;
+    transform: rotate(-90deg);
+}
+.carGreen7{
+    top: 230px;
+    left: 240px;
+    transform: rotate(-90deg);
+}
+.carGreen8{
+    top: 0;
+    left: 250px;
     transform: rotate(-90deg);
 }
 .carGreen9{
-    top: 70px;
-    left: 280px;
+    top: 230px;
+    left: 460px;
     transform: rotate(-90deg);
 }
 .carGreen10{
-    top: 220px;
-    left: 250px;
+    top: 320px;
+    left: 400px;
     transform: rotate(-90deg);
     width: 200px;
 }
@@ -148,13 +158,13 @@ article {
     height: 50%;
 }
 .carBlack2{
-    top: -10px;
-    left: 270px;
+    top: -130px;
+    left: -50px;
     transform: rotate(180deg);
 }
 .carBlack3{
-    top: 10px;
-    left: 320px;
+    top: -120px;
+    left: -10px;
     transform: rotate(180deg);
 }
 .carBlack4{
@@ -176,8 +186,8 @@ article {
     transform: rotate(180deg);
 }
 .carYellow2{
-    top: 230px;
-    left: 305px;
+    top: 130px;
+    left: 325px;
 }
 .carYellow6{
     top: 30px;
@@ -185,26 +195,24 @@ article {
     transform: rotate(145deg);
 }
 .carYellow7{
-    top: 330px;
-    left: 90px;
+    top: 200px;
+    left: 50px;
     transform: rotate(+90deg);
 }
 .carYellow8{
-    top: 60px;
-    left:640px;
+    top: -120px;
+    left:420px;
     transform: rotate(-90deg);
 }
 .carYellow9{
     top: -240px;
-    left:100px;
+    left:170px;
     transform: rotate(-180deg);
-    width: 60px;
 }
 .carYellow10{
-    top: 158px;
-    left:40px;
+    top: 280px;
+    left:100px;
     transform: rotate(90deg);
-    width: 82px;
 }
 
 .carYellow12{
@@ -223,17 +231,17 @@ article {
 }
 
 #tram{
-    width: 55px;
+    width: 50px;
 }
 .tram3{
-    top: 360px;
-    left: 208px;
+    top: 280px;
+    left: 130px;
     width: 80px;
 }
 .tram9{
-    top: 305px;
-    left: 242px;
-    width: 50px;
+    top: 580px;
+    left: 385px;
+    width: 80px;
 }
 .pedestrian1{
     top: 120px;
