@@ -12,13 +12,13 @@ body {
 
 .outer{
     margin: 10px;
-    width: 851px;
-    height: 851px;
+    width: 551px;
+    height: 551px;
     overflow: hidden;
 }
 /*tu sa aj ja niekedy stracam, treba kazde auto na kazdej krizovatke definovat jeho prvotne postavenie,
 potom sa tu aj definuju krizovatky obrazky. */
-article{
+article {
     width: 551px;
     height: 551px;
 }
@@ -70,11 +70,11 @@ article{
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
 #widthGreenCar{
-    width: 150px;
+    width: 140px;
 }
 .carGreen{
-    top: 60px;
-    left: 40px;
+    top: -140px;
+    left: 20px;
 }
 .carGreen2{
     top: -170px;
@@ -138,12 +138,14 @@ article{
 }
 
 #svgBlackCar{
-    width: 90px;
+    width: 50%;
+    height: 50%;
 }
 .carBlack1{
-    top: 580px;
-    left: 445px;
-    width: 103px;
+    top: 380px;
+    left: 285px;
+    width: 25%;
+    height: 50%;
 }
 .carBlack2{
     top: -10px;
@@ -166,11 +168,11 @@ article{
     transform: rotate(-45deg);
 }
 #widthYellowCar{
-    width: 75px;
+    width: 68px;
 }
 .carYellow1{
-    top: -120px;
-    left: 315px;
+    top: -260px;
+    left: 200px;
     transform: rotate(180deg);
 }
 .carYellow2{

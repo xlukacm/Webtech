@@ -16,10 +16,10 @@ function move1GreenCar(){  //zelene auto
     //animacie su jednoduche, spravis autu path skrze x a y suradnice a popritom otacas
     //vyskusajte si nejaku krizovatku u seba a pomente tieto suradnice a pozerajte ako to bude reagovat auto
         .to(svgGreenCar,0.6,{ease: "none",   x:100})
-        .to(svgGreenCar,0.6,{ease: "none",   x:180, y:"-=20",  rotation:"-20_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:240, y:"-=60",  rotation:"-40_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:300, y:"-=100",  rotation:"-70_short"})
-        .to(svgGreenCar, 0.6,{ease: "none",               x:320, y:"-=180", rotation:"-90_short"})
+        .to(svgGreenCar,0.6,{ease: "none",   x:140, y:"-=20",  rotation:"-20_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:180, y:"-=30",  rotation:"-40_short"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"-=40",  rotation:"-70_short"})
+        .to(svgGreenCar, 0.6,{ease: "none",               x:240, y:"-=40", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",                        y:"-=250"});
     //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
@@ -27,13 +27,13 @@ function move1GreenCar(){  //zelene auto
 function move1YellowCar() {
     let animation3w = gsap.timeline();
     animation3w .set(svgYellowCar, {ease: "none",     y:0})
-        .to(svgYellowCar, 0.6,{ease: "none",   y:-130,x:"-=20", rotation:"-20_short"})
-        .to(svgYellowCar, 0.6,{ease: "none",   y:-230,x:"-=60", rotation:"-40_short" })
-        .to(svgYellowCar, 0.6,{ease: "none",   y:-290,x:"-=120", rotation:"-70_short" })
-        .to(svgYellowCar, 0.6,{ease: "none",   y:-330,x:"-=180", rotation:"-90_short" })
+        .to(svgYellowCar, 0.6,{ease: "none",   y:-100})
+        .to(svgYellowCar, 0.3,{ease: "none",   y:-130,x:"-=20", rotation:"-20_short"})
+        .to(svgYellowCar, 0.5,{ease: "none",   y:-165,x:"-=20", rotation:"-40_short" })
+        .to(svgYellowCar, 0.5,{ease: "none",   y:-200,x:"-=40", rotation:"-70_short" })
+        .to(svgYellowCar, 0.6,{ease: "none",   y:-230,x:"-=40", rotation:"-90_short" })
         .to(svgYellowCar, 0.6,{ease: "none",  x:"-=260"})
-        .to(svgYellowCar, 0.6,{ease: "none", })
-        .to(svgYellowCar, 0.6,{ease: "none",  });
+        .to(svgYellowCar, 0.6,{ease: "none",  x:"-=260"})
 }
 
 function move1BlackCar() {

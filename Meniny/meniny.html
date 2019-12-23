@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="meniny.css">
 </head>
 
     <body>
@@ -30,18 +31,18 @@
     </header>
     <p id="namedayToday"></p>
     <label>
-        <input id="namedayInput" type="date">
-        <button id="namedayButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button>
-        <p id="namedayText">Zvoľte dátum a stlačte tlačidlo</p>
-        <p id="dateSK" ></p>
-        <p id="dateSKd" ></p>
-        <p id="dateCZ" ></p>
-        <p id="dateHU" ></p>
-        <p id="datePL" ></p>
-        <p id="dateAT" ></p>
-
-    </label>
-<br>
+        <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
+            <input id="namedayInput" type="date" required>
+        </span>
+        <button id="namedayButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button> <br>
+        <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
+        <div id="dateSK" ></div>
+        <div id="dateSKd"></div>
+        <div id="dateCZ" ></div>
+        <div id="dateHU" ></div>
+        <div id="datePL" ></div>
+        <div id="dateAT" ></div>
+    </label><br>
     <label>
         <input id="nameInput" type="text">
         <button id="nameButton" onclick="findDate()">Nájdi kedy má toto meno meniny</button>
