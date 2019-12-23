@@ -19,8 +19,8 @@ body {
 /*tu sa aj ja niekedy stracam, treba kazde auto na kazdej krizovatke definovat jeho prvotne postavenie,
 potom sa tu aj definuju krizovatky obrazky. */
 article{
-    width: 851px;
-    height: 851px;
+    width: 551px;
+    height: 551px;
 }
 .krizovatka{
     background-image: url("krizovatka1.svg");
@@ -69,46 +69,42 @@ article{
 }
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
+#widthGreenCar{
+    width: 150px;
+}
 .carGreen{
     top: 60px;
-    left: 90px;
-    width: 180px;
+    left: 40px;
 }
 .carGreen2{
     top: -170px;
-    left: 650px;
+    left: 450px;
     transform: rotate(-180deg);
-    width: 180px;
 }
 .carGreen3{
     top: 80px;
     left: 275px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen4{
     top: 280px;
     left: 400px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen5{
     top: 430px;
     left: 380px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen6{
     top: 300px;
     left: 390px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen9{
     top: 230px;
     left: 460px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen10{
     top: 320px;
@@ -125,26 +121,25 @@ article{
     top: 270px;
     left: 395px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen13{
     top: 540px;
     left: 310px;
     transform: rotate(-90deg);
-    width: 180px;
 }
 .carGreen14{
     top: 50px;
     left: 0;
-    width: 180px;
 }
 .carGreen15{
     top: 300px;
     left: 410px;
-    width: 180px;
     transform: rotate(-90deg);
 }
 
+#svgBlackCar{
+    width: 90px;
+}
 .carBlack1{
     top: 580px;
     left: 445px;
@@ -153,87 +148,76 @@ article{
 .carBlack2{
     top: -10px;
     left: 270px;
-    width: 80px;
     transform: rotate(180deg);
 }
 .carBlack3{
     top: 10px;
     left: 320px;
-    width: 80px;
     transform: rotate(180deg);
 }
 .carBlack4{
     top: 10px;
     left: 250px;
-    width: 90px;
     transform: rotate(90deg);
 }
-
 .carBlack5{
     top: 270px;
     left: 650px;
-    width: 90px;
     transform: rotate(-45deg);
+}
+#widthYellowCar{
+    width: 75px;
 }
 .carYellow1{
     top: -120px;
     left: 315px;
-    width: 80px;
     transform: rotate(180deg);
 }
 .carYellow2{
-    top: 430px;
-    left: 505px;
-    width: 100px;
+    top: 230px;
+    left: 305px;
 }
 .carYellow6{
     top: 30px;
     left: 100px;
-    width: 80px;
     transform: rotate(145deg);
 }
 .carYellow7{
     top: 330px;
     left: 90px;
-    width: 80px;
     transform: rotate(+90deg);
 }
 .carYellow8{
     top: 60px;
     left:640px;
-    width: 80px;
     transform: rotate(-90deg);
 }
 .carYellow9{
     top: -240px;
     left:170px;
-    width: 80px;
     transform: rotate(-180deg);
 }
 .carYellow10{
     top: 280px;
     left:100px;
-    width: 100px;
     transform: rotate(90deg);
 }
 
 .carYellow12{
     top: 30px;
     left: 100px;
-    width: 80px;
     transform: rotate(145deg);
 }
 .carYellow14{
     top: 410px;
     left: 385px;
-    width: 100px;
 }
 .carYellow15{
     top: 220px;
     left: 90px;
-    width: 80px;
     transform: rotate(90deg);
 }
+
 .tram3{
     top: 360px;
     left: 208px;
