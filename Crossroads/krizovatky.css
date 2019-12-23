@@ -112,18 +112,18 @@ article{
 }
 .carGreen10{
     top: 320px;
-    left: 420px;
+    left: 400px;
     transform: rotate(-90deg);
     width: 200px;
 }
 .carGreen11{
-    top: 320px;
+    top: 290px;
     left: 60px;
     width: 230px;
 }
 .carGreen12{
     top: 270px;
-    left: 390px;
+    left: 395px;
     transform: rotate(-90deg);
     width: 180px;
 }
@@ -205,7 +205,7 @@ article{
     transform: rotate(-90deg);
 }
 .carYellow9{
-    top: -300px;
+    top: -240px;
     left:170px;
     width: 80px;
     transform: rotate(-180deg);
@@ -224,8 +224,8 @@ article{
     transform: rotate(145deg);
 }
 .carYellow14{
-    top: 430px;
-    left: 505px;
+    top: 410px;
+    left: 385px;
     width: 100px;
 }
 .carYellow15{
