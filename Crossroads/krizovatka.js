@@ -19,7 +19,7 @@ function move1GreenCar(){  //zelene auto
         .to(svgGreenCar,0.6,{ease: "none",   x:140, y:"-=20",  rotation:"-20_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:180, y:"-=30",  rotation:"-40_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"-=40",  rotation:"-70_short"})
-        .to(svgGreenCar, 0.6,{ease: "none",               x:240, y:"-=40", rotation:"-90_short"})
+        .to(svgGreenCar, 0.6,{ease: "none",               x:230, y:"-=40", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",                        y:"-=250"});
     //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
@@ -392,4 +392,21 @@ function move15GreenCar(){
         .to(svgGreenCar, 0.6,{ease: "none",x:230, y:"-=70", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=220"})
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=250"});
+}
+
+
+//-----------------------------------------------------------------------------------------------------
+let myVar;
+let myVar2;
+
+function demoCrossroad1() {
+
+    move1BlackCar();
+    myVar = setTimeout(function(){
+        move1GreenCar();
+    }, 3000);
+
+    myVar2 = setTimeout(function(){
+        move1YellowCar();
+    }, 6000);
 }
