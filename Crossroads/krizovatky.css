@@ -123,8 +123,8 @@ article {
     width: 200px;
 }
 .carGreen11{
-    top: 290px;
-    left: 60px;
+    top: 110px;
+    left: 20px;
     width: 230px;
 }
 .carGreen12{
@@ -245,25 +245,33 @@ article {
     left: 245px;
     width: 50px;
 }
+#pedestrian1,#pedestrian2{
+    width: 70%;
+    height: 70%;
+}
 .pedestrian1{
-    top: 120px;
-    left: 500px;
-    width: 80px;
+    top: 70px;
+    left: 320px;
+    width: 40px;
     /*transform: rotate(60deg);*/
 }
 .pedestrian2{
-    top: 640px;
-    left: 580px;
-    width: 80px;
+    top: 410px;
+    left: 360px;
+    width: 40px;
 }
 .pedestrian3{
     top: 190px;
     left: 660px;
     width: 80px;
 }
+#cycle{
+    width: 70%;
+    height: 70%;
+}
 .cycle1{
-    top: 600px;
-    left: 630px;
+    top: 380px;
+    left: 405px;
     width: 50px;
     height: 120px;
 }

@@ -285,9 +285,7 @@ function move11Pedestrian(){
         .to(pedestrian,0.6,{ease: "none",   y:100,})
         .to(pedestrian,0.6,{ease: "none",   y:200,})
         .to(pedestrian,0.6,{ease: "none",   y:300,})
-        .to(pedestrian,0.6,{ease: "none",   y:400,})
-        .to(pedestrian,0.6,{ease: "none",   y:500,})
-        .to(pedestrian,0.6,{ease: "none",   y:570,})
+        .to(pedestrian,0.6,{ease: "none",   y:380,})
 }
 function move11Pedestrian2(){
     let animation11PE = gsap.timeline();
@@ -295,9 +293,7 @@ function move11Pedestrian2(){
         .to(pedestrian2,0.6,{ease: "none",   y:-100,})
         .to(pedestrian2,0.6,{ease: "none",   y:-200,})
         .to(pedestrian2,0.6,{ease: "none",   y:-300,})
-        .to(pedestrian2,0.6,{ease: "none",   y:-400, })
-        .to(pedestrian2,0.6,{ease: "none",   y:-500, })
-        .to(pedestrian2, 0.6,{ease: "none",   y:-570, })
+        .to(pedestrian2,0.6,{ease: "none",   y:-380, })
 }
 function move11Bike1(){
     let animation11B = gsap.timeline();
@@ -306,9 +302,7 @@ function move11Bike1(){
         .to(bike,0.6,{ease: "none",   y:-200})
         .to(bike, 0.6,{ease: "none",   y:-300})
         .to(bike, 0.6,{ease: "none",   y:-400})
-        .to(bike, 0.6,{ease: "none",   y:-500})
-        .to(bike, 0.6,{ease: "none",   y:-600})
-        .to(bike, 0.6,{ease: "none",   y:-650})
+        .to(bike, 0.4,{ease: "none",   y:-430})
 }
 
 //krizovatka 13 je cyklista ide zarovno s autom, ale cyklista ma prednost, ak auto zataca
