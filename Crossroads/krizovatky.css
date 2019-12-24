@@ -57,6 +57,7 @@ article {
 }
 .krizovatka12{
     background-image: url("krizovatka12.png");
+    background-size: 551px 551px;
 }
 .krizovatka13{
     background-image: url("krizovatka13.svg");
@@ -128,22 +129,22 @@ article {
     width: 230px;
 }
 .carGreen12{
-    top: 270px;
-    left: 395px;
+    top: 130px;
+    left: 250px;
     transform: rotate(-90deg);
 }
 .carGreen13{
-    top: 540px;
-    left: 310px;
+    top: 300px;
+    left: 180px;
     transform: rotate(-90deg);
 }
 .carGreen14{
-    top: 50px;
+    top: -160px;
     left: 0;
 }
 .carGreen15{
-    top: 300px;
-    left: 410px;
+    top: 0;
+    left: 250px;
     transform: rotate(-90deg);
 }
 
@@ -168,14 +169,18 @@ article {
     transform: rotate(180deg);
 }
 .carBlack4{
-    top: 10px;
-    left: 250px;
+    top: 0;
+    left: -15px;
     transform: rotate(90deg);
+    width: 25%;
+    height: 50%;
 }
 .carBlack5{
-    top: 270px;
-    left: 650px;
+    top: 70px;
+    left: 430px;
     transform: rotate(-45deg);
+    width: 25%;
+    height: 50%;
 }
 #widthYellowCar{
     width: 68px;
@@ -223,12 +228,12 @@ article {
     transform: rotate(145deg);
 }
 .carYellow14{
-    top: 410px;
-    left: 385px;
+    top: 100px;
+    left: 250px;
 }
 .carYellow15{
-    top: 220px;
-    left: 90px;
+    top: -30px;
+    left: 60px;
     transform: rotate(90deg);
 }
 
@@ -261,24 +266,24 @@ article {
     width: 40px;
 }
 .pedestrian3{
-    top: 190px;
-    left: 660px;
-    width: 80px;
+    top: 110px;
+    left: 460px;
+    width: 40px;
 }
 #cycle{
     width: 70%;
     height: 70%;
 }
-.cycle1{
+.cycle11{
     top: 380px;
     left: 405px;
     width: 50px;
     height: 120px;
 }
 
-.cycle2{
-    top: 630px;
-    left: 450px;
+.cycle13{
+    top: 390px;
+    left: 295px;
     width: 50px;
     height: 120px;
 }
