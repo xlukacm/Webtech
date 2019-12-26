@@ -22,10 +22,7 @@ function addZero(number){
 function clearDisplay() {
     let countries = document.getElementById("countries");
     let input_countries = countries.getElementsByTagName("input");
-    for (let i=0, length = input_countries.length; i<length; i++){
-        let str = 'date'+input_countries[i].value;
-        document.getElementById(str).style.display="none";
-    }
+    document.getElementById("dates").style.display="none";
 }
 
 
@@ -38,12 +35,12 @@ function choseMeniny() {
     }
     let countries = document.getElementById("countries");
     let input_countries = countries.getElementsByTagName("input");
+    document.getElementById("dates").style.display="block";
     for (let i=0, length = input_countries.length; i<length; i++){
         let date = new Date(namedayInput);
         let str = 'date'+input_countries[i].value;
 
         str = str.replace(/^\s+|\s+$/g,"");
-        document.getElementById(str).style.display="block";
         document.getElementById(str).innerText =  input_countries[i].value+":" + findMeniny(date,input_countries[i].value);
         document.getElementById("namedayText").style.display="none";
     }

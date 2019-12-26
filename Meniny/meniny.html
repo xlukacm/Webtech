@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="meniny.css">
 </head>
@@ -36,13 +37,37 @@
         </span>
         <button id="namedayButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button> <br>
         <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
-        <div id="dateSK" ></div>
-        <div id="dateSKd"></div>
-        <div id="dateCZ" ></div>
-        <div id="dateHU" ></div>
-        <div id="datePL" ></div>
-        <div id="dateAT" ></div>
     </label><br>
+    <div id="dates">
+        <table class="table">
+            <tbody>
+            <tr >
+                <td class="flag-icon-background flag-icon-sk"></td>
+                <td ><div id="dateSK" ></div></td>
+            </tr>
+            <tr>
+                <td class="flag-icon-background flag-icon-sk" ></td>
+                <td ><div id="dateSKd" ></div></td>
+            </tr>
+            <tr>
+                <td class="flag-icon-background flag-icon-cz"></td>
+                <td ><div id="dateCZ" ></div></td>
+            </tr>
+            <tr>
+                <td class="flag-icon-background flag-icon-hu"></td>
+                <td ><div id="dateHU" ></div></td>
+            </tr>
+            <tr>
+                <td class="flag-icon-background flag-icon-pl"></td>
+                <td ><div id="datePL" ></div></td>
+            </tr>
+            <tr>
+                <td class="flag-icon-background flag-icon-at"></td>
+                <td ><div id="dateAT" ></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div> <br>
     <label>
         <input id="nameInput" type="text">
         <button id="nameButton" onclick="findDate()">Nájdi kedy má toto meno meniny</button>
@@ -65,3 +90,5 @@
     </script>
 </body>
 </html>
+
+<!--https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css-->
