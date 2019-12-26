@@ -245,7 +245,15 @@ function moveTram9(){
 }
 
 ///10. krizovatka/ 2 auta / 1 elektricka ////////////////////////////////////////////////////////////////////////
-function move10YellowCar() {
+
+// let x = document.getElementsByClassName("carGreen10");
+// x.addEventListener("click", move10GreenCar);
+//
+// let z = document.getElementsByClassName("carYellow10");
+// z.addEventListener("click", move10YellowCar);
+
+
+ function move10YellowCar() {
     let animation10YC = gsap.timeline();
     animation10YC.set(svgYellowCar, {ease: "none", y: 0,})
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-150"})
@@ -254,6 +262,7 @@ function move10YellowCar() {
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-600"})
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-750"})
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-900"})
+
 }
 function move10GreenCar() {
     let animation10GC = gsap.timeline();
@@ -284,25 +293,23 @@ function move11Pedestrian(){
     animation11PE .set(pedestrian, {ease: "none",      x:0, rotation:"60_short"})
         .to(pedestrian,0.6,{ease: "none",   y:100,})
         .to(pedestrian,0.6,{ease: "none",   y:200,})
-        .to(pedestrian,0.6,{ease: "none",   y:300,})
-        .to(pedestrian,0.6,{ease: "none",   y:380,})
+        .to(pedestrian,0.6,{ease: "none",   y:300,});
 }
 function move11Pedestrian2(){
     let animation11PE = gsap.timeline();
     animation11PE .set(pedestrian2, {ease: "none",      x:0, rotation:"100_short"})
         .to(pedestrian2,0.6,{ease: "none",   y:-100,})
         .to(pedestrian2,0.6,{ease: "none",   y:-200,})
-        .to(pedestrian2,0.6,{ease: "none",   y:-300,})
-        .to(pedestrian2,0.6,{ease: "none",   y:-380, })
+        .to(pedestrian2,0.6,{ease: "none",   y:-300,});
 }
 function move11Bike1(){
     let animation11B = gsap.timeline();
     animation11B .set(bike, {ease: "none",      y:0})
         .to(bike,0.6,{ease: "none",   y:-100})
         .to(bike,0.6,{ease: "none",   y:-200})
-        .to(bike, 0.6,{ease: "none",   y:-300})
-        .to(bike, 0.6,{ease: "none",   y:-400})
-        .to(bike, 0.4,{ease: "none",   y:-430})
+        .to(bike, 0.6,{ease: "none",   y:-300, x:20, rotation: "35_short"})
+        .to(bike, 0.6,{ease: "none",   y:-340, x:40, rotation: "70_short"})
+
 }
 
 //krizovatka 13 je cyklista ide zarovno s autom, ale cyklista ma prednost, ak auto zataca
