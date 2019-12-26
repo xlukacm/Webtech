@@ -39,14 +39,11 @@
     word-wrap:normal;
 }
 [data-tip]:hover:before,
-[data-tip]:hover:after {
-    display:block;
-}
+[data-tip]:hover:after { display:block; }
 .flag-icon-background flag-icon-sk{
     width: 16px;
     height: 16px;
 }
-
 .table{
     width: fit-content;
     height: 17px;}
@@ -56,4 +53,3 @@
     margin:0;
     padding: 0 0.75em 0 0.75em;
 }
-.table td div{}
