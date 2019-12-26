@@ -40,10 +40,6 @@
 }
 [data-tip]:hover:before,
 [data-tip]:hover:after { display:block; }
-.flag-icon-background flag-icon-sk{
-    width: 16px;
-    height: 16px;
-}
 .table{
     width: fit-content;
     height: 17px;}
