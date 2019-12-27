@@ -403,17 +403,112 @@ function move15GreenCar(){
 
 
 //-----------------------------------------------------------------------------------------------------
-let myVar;
+/*let pause;
 let myVar2;
 
 function demoCrossroad1() {
 
     move1BlackCar();
-    myVar = setTimeout(function(){
+    pause = setTimeout(function(){
         move1GreenCar();
     }, 3000);
 
     myVar2 = setTimeout(function(){
         move1YellowCar();
     }, 6000);
+}*/
+
+let pause;
+
+function demoCrossroad1() {
+
+    move1BlackCar();
+    pause = setInterval(move1GreenCar, 4300);
+    pause = setInterval(move1YellowCar,8100);
+
+}
+function demoCrossroad2() {
+
+    move2GreenCar();
+    pause = setInterval(move2YellowCar,3400);
+    pause = setInterval(move2BlackCar, 7400);
+
+}function demoCrossroad3() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad4() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad5() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad6() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad7() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad8() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad9() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad10() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad11() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad12() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad13() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad14() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
+}function demoCrossroad15() {
+
+    move1BlackCar();
+    pause = setInterval(move1YellowCar,3800);
+    pause = setInterval(move1GreenCar, 8100);
+
 }
