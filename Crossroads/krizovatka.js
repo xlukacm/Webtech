@@ -27,7 +27,6 @@ function move1GreenCar(){  //zelene auto
         .to(svgGreenCar, 0.6,{ease: "none",               x:230, y:"-=40", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",                        y:"-=250"});
-        Object.freeze(svgGreenCar);
     //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
         if(window.cross1yellowMoved && window.cross1blackMoved){
             document.getElementById('wronglog').style.display = "block";
@@ -93,7 +92,7 @@ function move2GreenCar() {
             .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=180"})
             .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=220"})
             .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
-        if(window.cross2yellowMoved && window.cross2greenMoved){
+        if(window.cross2yellowMoved && window.cross2blackMoved){
             document.getElementById('wronglog').style.display = "block";
         }
 }
@@ -152,10 +151,10 @@ let cross6yellowMoved = false;
 function move6GreenCar(){
     window.cross6greenMoved = true;
     animation .set(svgGreenCar, {ease: "none",      x:0, })
-        .to(svgGreenCar,0.6,{ease: "none",   x:80})
-        .to(svgGreenCar, 0.6,{ease: "none", x:130, y:"+=30",  rotation:"30_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:180, y:"+=40", rotation:"45_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"+=40",  rotation:"50_short"})
+        .to(svgGreenCar,0.5,{ease: "none",   x:80})
+        .to(svgGreenCar, 0.5,{ease: "none", x:130, y:"+=30",  rotation:"30_short"})
+        .to(svgGreenCar, 0.5,{ease: "none", x:180, y:"+=40", rotation:"45_short"})
+        .to(svgGreenCar, 0.5,{ease: "none", x:210, y:"+=40",  rotation:"50_short"})
         .to(svgGreenCar, 0.4,{ease: "none", x:250, y:"+=20", rotation:"30_short"})
         .to(svgGreenCar, 0.4,{ease: "none", x:280, y:"+=20",  rotation:"20_short"})
         .to(svgGreenCar,0.4,{ease: "none", x:330, y:"+=10", rotation:"0_short"})
@@ -176,9 +175,9 @@ function move6YellowCar() {
         .to(svgYellowCar, 0.4, {ease: "none", y: -110, x: "-=30", rotation: "-45_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -130, x: "-=30", rotation: "-60_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -145, x: "-=30", rotation: "-75_short"})
-        .to(svgYellowCar, 0.5, {ease: "none", y: -160, x: "-=40", rotation: "-90_short"})
-        .to(svgYellowCar, 0.5, {ease: "none", y: -160, x: "-=40", rotation: "-100_short"})
-        .to(svgYellowCar, 0.5, {ease: "none", y: -150, x: "-=40", rotation: "-110_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -160, x: "-=40", rotation: "-90_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -160, x: "-=40", rotation: "-100_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -150, x: "-=40", rotation: "-110_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -120, x: "-=45", rotation: "-120_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -100, x: "-=45", rotation: "-130_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -80, x: "-=30", rotation: "-140_short"})
@@ -196,16 +195,15 @@ let cross7yellowMoved = false;
 function move7YellowCar() {
     window.cross7yellowMoved = true;
     animation.set(svgYellowCar, {ease: "none", x: 0,})
-        .to(svgYellowCar, 0.6,{ease: "none",   y:"-100"})
-        .to(svgYellowCar, 0.6,{ease: "none",   y:"-180"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-260"})
-        .to(svgYellowCar, 0.6,{ease: "none", y:"-340"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-420"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-500"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-580"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-660"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-740"})
-        .to(svgYellowCar, 0.6,{ease: "none",y:"-820"});
+        .to(svgYellowCar, 0.5,{ease: "none",   y:"-100"})
+        .to(svgYellowCar, 0.5,{ease: "none",   y:"-180"})
+        .to(svgYellowCar, 0.5,{ease: "none", y:"-260"})
+        .to(svgYellowCar, 0.5,{ease: "none", y:"-340"})
+        .to(svgYellowCar, 0.5,{ease: "none",y:"-420"})
+        .to(svgYellowCar, 0.5,{ease: "none",y:"-500"})
+        .to(svgYellowCar, 0.5,{ease: "none",y:"-580"})
+        .to(svgYellowCar, 0.5,{ease: "none",y:"-660"})
+        .to(svgYellowCar, 0.5,{ease: "none",y:"-740"});
     if(window.cross7greenMoved){
         document.getElementById('wronglog').style.display = "block";
     }
@@ -595,9 +593,12 @@ function demoCrossroad1() {
     }, 6000);
 }*/
 
-let pause;
 
 function demoCrossroad1() {
+    // animation.kill();
+    // animation.invalidate().restart();
+    // animation.play();
+    animation.restart();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
@@ -612,7 +613,16 @@ function demoCrossroad1() {
     // pause = setInterval(move1YellowCar,8100);
 }
 function demoCrossroad2() {
-    move2GreenCar();
+    if (!animation.isActive()) {
+        if (!animation.isActive()) {
+            if (!animation.isActive()) {
+                move2BlackCar();
+            }
+            move2GreenCar();
+        }
+        move2YellowCar();
+    }
+
 }
 function demoCrossroad3() {
     if (!animation.isActive()) {
