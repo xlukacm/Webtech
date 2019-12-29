@@ -7,7 +7,9 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
-
+}
+header{
+    box-sizing: border-box;
 }
 
 .outer{
@@ -258,7 +260,6 @@ article {
     top: 170px;
     left: 320px;
     width: 40px;
-    /*transform: rotate(60deg);*/
 }
 .pedestrian2{
     top: 310px;
@@ -287,6 +288,14 @@ article {
     width: 50px;
     height: 120px;
 }
+#rightlog{
+    display: none;
+}
+#wronglog{
+    display: none;
+}
+
+
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
 
 .autoWhite1{
@@ -315,65 +324,15 @@ article {
     /*animation-direction: alternate;*/
 }
 div{
-
     position: relative;
-    animation: move 5s;
-    /*animation-iteration-count: revert;*/
-    animation-timing-function: linear;
-    animation-direction: alternate;
+    /*animation: move 5s;*/
+    /*!*animation-iteration-count: revert;*!*/
+    /*animation-timing-function: linear;*/
+    /*animation-direction: alternate;*/
     /*animation-direction: alternate;*/
 
     /*-webkit-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
     /*-moz-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
     /*-o-transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645);*/
     /*transition: all 600ms cubic-bezier(0.175, 0.295, 0.830, 0.645); !* custom *!*/
-
-}
-
-@keyframes move {
-    /*najprv sme to pracovali v CSS ale nakoniec sme nasli lepsi sposob cez zelenu ponozku*/
-    /*from {top: 140px; left: 270px; }*/
-    /*15%{top: 180px; left: 270px;}*/
-    /*20% {top: 220px; left: 270px;transform: rotate(90deg);}*/
-    /*25% {top: 260px; left: 270px;transform: rotate(90deg);}*/
-    /*30%{ top: 300px; left: 270px;transform: rotate(90deg);}*/
-    /*35%{ top: 340px; left: 270px;transform: rotate(80deg);}*/
-    /*40% {top: 380px; left: 290px;transform: rotate(60deg);}*/
-    /*45% {top: 420px; left: 330px;transform: rotate(40deg);}*/
-    /*50%{top: 430px; left: 380px;transform: rotate(20deg);}*/
-    /*55%{top: 440px; left: 430px;transform: rotate(10deg);}*/
-    /*60%{top: 450px; left: 470px;transform: rotate(0deg);}*/
-    /*to {top: 450px; left: 520px;transform: rotate(0deg);}*/
-
-
-
-
-
-   /*from  {top: 0; left: 0%;transform: rotate(90deg) }*/
-   /* 25%   {top: 0; left: 10%; transform:  rotate(180deg)}*/
-   /* 40%   {transform: rotate(90deg)}*/
-   /* 50%   {top: 10%; left: 10%;}*/
-   /* 70%   {transform: rotate(90deg)}*/
-   /* 75%   {top: 10%; left: 0px;}*/
-   /* 90%   {transform: rotate(90deg)}*/
-   /*to {top: 0px; left: 0px; transform: rotate(90deg) }*/
-
-    /*0% { left: 0px; top: 0%; transform: translate(0%, 0%) ;}*/
-    /*25% { left: 0px; top: 100%; transform: translate(0%, 100%)  ;}*/
-    /*35% { left: 0px; top: 100%; transform: translate(0%, 100%)  rotate(90deg);}*/
-    /*50% { left: 100%; top: 100%; transform: translate(100%,100%);}*/
-    /*55% { left: 100%; top: 100%; transform: rotate(90deg);}*/
-    /*75% { left: 100%; top: 0%; transform: translate(100%, 0%)  ;}*/
-    /*80% {left: 100%; top: 0%; transform:  rotate(90deg);}*/
-    /*100% { left: 0px; top: 0%; transform: translate(0%, 0%) ;}*/
-
-    /*0%{ transform: translate(100px)}*/
-    /*75%{ transform: translate(300px)}*/
-    /*100%{transform: translate(0px)}*/
-
-    /*0%{ left: 0px; top: 0px;}*/
-    /*25%{  left: 1000px; top: 0px;}*/
-    /*50%{ left: 1000px; top: 1000px;}*/
-    /*75%{ left: 0px; top: 1000px;}*/
-    /*100%{left: 0px; top: 0px;}*/
 }
