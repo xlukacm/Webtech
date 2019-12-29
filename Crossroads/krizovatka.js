@@ -495,26 +495,36 @@ function move13Bike2(){
     }
 }
 ///14. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
+let cross14pedMoved = false;
+let cross14greenMoved = false;
+let cross14blackMoved = false;
+let cross14yellowMoved = false;
 
 function move14GreenCar(){
-    window.cross13bikeMoved = true;
+    window.cross14greenMoved = true;
     animation.set(svgGreenCar, {ease: "none", x: 0})
         .to(svgGreenCar, 0.6, {ease: "none", x: 150,})
         .to(svgGreenCar, 0.6, {ease: "none", x: 300})
         .to(svgGreenCar, 0.6, {ease: "none", x: 450})
         .to(svgGreenCar, 0.6, {ease: "none", x: 600})
         .to(svgGreenCar, 0.6, {ease: "none", x: 750})
-        .to(svgGreenCar, 0.6, {ease: "none", x: 900})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 900});
+    if(!window.cross14pedMoved || window.cross14blackMoved || window.cross14yellowMoved){
+        document.getElementById('wronglog').style.display = "block";
+    }
 }
 function move14Pedestrian2(){
-    window.cross13bikeMoved = true;
+    window.cross14pedMoved = true;
     animation .set(pedestrian2, {ease: "none",      x:0, rotation:"-70_short"})
         .to(pedestrian2, 0.6,{ease: "none",   y:120,})
         .to(pedestrian2, 0.6,{ease: "none",   y:200, })
         .to(pedestrian2, 0.6,{ease: "none",   y:290, })
+    if(window.cross14greenMoved || window.cross14blackMoved || window.cross14yellowMoved){
+        document.getElementById('wronglog').style.display = "block";
+    }
 }
 function move14YellowCar(){
-    window.cross13bikeMoved = true;
+    window.cross14yellowMoved = true;
     animation.set(svgYellowCar, {ease: "none", y: 0})
         .to(svgYellowCar, 0.6,{ease: "none",   y:-100})
         .to(svgYellowCar, 0.6,{ease: "none",   y:-180})
@@ -524,6 +534,27 @@ function move14YellowCar(){
         .to(svgYellowCar, 0.5,{ease: "none", y:-250,       x:"-=70",rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"});
+    if(window.cross14blackMoved && window.cross14pedMoved && window.cross14greenMoved){
+        document.getElementById('rightlog').style.display = "block";
+        document.getElementById('demoCrossroad').style.display = "none";
+    }
+}
+
+function move14BlackCar() {
+    window.cross14blackMoved = true;
+    animation .set(svgBlackCar, {ease: "none",      y:0})
+        .to(svgBlackCar, 0.8,{ease: "none",   y:200,})
+        .to(svgBlackCar, 0.8,{ease: "none",   y:400, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:600, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:800, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:900, });
+    if(window.cross14yellowMoved ){
+        document.getElementById('wronglog').style.display = "block";
+    }
+    if(window.cross14yellowMoved && !window.cross14greenMoved){
+        document.getElementById('rightlog').style.display = "block";
+        document.getElementById('demoCrossroad').style.display = "none";
+    }
 }
 ///15. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
 let cross15blackMoved = false;
