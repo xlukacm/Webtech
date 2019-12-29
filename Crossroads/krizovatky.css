@@ -294,7 +294,9 @@ article {
 #wronglog{
     display: none;
 }
-
+#demoCrossroad{
+    display: block;
+}
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
 
