@@ -609,27 +609,10 @@ function move15GreenCar(){
 
 
 //-----------------------------------------------------------------------------------------------------
-/*let pause;
-let myVar2;
-
-function demoCrossroad1() {
-
-    move1BlackCar();
-    pause = setTimeout(function(){
-        move1GreenCar();
-    }, 3000);
-
-    myVar2 = setTimeout(function(){
-        move1YellowCar();
-    }, 6000);
-}*/
 
 
 function demoCrossroad1() {
-    // animation.kill();
-    // animation.invalidate().restart();
-    // animation.play();
-    animation.restart();
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
@@ -639,23 +622,22 @@ function demoCrossroad1() {
         }
         move1YellowCar();
     }
-    // move1BlackCar();
-    // pause = setInterval(move1GreenCar, 4300);
-    // pause = setInterval(move1YellowCar,8100);
 }
 function demoCrossroad2() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
-                move2BlackCar();
+                move2GreenCar();
             }
-            move2GreenCar();
+            move2YellowCar();
         }
-        move2YellowCar();
+        move2BlackCar();
     }
 
 }
 function demoCrossroad3() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move3to5Tram();
@@ -664,6 +646,7 @@ function demoCrossroad3() {
     }
 }
 function demoCrossroad4() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move3to5Tram();
@@ -672,8 +655,7 @@ function demoCrossroad4() {
     }
 }
 function demoCrossroad5() {
-    // if (move3to5Tram()===true)
-    //     move3to5GreenCar();
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move3to5Tram();
@@ -682,6 +664,7 @@ function demoCrossroad5() {
     }
 }
 function demoCrossroad6() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move6GreenCar();
@@ -690,6 +673,7 @@ function demoCrossroad6() {
     }
 }
 function demoCrossroad7() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move7YellowCar();
@@ -698,6 +682,7 @@ function demoCrossroad7() {
     }
 }
 function demoCrossroad8() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if(!animation.isActive()){
@@ -709,7 +694,8 @@ function demoCrossroad8() {
     }
 }
 function demoCrossroad9() {
-        if (!animation.isActive()) {
+    animation.progress(0).clear();
+    if (!animation.isActive()) {
             if(!animation.isActive()){
                 moveTram9();
                 move9YellowCar();
@@ -718,6 +704,7 @@ function demoCrossroad9() {
     }
 }
 function demoCrossroad10() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move10GreenCar();
@@ -726,6 +713,7 @@ function demoCrossroad10() {
     }
 }
 function demoCrossroad11() {
+    animation.progress(0).clear();
     if(!animation.isActive()){
         if (!animation.isActive()) {
             move11Bike1();
@@ -736,6 +724,7 @@ function demoCrossroad11() {
     }
 }
 function demoCrossroad12() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move6YellowCar();
@@ -744,6 +733,7 @@ function demoCrossroad12() {
     }
 }
 function demoCrossroad13() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move13Bike2();
@@ -752,6 +742,7 @@ function demoCrossroad13() {
     }
 }
 function demoCrossroad14() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if(!animation.isActive()){
@@ -766,6 +757,7 @@ function demoCrossroad14() {
     }
 }
 function demoCrossroad15() {
+    animation.progress(0).clear();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if(!animation.isActive()){
@@ -775,4 +767,7 @@ function demoCrossroad15() {
         }
         move15GreenCar();
     }
+}
+function resetCrossroad(){
+    animation.progress(0).clear();
 }
