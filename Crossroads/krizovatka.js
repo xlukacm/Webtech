@@ -49,6 +49,8 @@ function move1YellowCar() {
         if(window.cross1blackMoved && window.cross1greenMoved){
             document.getElementById('rightlog').style.display = "block";
             document.getElementById('demoCrossroad').style.display = "none";
+            document.getElementById('rightArrow').style.display = "block";
+            document.getElementById('leftArrow').style.display = "block";
         }
     document.getElementById('reset').style.display = "block";
 }
@@ -86,6 +88,8 @@ function move2BlackCar() {
         if(window.cross2yellowMoved && window.cross2greenMoved){
             document.getElementById('rightlog').style.display = "block";
             document.getElementById('demoCrossroad').style.display = "none";
+            document.getElementById('rightArrow').style.display = "block";
+            document.getElementById('leftArrow').style.display = "block";
         }
     document.getElementById('reset').style.display = "block";
 }
@@ -157,6 +161,8 @@ function move3to5GreenCar(){
     if(window.cross3tramMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -204,6 +210,8 @@ function move6YellowCar() {
     if(window.cross6greenMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -243,6 +251,8 @@ function move7GreenCar() {
     if(window.cross7yellowMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -304,6 +314,8 @@ function move8GreenCar() {
     if(window.cross8yellowMoved && window.cross8blackMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -325,6 +337,8 @@ function move9YellowCar() {
     if(window.cross9greenMoved && window.cross9tramMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -344,6 +358,8 @@ function move9GreenCar() {
     if(window.cross9yellowMoved && window.cross9tramMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -386,6 +402,8 @@ let cross10greenMoved = false;
      if(window.cross10greenMoved){
          document.getElementById('rightlog').style.display = "block";
          document.getElementById('demoCrossroad').style.display = "none";
+         document.getElementById('rightArrow').style.display = "block";
+         document.getElementById('leftArrow').style.display = "block";
      }
      document.getElementById('reset').style.display = "block";
 }
@@ -425,6 +443,8 @@ function move11GreenCar() {
     if(window.cross11ped1Moved && window.cross11bikeMoved  && window.cross11ped2Moved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     else{
         document.getElementById('wronglog').style.display = "block";
@@ -478,6 +498,8 @@ function move12GreenCar(){
     if(window.cross12yellowMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -522,6 +544,8 @@ function move13GreenCar(){
     if(window.cross13bikeMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
    document.getElementById('reset').style.display = "block";
 }
@@ -585,6 +609,8 @@ function move14YellowCar(){
     if(window.cross14blackMoved  && window.cross14greenMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -604,6 +630,8 @@ function move14BlackCar() {
     if(window.cross14yellowMoved && !window.cross14greenMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -660,6 +688,8 @@ function move15GreenCar(){
     if(window.cross15yellowMoved && window.cross15blackMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
     document.getElementById('reset').style.display = "block";
 }
@@ -681,6 +711,8 @@ function demoCrossroad1() {
         document.getElementById('wronglog').style.display = "none";
         document.getElementById('rightlog').style.display = "none";
         document.getElementById('reset').style.display = "block";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
 }
 function demoCrossroad2() {
@@ -696,6 +728,8 @@ function demoCrossroad2() {
         document.getElementById('wronglog').style.display = "none";
         document.getElementById('rightlog').style.display = "none";
         document.getElementById('reset').style.display = "block";
+        document.getElementById('rightArrow').style.display = "block";
+        document.getElementById('leftArrow').style.display = "block";
     }
 
 }
@@ -710,6 +744,8 @@ function demoCrossroad3() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad4() {
     animation.progress(0).clear();
@@ -722,6 +758,8 @@ function demoCrossroad4() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad5() {
     animation.progress(0).clear();
@@ -734,6 +772,8 @@ function demoCrossroad5() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad6() {
     animation.progress(0).clear();
@@ -746,6 +786,8 @@ function demoCrossroad6() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad7() {
     animation.progress(0).clear();
@@ -758,6 +800,8 @@ function demoCrossroad7() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad8() {
     animation.progress(0).clear();
@@ -773,6 +817,8 @@ function demoCrossroad8() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad9() {
     animation.progress(0).clear();
@@ -786,6 +832,8 @@ function demoCrossroad9() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad10() {
     animation.progress(0).clear();
@@ -798,6 +846,8 @@ function demoCrossroad10() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad11() {
     animation.progress(0).clear();
@@ -812,6 +862,8 @@ function demoCrossroad11() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad12() {
     animation.progress(0).clear();
@@ -824,6 +876,8 @@ function demoCrossroad12() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad13() {
     animation.progress(0).clear();
@@ -836,6 +890,8 @@ function demoCrossroad13() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad14() {
     animation.progress(0).clear();
@@ -854,6 +910,8 @@ function demoCrossroad14() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function demoCrossroad15() {
     animation.progress(0).clear();
@@ -869,10 +927,14 @@ function demoCrossroad15() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
 }
 function resetCrossroad(){
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
+    document.getElementById('rightArrow').style.display = "none";
+    document.getElementById('leftArrow').style.display = "none";
     window.cross1greenMoved = false;
     window.cross1yellowMoved = false;
     window.cross1blackMoved = false;
