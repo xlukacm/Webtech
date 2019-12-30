@@ -289,7 +289,7 @@ article {
 #leftArrow{
     margin-left: 10px;
     margin-right: 3px;
-    width: 30px;
+    width: 40px;
     display: none;
     overflow: auto;
     float:left;
@@ -297,8 +297,8 @@ article {
 }
 #rightArrow{
     margin-left: 10px;
-    margin-right: 70.8%;
-    width: 30px;
+    margin-right: 44.8%;
+    width: 40px;
     display: none;
     float:right;
 }
@@ -306,16 +306,19 @@ article {
 #rightlog{
     display: none;
     position: relative;
-    width: 401px;
-    margin: auto;
+    width: 551px;
+    margin-top: 45px;
+    margin-left: 10px;
     overflow: auto;
     text-align: center;
 }
 #wronglog{
     display: none;
     position: relative;
-    width: 401px;
+    width: 551px;
     margin: auto 75% auto auto;
+    margin-left: 10px;
+
     overflow: auto;
     text-align: center;
 
@@ -324,7 +327,7 @@ article {
     display: none;
     box-sizing: border-box;
     margin: 3px;
-    /*float: left;*/
+    float: left;
     text-align: center;
     overflow: auto;
 

@@ -50,3 +50,7 @@
     padding: 0 0.75em 0 0.75em;
 }
 
+#skIcon{
+    background-position: 20%;
+    float: left;
+}
