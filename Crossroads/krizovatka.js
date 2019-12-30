@@ -29,10 +29,11 @@ function move1GreenCar(){  //zelene auto
         .to(svgGreenCar, 0.6,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",                        y:"-=250"});
     //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
-        if(window.cross1yellowMoved && window.cross1blackMoved){
-            document.getElementById('wronglog').style.display = "block";
-            document.getElementById('demoCrossroad').style.display = "block";
-        }
+    if (window.cross1blackMoved)
+        window.right = true;
+    if (window.cross1yellowMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -47,12 +48,10 @@ function move1YellowCar() {
         .to(svgYellowCar, 0.5,{ease: "none",   y:-200,x:"-=40", rotation:"-70_short" })
         .to(svgYellowCar, 0.6,{ease: "none",   y:-230,x:"-=40", rotation:"-90_short" })
         .to(svgYellowCar, 0.6,{ease: "none",  x:"-=300"});
-        if(window.cross1blackMoved && window.cross1greenMoved){
-            document.getElementById('rightlog').style.display = "block";
-            document.getElementById('demoCrossroad').style.display = "none";
-            document.getElementById('rightArrow').style.display = "block";
-            document.getElementById('leftArrow').style.display = "block";
-        }
+    if(window.cross1blackMoved && window.cross1greenMoved && window.right){
+            window.right = true;
+    }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -65,10 +64,10 @@ function move1BlackCar() {
         .to(svgBlackCar, 0.6,{ease: "none",   y:-540, })
         .to(svgBlackCar, 0.6,{ease: "none", y:-720, })
         .to(svgBlackCar, 0.6,{ease: "none", y:-840, });
-    if(window.cross1yellowMoved && window.cross1greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+    if(window.cross1yellowMoved || window.cross1greenMoved){
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -78,52 +77,48 @@ let cross2yellowMoved = false;
 let cross2blackMoved = false;
 
 function move2BlackCar() {
-        window.cross2blackMoved = true;
-        animation .set(svgBlackCar, {ease: "none",      y:0})
-            .to(svgBlackCar, 0.8,{ease: "none",   y:-200,})
-            .to(svgBlackCar, 0.8,{ease: "none",   y:-400, })
-            .to(svgBlackCar, 0.8,{ease: "none",   y:-600, })
-            .to(svgBlackCar, 0.8,{ease: "none",   y:-800, })
-        if(window.cross2yellowMoved && window.cross2greenMoved){
-            document.getElementById('rightlog').style.display = "block";
-            document.getElementById('demoCrossroad').style.display = "none";
-            document.getElementById('rightArrow').style.display = "block";
-            document.getElementById('leftArrow').style.display = "block";
-        }
+    window.cross2blackMoved = true;
+    animation .set(svgBlackCar, {ease: "none",      y:0})
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-200,})
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-400, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-600, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-800, });
+    if(window.cross2yellowMoved && window.cross2greenMoved && window.right){
+        window.right = true;
+    }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
 function move2GreenCar() {
-         window.cross2greenMoved = true;
-        animation.set(svgGreenCar, {ease: "none", x: 0})
-            .to(svgGreenCar,0.6, {ease: "none", x: 100,})
-            .to(svgGreenCar,0.6, {ease: "none", x: 140, y: "+=20", rotation: "40_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=60", rotation: "70_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=120", rotation: "90_short"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=180"})
-            .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=220"})
-            .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
-        if(window.cross2yellowMoved && window.cross2blackMoved){
-            document.getElementById('wronglog').style.display = "block";
-            document.getElementById('demoCrossroad').style.display = "block";
-        }
+    window.cross2greenMoved = true;
+    animation.set(svgGreenCar, {ease: "none", x: 0})
+        .to(svgGreenCar,0.6, {ease: "none", x: 100,})
+        .to(svgGreenCar,0.6, {ease: "none", x: 140, y: "+=20", rotation: "40_short"})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=60", rotation: "70_short"})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=120", rotation: "90_short"})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=180"})
+        .to(svgGreenCar, 0.6, {ease: "none", x: 160, y: "+=220"})
+        .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
+    if (window.cross2blackMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
 function move2YellowCar() {
-        window.cross2yellowMoved = true;
-        animation.set(svgYellowCar, {ease: "none", y: 0})
-            .to(svgYellowCar,0.6, {ease: "none", y: -100,})
-            .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=10", rotation: "20_short"})
-            .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=20", rotation: "40_short"})
-            .to(svgYellowCar, 0.4, {ease: "none", y: -150, x: "+=20", rotation: "70_short"})
-            .to(svgYellowCar, 0.3, {ease: "none", y: -150, x: "+=30", rotation: "90_short"})
-            .to(svgYellowCar, 0.6, {ease: "none", y: -150, x: "+=120"})
-            .to(svgYellowCar,0.6, {ease: "none", y: -150, x: "+=250"});
-        if(window.cross2blackMoved && window.cross2greenMoved){
-            document.getElementById('wronglog').style.display = "block";
-            document.getElementById('demoCrossroad').style.display = "block";
-        }
+    window.cross2yellowMoved = true;
+    animation.set(svgYellowCar, {ease: "none", y: 0})
+        .to(svgYellowCar,0.6, {ease: "none", y: -100,})
+        .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=10", rotation: "20_short"})
+        .to(svgYellowCar,0.4, {ease: "none", y: -130, x: "+=20", rotation: "40_short"})
+        .to(svgYellowCar, 0.4, {ease: "none", y: -150, x: "+=20", rotation: "70_short"})
+        .to(svgYellowCar, 0.3, {ease: "none", y: -150, x: "+=30", rotation: "90_short"})
+        .to(svgYellowCar, 0.6, {ease: "none", y: -150, x: "+=120"})
+        .to(svgYellowCar,0.6, {ease: "none", y: -150, x: "+=250"});
+    if (window.cross2blackMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -143,9 +138,9 @@ function move3to5Tram() {
         .to(svgTram, 0.6,{ease: "none", y:-260,               x:"+=220"})
         .to(svgTram,0.6,{ease: "none",   y:-260,               x:"+=250"});
     if(window.cross3greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right= false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move3to5GreenCar(){
@@ -158,11 +153,9 @@ function move3to5GreenCar(){
         .to(svgGreenCar, 0.6,{ease: "none", x:500,  })
         .to(svgGreenCar, 0.6,{ease: "none", x:600,  });
     if(window.cross3tramMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        window.right = true;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 ///6. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
@@ -184,9 +177,9 @@ function move6GreenCar(){
         .to(svgGreenCar, 0.5,{ease: "none", x:500,  rotation:"-10_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=10"});
     if(window.cross6yellowMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move6YellowCar() {
@@ -207,11 +200,9 @@ function move6YellowCar() {
         .to(svgYellowCar, 0.4, {ease: "none", y: -60, x: "-=30", rotation: "-140_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -40, x: "-=30", rotation: "-140_short"});
     if(window.cross6greenMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        window.right = true;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 ///7. krizovatka/ 2 auta ////////////////////////////////////////////////////////////////////////
@@ -231,9 +222,9 @@ function move7YellowCar() {
         .to(svgYellowCar, 0.5,{ease: "none",y:"-660"})
         .to(svgYellowCar, 0.5,{ease: "none",y:"-740"});
     if(window.cross7greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move7GreenCar() {
@@ -248,11 +239,9 @@ function move7GreenCar() {
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",y:"-=250"});
     if(window.cross7yellowMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        window.right = true;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -260,6 +249,8 @@ function move7GreenCar() {
 let cross8yellowMoved = false;
 let cross8blackMoved = false;
 let cross8greenMoved = false;
+window.right = true;
+
 
 function move8BlackCar() {
     window.cross8blackMoved = true;
@@ -269,10 +260,11 @@ function move8BlackCar() {
         .to(svgBlackCar, 0.7,{ease: "none",y:-480})
         .to(svgBlackCar, 0.7,{ease: "none",y:-640})
         .to(svgBlackCar, 0.7,{ease: "none",y:-800});
-    if(window.cross8yellowMoved && window.cross8greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
-    }
+    if(window.cross8yellowMoved && window.right)
+        window.right=true;
+    if (window.cross8greenMoved && window.right)
+        window.right=false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -286,10 +278,13 @@ function move8YellowCar() {
         .to(svgYellowCar, 0.6,{ease: "none",y:-220,x:"-=80",rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",               x:"-=220"})
         .to(svgYellowCar,0.6,{ease: "none",                 x:"-=250"});
-    if(window.cross8greenMoved && window.cross8blackMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+    if(window.cross8greenMoved && window.right)
+        window.right = false;
+    if(window.cross8blackMoved && window.right){
+        window.right= false;
     }
+    controlAll();
+
     document.getElementById('reset').style.display = "block";
 }
 function move8GreenCar() {
@@ -304,14 +299,19 @@ function move8GreenCar() {
         .to(svgGreenCar, 0.6, {ease: "none", y: "-=120"})
         .to(svgGreenCar,0.6, {ease: "none", y: "-=100"})
         .to(svgGreenCar,0.6, {ease: "none", y: "-=100"});
-    if(window.cross8yellowMoved && window.cross8blackMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+    if (!window.cross8blackMoved&& window.right===true)
+        window.right = false;
+    if (!window.cross8yellowMoved && window.right===true)
+        window.right = false;
+    if(window.cross8yellowMoved && window.cross8blackMoved && window.right){
+        window.right = true;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
+
+
+
 ///9. krizovatka/ 2 auta / 1 elektricka ////////////////////////////////////////////////////////////////////////
 let cross9yellowMoved = false;
 let cross9tramMoved = false;
@@ -327,12 +327,7 @@ function move9YellowCar() {
         .to(svgYellowCar, 0.6,{ease: "none",x:"+=90",rotation:"90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",               x:"+=120"})
         .to(svgYellowCar,0.6,{ease: "none",                 x:"+=180"});
-    if(window.cross9greenMoved && window.cross9tramMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move9GreenCar() {
@@ -348,12 +343,7 @@ function move9GreenCar() {
         .to(svgGreenCar, 0.6, {ease: "none", y: "-=160", rotation: "-90_short"})
         .to(svgGreenCar, 0.6, {ease: "none", y: "-=220"})
         .to(svgGreenCar,0.6, {ease: "none", y: "-=250"});
-    if(window.cross9yellowMoved && window.cross9tramMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function moveTram9(){
@@ -369,13 +359,9 @@ function moveTram9(){
         .to(svgTram, 0.6,{ease: "none", y:-800,  })
         .to(svgTram, 0.6,{ease: "none", y:-900,  });
     if(window.cross9greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
-    if(window.cross9greenMoved && window.cross9yellowMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
-    }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -393,11 +379,9 @@ let cross10greenMoved = false;
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-750"})
         .to(svgYellowCar, 0.6,{ease: "none",     y:"-900"});
      if(window.cross10greenMoved){
-         document.getElementById('rightlog').style.display = "block";
-         document.getElementById('demoCrossroad').style.display = "none";
-         document.getElementById('rightArrow').style.display = "block";
-         document.getElementById('leftArrow').style.display = "block";
+         window.right = true;
      }
+     controlAll();
      document.getElementById('reset').style.display = "block";
 }
 function move10GreenCar() {
@@ -411,9 +395,9 @@ function move10GreenCar() {
         .to(svgGreenCar, 1, {ease: "none", y: "+=200"})
         .to(svgGreenCar,1, {ease: "none", y: "+=240"});
     if(window.cross10yellowMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -433,16 +417,8 @@ function move11GreenCar() {
         .to(svgGreenCar, 0.6,{ease: "none", x:600, })
         .to(svgGreenCar, 0.6,{ease: "none", x:720, })
         .to(svgGreenCar, 0.6,{ease: "none", x:840, });
-    if(window.cross11ped1Moved && window.cross11bikeMoved  && window.cross11ped2Moved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
-    else{
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
-    }
+    window.right = window.cross11ped1Moved && window.cross11bikeMoved && window.cross11ped2Moved;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move11Pedestrian(){
@@ -451,6 +427,7 @@ function move11Pedestrian(){
         .to(pedestrian,0.6,{ease: "none",   y:100,})
         .to(pedestrian,0.6,{ease: "none",   y:200,})
         .to(pedestrian,0.6,{ease: "none",   y:300,});
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move11Pedestrian2(){
@@ -459,6 +436,7 @@ function move11Pedestrian2(){
         .to(pedestrian2,0.6,{ease: "none",   y:-100,})
         .to(pedestrian2,0.6,{ease: "none",   y:-200,})
         .to(pedestrian2,0.6,{ease: "none",   y:-300,});
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move11Bike1(){
@@ -468,6 +446,7 @@ function move11Bike1(){
         .to(bike,0.6,{ease: "none",   y:-200})
         .to(bike, 0.6,{ease: "none",   y:-300, x:20, rotation: "35_short"})
         .to(bike, 0.6,{ease: "none",   y:-340, x:40, rotation: "70_short"});
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 ///6. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
@@ -489,11 +468,9 @@ function move12GreenCar(){
         .to(svgGreenCar, 0.5,{ease: "none", x:500,  rotation:"-10_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=10"});
     if(window.cross12yellowMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        window.right = true;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -515,9 +492,9 @@ function move12YellowCar() {
         .to(svgYellowCar, 0.4, {ease: "none", y: -60, x: "-=30", rotation: "-140_short"})
         .to(svgYellowCar, 0.4, {ease: "none", y: -40, x: "-=30", rotation: "-140_short"});
     if(window.cross12greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -535,12 +512,10 @@ function move13GreenCar(){
         .to(svgGreenCar, 0.6, {ease: "none", x: 150, y: "+=220"})
         .to(svgGreenCar,0.6, {ease: "none", x: 150, y: "+=250"});
     if(window.cross13bikeMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        window.right = true;
     }
-   document.getElementById('reset').style.display = "block";
+    controlAll();
+    document.getElementById('reset').style.display = "block";
 }
 function move13Bike2(){
     window.cross13bikeMoved = true;
@@ -554,9 +529,9 @@ function move13Bike2(){
         .to(bike,0.6,{ease: "none", y:-700,  })
         .to(bike,0.6 ,{ease: "none", y:-800,  });
     if(window.cross13greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 ///14. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
@@ -574,10 +549,9 @@ function move14GreenCar(){
         .to(svgGreenCar, 0.6, {ease: "none", x: 600})
         .to(svgGreenCar, 0.6, {ease: "none", x: 750})
         .to(svgGreenCar, 0.6, {ease: "none", x: 900});
-    if(window.cross14blackMoved || window.cross14yellowMoved || !cross14pedMoved ){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
-    }
+    if (window.cross14yellowMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move14Pedestrian2(){
@@ -585,6 +559,9 @@ function move14Pedestrian2(){
     animation .set(pedestrian2, {ease: "none",      x:0, rotation:"-70_short"})
         .to(pedestrian2, 0.6,{ease: "none",   y:80,})
         .to(pedestrian2, 0.6,{ease: "none",   y:160, });
+    if (window.cross14greenMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move14YellowCar(){
@@ -598,13 +575,9 @@ function move14YellowCar(){
         .to(svgYellowCar, 0.5,{ease: "none", y:-250,       x:"-=70",rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"});
-
-    if(window.cross14blackMoved  && window.cross14greenMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
+    if (window.cross14pedMoved && window.cross14blackMoved && window.cross14greenMoved && window.right)
+        window.right = true;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -616,16 +589,9 @@ function move14BlackCar() {
         .to(svgBlackCar, 0.8,{ease: "none",   y:-600, })
         .to(svgBlackCar, 0.8,{ease: "none",   y:-800, })
         .to(svgBlackCar, 0.8,{ease: "none",   y:-900, });
-    if(window.cross14yellowMoved ){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
-    }
-    if(!window.cross14yellowMoved && !window.cross14greenMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
+    if (window.cross14yellowMoved)
+        window.right = false;
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 ///15. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
@@ -643,14 +609,13 @@ function move15YellowCar(){
         .to(svgYellowCar, 0.6,{ease: "none",y:-230, x:"-=70", rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"              })
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"                });
-    if(!window.cross15blackMoved ){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+    if(window.cross15blackMoved ){
+        window.right = true;
     }
-    if(window.cross15greenMoved && window.cross15blackMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+    if(window.cross15greenMoved){
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move15BlackCar(){
@@ -662,10 +627,12 @@ function move15BlackCar(){
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"});
-    if(window.cross15yellowMoved && window.cross15greenMoved){
-        document.getElementById('wronglog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "block";
+    if(window.cross15yellowMoved)
+        window.right = false;
+    if (window.cross15greenMoved){
+        window.right = false;
     }
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 function move15GreenCar(){
@@ -678,12 +645,10 @@ function move15GreenCar(){
         .to(svgGreenCar, 0.6,{ease: "none",x:230, y:"-=70", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=220"})
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=250"});
-    if(window.cross15yellowMoved && window.cross15blackMoved){
-        document.getElementById('rightlog').style.display = "block";
-        document.getElementById('demoCrossroad').style.display = "none";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
-    }
+    if(window.cross15yellowMoved && window.cross15blackMoved && window.right)
+        window.right = true ;
+
+    controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
@@ -722,11 +687,7 @@ function demoCrossroad2() {
             move2YellowCar();
         }
         move2BlackCar();
-        document.getElementById('wronglog').style.display = "none";
-        document.getElementById('rightlog').style.display = "none";
-        document.getElementById('reset').style.display = "block";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        displayButtonsLogs();
     }
 
 }
@@ -738,11 +699,7 @@ function demoCrossroad3() {
         }
         move3to5GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad4() {
     animation.progress(0).clear();
@@ -752,11 +709,7 @@ function demoCrossroad4() {
         }
         move3to5GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad5() {
     animation.progress(0).clear();
@@ -766,11 +719,7 @@ function demoCrossroad5() {
         }
         move3to5GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad6() {
     animation.progress(0).clear();
@@ -780,11 +729,7 @@ function demoCrossroad6() {
         }
         move6YellowCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad7() {
     animation.progress(0).clear();
@@ -794,11 +739,7 @@ function demoCrossroad7() {
         }
         move7GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad8() {
     animation.progress(0).clear();
@@ -811,11 +752,7 @@ function demoCrossroad8() {
         }
         move8GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad9() {
     animation.progress(0).clear();
@@ -826,11 +763,7 @@ function demoCrossroad9() {
             }
             move9GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad10() {
     animation.progress(0).clear();
@@ -840,11 +773,7 @@ function demoCrossroad10() {
         }
         move10YellowCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad11() {
     animation.progress(0).clear();
@@ -856,11 +785,7 @@ function demoCrossroad11() {
         }
         move11GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad12() {
     animation.progress(0).clear();
@@ -870,11 +795,7 @@ function demoCrossroad12() {
         }
         move6GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad13() {
     animation.progress(0).clear();
@@ -884,11 +805,7 @@ function demoCrossroad13() {
         }
         move13GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad14() {
     animation.progress(0).clear();
@@ -904,11 +821,7 @@ function demoCrossroad14() {
         }
         move14YellowCar()
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('rightArrow').style.display = "block";
-    document.getElementById('leftArrow').style.display = "block";
+    displayButtonsLogs();
 }
 function demoCrossroad15() {
     animation.progress(0).clear();
@@ -921,17 +834,81 @@ function demoCrossroad15() {
         }
         move15GreenCar();
     }
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
+    displayButtonsLogs();
+}
+
+function rightLog() {
+    document.getElementById('rightlog').style.display = "block";
+    document.getElementById('demoCrossroad').style.display = "none";
     document.getElementById('rightArrow').style.display = "block";
     document.getElementById('leftArrow').style.display = "block";
 }
+
+function wrongLog() {
+    document.getElementById('wronglog').style.display = "block";
+    document.getElementById('demoCrossroad').style.display = "block";
+}
+
+function rightControl() {
+    if (window.right!==true){
+        wrongLog();
+    }
+    else if (window.right===true)
+    {
+        rightLog();
+    }
+}
+function controlAll(){
+    if(window.cross1yellowMoved && window.cross1blackMoved && window.cross1greenMoved) {
+        rightControl();
+    }
+    if(window.cross2yellowMoved && window.cross2blackMoved && window.cross2greenMoved) {
+        rightControl();
+    }
+    if(window.cross3greenMoved && window.cross3tramMoved) {
+        rightControl();
+    }
+    if(window.cross6greenMoved && window.cross6yellowMoved) {
+        rightControl();
+    }
+    if(window.cross7greenMoved && window.cross7yellowMoved) {
+        rightControl();
+    }
+    if(window.cross8yellowMoved && window.cross8blackMoved && window.cross8greenMoved){
+        rightControl();
+    }
+    if(window.cross9yellowMoved && window.cross9tramMoved && window.cross9greenMoved){
+        rightControl();
+    }
+    if(window.cross10yellowMoved && window.cross10greenMoved){
+        rightControl();
+    }
+    if(window.cross11bikeMoved && window.cross11ped1Moved && window.cross11ped2Moved && window.cross11greenMoved){
+        rightControl();
+    }
+    if(window.cross12greenMoved && window.cross12yellowMoved){
+        rightControl();
+    }
+    if (window.cross13bikeMoved && window.cross13greenMoved){
+        rightControl();
+    }
+    if (window.cross14pedMoved && window.cross14yellowMoved && window.cross14blackMoved && window.cross14greenMoved){
+        rightControl();
+    }
+    if (window.cross15blackMoved && window.cross15greenMoved && window.cross15yellowMoved){
+        rightControl();
+    }
+}
+
+
+
+
 function resetCrossroad(){
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('rightArrow').style.display = "none";
     document.getElementById('leftArrow').style.display = "none";
+    window.right=true;
     window.cross1greenMoved = false;
     window.cross1yellowMoved = false;
     window.cross1blackMoved = false;
