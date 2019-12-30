@@ -574,7 +574,7 @@ function move14GreenCar(){
         .to(svgGreenCar, 0.6, {ease: "none", x: 600})
         .to(svgGreenCar, 0.6, {ease: "none", x: 750})
         .to(svgGreenCar, 0.6, {ease: "none", x: 900});
-    if(window.cross14blackMoved || window.cross14yellowMoved){
+    if(window.cross14blackMoved || window.cross14yellowMoved || !cross14pedMoved ){
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";
     }
@@ -583,9 +583,8 @@ function move14GreenCar(){
 function move14Pedestrian2(){
     window.cross14pedMoved = true;
     animation .set(pedestrian2, {ease: "none",      x:0, rotation:"-70_short"})
-        .to(pedestrian2, 0.6,{ease: "none",   y:120,})
-        .to(pedestrian2, 0.6,{ease: "none",   y:200, })
-        .to(pedestrian2, 0.6,{ease: "none",   y:290, });
+        .to(pedestrian2, 0.6,{ease: "none",   y:80,})
+        .to(pedestrian2, 0.6,{ease: "none",   y:160, });
     document.getElementById('reset').style.display = "block";
 }
 function move14YellowCar(){

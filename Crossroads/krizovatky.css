@@ -18,6 +18,18 @@ header{
     height: 551px;
     overflow: hidden;
 }
+.centerhead{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
 /*tu sa aj ja niekedy stracam, treba kazde auto na kazdej krizovatke definovat jeho prvotne postavenie,
 potom sa tu aj definuju krizovatky obrazky. */
 article {
@@ -114,7 +126,7 @@ article {
     height: auto;
 }
 .carGreen10{
-    top: 20px;
+    top: 35px;
     left: 50px;
     transform: rotate(-90deg);
 }
@@ -253,19 +265,22 @@ article {
 #pedestrian1,#pedestrian2{
     width: 70%;
     height: 70%;
+
 }
 .pedestrian1{
-    top: 170px;
+    top: 150px;
     left: 320px;
     width: 40px;
+
 }
 .pedestrian2{
-    top: 310px;
+    top: 350px;
     left: 360px;
     width: 40px;
+    position: absolute;
 }
 .pedestrian3{
-    top: 110px;
+    top: 280px;
     left: 460px;
     width: 40px;
 }
@@ -297,7 +312,8 @@ article {
 }
 #rightArrow{
     margin-left: 10px;
-    margin-right: 44.8%;
+ left: 510px;
+    position: absolute;
     width: 40px;
     display: none;
     float:right;
@@ -309,6 +325,7 @@ article {
     width: 551px;
     margin-top: 45px;
     margin-left: 10px;
+    margin-bottom: 5px;
     overflow: auto;
     text-align: center;
 }
@@ -318,7 +335,6 @@ article {
     width: 551px;
     margin: auto 75% auto auto;
     margin-left: 10px;
-
     overflow: auto;
     text-align: center;
 
@@ -327,7 +343,6 @@ article {
     display: none;
     box-sizing: border-box;
     margin: 3px;
-    float: left;
     text-align: center;
     overflow: auto;
 
@@ -335,6 +350,7 @@ article {
 #reset{
     display: none;
     margin: 3px;
+    float: left;
     box-sizing: border-box;
     overflow: auto;
 }
