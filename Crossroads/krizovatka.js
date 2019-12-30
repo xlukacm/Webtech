@@ -607,6 +607,7 @@ function move14YellowCar(){
         .to(svgYellowCar, 0.5,{ease: "none", y:-250,       x:"-=70",rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=150"});
+
     if(window.cross14blackMoved  && window.cross14greenMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
@@ -628,7 +629,7 @@ function move14BlackCar() {
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";
     }
-    if(window.cross14yellowMoved && !window.cross14greenMoved){
+    if(!window.cross14yellowMoved && !window.cross14greenMoved){
         document.getElementById('rightlog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "none";
         document.getElementById('rightArrow').style.display = "block";
