@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <a href="../index.html"><img src="../home.png" alt="home" id="logo-home" sizes="32x32"></a>
+        <a href="../home.html"><img src="../home.png" alt="home" id="logo-home" sizes="32x32"></a>
         <h1 class="header">Križovatka 1. </h1>
     </header>
 <!--    vytvorime si outer kvoli tomu, aby sa nam stracali auta ked prejdu za okraj-->
@@ -102,20 +102,19 @@
     setBlinkre1();
 </script>
 </div>
-
-    <script src="krizovatka.js"></script>
-    <a  href="../index.html">
-        <img id="leftArrow" src="cars/1-2-arrow-png-image.png" alt="left arrow">
+    <a  href="../home.html">
+        <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
     </a>
     <a  href="krizovatka2.html">
-        <img id="rightArrow" src="cars/1-2-arrow-png-image.png" alt="left arrow">
+        <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
     </a>
-    <div id="rightlog" class="alert alert-success" role="alert">
+    <script src="krizovatka.js"></script>
+    <span id="rightlog" class="alert alert-success" role="alert">
         Správne riešenie
-    </div>
-    <div id="wronglog" class="alert alert-danger" role="alert">
+    </span>
+    <span id="wronglog" class="alert alert-danger" role="alert">
         Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
-    </div>
+    </span>
     <button id="demoCrossroad" type="button" onclick="demoCrossroad1()" class="btn btn-info">Správne</button>
     <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
 </body>
