@@ -295,7 +295,10 @@ article {
     display: none;
 }
 #demoCrossroad{
-    display: block;
+    display: none;
+}
+#reset{
+    display: none;
 }
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
