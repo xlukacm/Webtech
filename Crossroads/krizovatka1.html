@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <script src="blinkre.js"></script>
 </head>
 
 <body>
@@ -23,8 +24,9 @@
     <article class="krizovatka">
         <h6 hidden>Križovatka 1</h6>
         <!-- tu mame zase auta. Vsade su SVG az tu, jedno je aj PNG, ale neda sa s nimi velmi otacat, tak neodporucam PNG-->
-        <div class="carBlack1" onclick="move1BlackCar()" id="svgBlackCar">
-            <img src="cars/black-car.png" class="carBlack1" alt="Cierne auto" title="Čierne auto">
+        <div class="carBlack1" onclick="move1BlackCar()" id="svgBlackCar" style="z-index: 2">
+            <img src="cars/black-car.png" class="carBlack1" alt="Cierne auto" title="Čierne auto" id="blackCar">
+            <img src="cars/black-carBlinker.png" class="carBlack1" alt="Cierne auto" title="Čierne auto blinker" id="blackCarBlinker" style="display: none">
         </div>
         <div class="carYellow1" id="widthYellowCar"  onclick="move1YellowCar()" title="Žlté auto">
 <!--            tu napriklad si zadefinujeme zlte auto svgGreenCar a na ONCLICK spravime funkciu vid javascript-->
@@ -96,6 +98,9 @@
             </svg>
         </div>
     </article>
+<script>
+    setBlinkre1();
+</script>
 </div>
 
     <script src="krizovatka.js"></script>

@@ -1,6 +1,7 @@
 let svgGreenCar = document.querySelector("#svgGreenCar"); //pomocou Jqery si najdeme v html dokumente idecko auta
 let svgBlackCar = document.querySelector("#svgBlackCar");
 let svgYellowCar = document.querySelector("#svgYellowCar");
+
 let svgTram = document.querySelector("#tram");
 let pedestrian = document.querySelector("#pedestrian1");
 let pedestrian2 = document.querySelector("#pedestrian2");
@@ -183,7 +184,7 @@ function move6GreenCar(){
         .to(svgGreenCar, 0.4,{ease: "none", x:380, y:"+=10",  rotation:"-10_short"})
         .to(svgGreenCar, 0.5,{ease: "none", x:450, y:"-=20",rotation:"-10_short"})
         .to(svgGreenCar, 0.5,{ease: "none", x:500,  rotation:"-10_short"})
-        .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=10"})
+        .to(svgGreenCar, 0.6,{ease: "none", x:550, y:"+=10"});
     if(window.cross6yellowMoved){
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";
