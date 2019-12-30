@@ -698,6 +698,14 @@ function move15GreenCar(){
 //-----------------------------------------------------------------------------------------------------
 
 
+function displayButtonsLogs() {
+    document.getElementById('wronglog').style.display = "none";
+    document.getElementById('rightlog').style.display = "none";
+    document.getElementById('reset').style.display = "block";
+    document.getElementById('rightArrow').style.display = "block";
+    document.getElementById('leftArrow').style.display = "block";
+}
+
 function demoCrossroad1() {
     animation.progress(0).clear();
     if (!animation.isActive()) {
@@ -708,11 +716,7 @@ function demoCrossroad1() {
             move1GreenCar();
         }
         move1YellowCar();
-        document.getElementById('wronglog').style.display = "none";
-        document.getElementById('rightlog').style.display = "none";
-        document.getElementById('reset').style.display = "block";
-        document.getElementById('rightArrow').style.display = "block";
-        document.getElementById('leftArrow').style.display = "block";
+        displayButtonsLogs();
     }
 }
 function demoCrossroad2() {

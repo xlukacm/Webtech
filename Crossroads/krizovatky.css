@@ -291,35 +291,34 @@ article {
 #leftArrow{
     margin-left: 10px;
     margin-right: 3px;
-    width: 50px;
+    width: 30px;
     display: none;
+    overflow: auto;
+    float:left;
 
 }
 #rightArrow{
     margin-left: 10px;
-    margin-right: 3px;
-    width: 50px;
-    float: right;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    margin-right: 70.8%;
+    width: 30px;
     display: none;
+    float:right;
 }
 
 #rightlog{
     display: none;
-    width: 451px;
-    margin: 10px;
-    float: right;
+    position: relative;
+    width: 401px;
+    margin: auto;
+    overflow: auto;
     text-align: center;
 }
 #wronglog{
     display: none;
-    width: 451px;
-    margin: 10px;
-    float: right;
+    position: relative;
+    width: 401px;
+    margin: auto 75% auto auto;
+    overflow: auto;
     text-align: center;
 
 }
@@ -329,12 +328,14 @@ article {
     margin: 3px;
     /*float: left;*/
     text-align: center;
+    overflow: auto;
 
 }
 #reset{
     display: none;
     margin: 3px;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/
