@@ -340,6 +340,16 @@ article {
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
+#logo-home{
+    width:32px;
+    height:32px;
+    margin-top: 0.6em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
+    float:left;
+}
+
 #layer1{
     /*animation: mov 7s 2;*/
     /*animation-direction: alternate;*/
