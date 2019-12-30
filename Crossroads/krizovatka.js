@@ -80,12 +80,10 @@ let cross2blackMoved = false;
 function move2BlackCar() {
         window.cross2blackMoved = true;
         animation .set(svgBlackCar, {ease: "none",      y:0})
-            .to(svgBlackCar, 0.8,{ease: "none",   y:200,})
-            .to(svgBlackCar, 0.8,{ease: "none",   y:400, })
-            .to(svgBlackCar, 0.8,{ease: "none",   y:600, })
-            .to(svgBlackCar, 0.8,{ease: "none",   y:800, })
-            .to(svgBlackCar, 0.8,{ease: "none",   y:900, });
-
+            .to(svgBlackCar, 0.8,{ease: "none",   y:-200,})
+            .to(svgBlackCar, 0.8,{ease: "none",   y:-400, })
+            .to(svgBlackCar, 0.8,{ease: "none",   y:-600, })
+            .to(svgBlackCar, 0.8,{ease: "none",   y:-800, })
         if(window.cross2yellowMoved && window.cross2greenMoved){
             document.getElementById('rightlog').style.display = "block";
             document.getElementById('demoCrossroad').style.display = "none";
@@ -266,17 +264,11 @@ let cross8greenMoved = false;
 function move8BlackCar() {
     window.cross8blackMoved = true;
     animation.set(svgYellowCar, {ease: "none", y: 0,})
-        .to(svgBlackCar, 0.6,{ease: "none",   y:100})
-        .to(svgBlackCar, 0.6,{ease: "none",   y:180})
-        .to(svgBlackCar, 0.6,{ease: "none",   y:260})
-        .to(svgBlackCar, 0.6,{ease: "none",   y:340})
-        .to(svgBlackCar, 0.6,{ease: "none",y:420})
-        .to(svgBlackCar, 0.6,{ease: "none",y:500})
-        .to(svgBlackCar, 0.6,{ease: "none",y:580})
-        .to(svgBlackCar, 0.6,{ease: "none",y:660})
-        .to(svgBlackCar, 0.6,{ease: "none",y:740})
-        .to(svgBlackCar, 0.6,{ease: "none",y:820})
-        .to(svgBlackCar, 0.6,{ease: "none",y:880});
+        .to(svgBlackCar, 0.7,{ease: "none",   y:-160})
+        .to(svgBlackCar, 0.7,{ease: "none",   y:-320})
+        .to(svgBlackCar, 0.7,{ease: "none",y:-480})
+        .to(svgBlackCar, 0.7,{ease: "none",y:-640})
+        .to(svgBlackCar, 0.7,{ease: "none",y:-800});
     if(window.cross8yellowMoved && window.cross8greenMoved){
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";
@@ -619,11 +611,11 @@ function move14YellowCar(){
 function move14BlackCar() {
     window.cross14blackMoved = true;
     animation .set(svgBlackCar, {ease: "none",      y:0})
-        .to(svgBlackCar, 0.8,{ease: "none",   y:200,})
-        .to(svgBlackCar, 0.8,{ease: "none",   y:400, })
-        .to(svgBlackCar, 0.8,{ease: "none",   y:600, })
-        .to(svgBlackCar, 0.8,{ease: "none",   y:800, })
-        .to(svgBlackCar, 0.8,{ease: "none",   y:900, });
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-200,})
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-400, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-600, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-800, })
+        .to(svgBlackCar, 0.8,{ease: "none",   y:-900, });
     if(window.cross14yellowMoved ){
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";
@@ -663,13 +655,13 @@ function move15YellowCar(){
 }
 function move15BlackCar(){
     window.cross15blackMoved = true;
-    animation.set(svgBlackCar, {ease: "none", x: 0})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"})
-        .to(svgBlackCar, 0.6, {ease: "none", x: "-=150"});
+    animation.set(svgBlackCar, {ease: "none", y: 0})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
+        .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"});
     if(window.cross15yellowMoved && window.cross15greenMoved){
         document.getElementById('wronglog').style.display = "block";
         document.getElementById('demoCrossroad').style.display = "block";

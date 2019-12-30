@@ -72,72 +72,64 @@ article {
 }
 /*tu zacinaju auta napr radsej neotvaraj je zelene a na kazdu krizovatku sa definuje poloha. Niekde su rovnake ako napr
     na krizovatke s elektrickou (jedna krizovatka na 3 sposoby) tak tam nechavam tu istu polohu*/
-#widthGreenCar{
-    width: 140px;
+
+.greenCar{
+    width: 25%;
+    height: 25%;
 }
 .carGreen{
-    top: -140px;
-    left: 20px;
+    top: -150px;
+    left: 30px;
 }
 .carGreen2{
     top: -250px;
-    left: 440px;
+    left: 30px;
     transform: rotate(-180deg);
 }
 .carGreen3{
-    top: 100px;
-    left: 160px;
-    transform: rotate(-90deg);
-}
-.carGreen4{
-    top: 280px;
-    left: 400px;
-    transform: rotate(-90deg);
-}
-.carGreen5{
-    top: 430px;
-    left: 380px;
+    top: -70px;
+    left: -50px;
     transform: rotate(-90deg);
 }
 .carGreen6{
-    top: 140px;
-    left: 250px;
+    top: -80px;
+    left: 40px;
     transform: rotate(-90deg);
 }
 .carGreen7{
-    top: 230px;
-    left: 240px;
+    top: 20px;
+    left: 30px;
     transform: rotate(-90deg);
 }
 .carGreen8{
-    top: 0;
-    left: 250px;
+    top: -220px;
+    left: 50px;
     transform: rotate(-90deg);
 }
 .carGreen9{
-    top: 85px;
-    left: 280px;
+    top: -110px;
+    left: 105px;
     transform: rotate(-90deg);
+    width: 90%;
+    height: auto;
 }
 .carGreen10{
-    top: 220px;
-    left: 250px;
+    top: 20px;
+    left: 50px;
     transform: rotate(-90deg);
-    width: 200px;
 }
 .carGreen11{
-    top: 110px;
+    top: 120px;
     left: 20px;
-    width: 230px;
 }
 .carGreen12{
-    top: 130px;
-    left: 250px;
+    top: -80px;
+    left: 40px;
     transform: rotate(-90deg);
 }
 .carGreen13{
-    top: 300px;
-    left: 180px;
+    top: 90px;
+    left: -20px;
     transform: rotate(-90deg);
 }
 .carGreen14{
@@ -145,12 +137,12 @@ article {
     left: 0;
 }
 .carGreen15{
-    top: 0;
-    left: 250px;
+    top: -220px;
+    left: 50px;
     transform: rotate(-90deg);
 }
 
-#svgBlackCar{
+.blackCar{
     width: 50%;
     height: 50%;
 }
@@ -162,34 +154,40 @@ article {
 }
 .carBlack2{
     top: -130px;
-    left: -50px;
+    left: 90px;
     transform: rotate(180deg);
+    width: 25%;
+    height: 50%;
 }
-.carBlack3{
+.carBlack8{
     top: -120px;
-    left: -10px;
+    left: 120px;
     transform: rotate(180deg);
+    width: 25%;
+    height: 50%;
 }
-.carBlack4{
+.carBlack14{
     top: 0;
-    left: -15px;
-    transform: rotate(90deg);
+    left: 500px;
+    transform: rotate(270deg);
     width: 25%;
     height: 50%;
 }
-.carBlack5{
-    top: 70px;
-    left: 430px;
-    transform: rotate(-45deg);
+.carBlack15{
+    top: 60px;
+    left: 450px;
+    transform: rotate(-90deg);
     width: 25%;
     height: 50%;
 }
-#widthYellowCar{
-    width: 68px;
+
+.yellowCar{
+    width: 13%;
+    height: 13%;
 }
 .carYellow1{
     top: -260px;
-    left: 200px;
+    left: -280px;
     transform: rotate(180deg);
 }
 .carYellow2{
@@ -197,45 +195,45 @@ article {
     left: 325px;
 }
 .carYellow6{
-    top: 30px;
-    left: 100px;
+    top: 170px;
+    left: -340px;
     transform: rotate(145deg);
 }
 .carYellow7{
-    top: 200px;
-    left: 50px;
+    top: 430px;
+    left: -170px;
     transform: rotate(+90deg);
 }
 .carYellow8{
-    top: -120px;
-    left:420px;
+    top: -360px;
+    left:180px;
     transform: rotate(-90deg);
 }
 .carYellow9{
-    top: -215px;
-    left:105px;
+    top: -220px;
+    left:-330px;
     transform: rotate(-180deg);
-    width: 60px;
+    width: 90%;
+    height: auto;
 }
 .carYellow10{
-    top: 165px;
-    left:40px;
+    top: 410px;
+    left:-190px;
     transform: rotate(90deg);
-    width: 72px;
 }
 
 .carYellow12{
-    top: 30px;
-    left: 100px;
+    top: 170px;
+    left: -340px;
     transform: rotate(145deg);
 }
 .carYellow14{
-    top: 100px;
-    left: 250px;
+    top: 90px;
+    left: 245px;
 }
 .carYellow15{
-    top: -30px;
-    left: 60px;
+    top: 200px;
+    left: -185px;
     transform: rotate(90deg);
 }
 
