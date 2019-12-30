@@ -290,15 +290,31 @@ article {
 }
 #rightlog{
     display: none;
+    width: 551px;
+    margin: 10px;
+    text-align: center;
+
 }
 #wronglog{
     display: none;
+    width: 551px;
+    margin: 10px;
+    text-align: center;
+
 }
 #demoCrossroad{
     display: none;
+    box-sizing: border-box;
+    margin: 3px;
+    float: left;
+    text-align: center;
+
 }
 #reset{
     display: none;
+    float: left;
+    margin: 3px;
+    box-sizing: border-box;
 }
 
 /*toto si uz nevsimajte, tu su smerovky cez CSS a byvale pohyby cez CSS*/

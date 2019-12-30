@@ -99,9 +99,13 @@
     </article>
 </div>
 <script src="krizovatka.js"></script>
-<p id="rightlog">Správne riešenie</p>
-<p id="wronglog">Nesprávne riešenie, odklikni tlačidlo Správne na správne zobrazenie. </p>
-<button id="demoCrossroad" onclick="demoCrossroad5()">Správne</button>
-<button id="reset" onclick="resetCrossroad()">Reset</button>
+<<div id="rightlog" class="alert alert-success" role="alert">
+    Správne riešenie
+</div>
+<div id="wronglog" class="alert alert-danger" role="alert">
+    Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
+</div>
+<button id="demoCrossroad" type="button" onclick="demoCrossroad5()" class="btn btn-info">Správne</button>
+<button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
 </body>
 </html>
