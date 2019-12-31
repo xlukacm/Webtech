@@ -104,8 +104,7 @@ function move2GreenCar() {
         window.right = false;
     if(window.cross2yellowMoved){
         //zmena semafora
-        document.getElementById('greenLight').style.display = "block";
-        document.getElementById('blackLight').style.display = "block";
+        setTrafficCrossroad2();
     }
 
     controlAll();
@@ -126,13 +125,20 @@ function move2YellowCar() {
         window.right = false;
     if(window.cross2greenMoved){
         //zmena semafora
-        document.getElementById('greenLight').style.display = "block";
-        document.getElementById('blackLight').style.display = "block";
+        setTrafficCrossroad2();
     }
     controlAll();
     document.getElementById('reset').style.display = "block";
 }
 
+function setTrafficCrossroad2(){
+    document.getElementById('greenLight').style.display = "block";
+    document.getElementById('blackLight').style.display = "block";
+    document.getElementById('blackLight2').style.display = "block";
+    document.getElementById('blackLight3').style.display = "block";
+    document.getElementById('redLight').style.display = "block";
+    document.getElementById('redLight2').style.display = "block";
+}
 ///3. az 5. krizovatka/ 1 auto + elektricka Tram ////////////////////////////////////////////////////////////////////////
 let cross3greenMoved = false;
 let cross3tramMoved = false;
@@ -150,6 +156,11 @@ function move3to5Tram() {
         .to(svgTram,0.6,{ease: "none",   y:-260,               x:"+=250"});
     if(window.cross3greenMoved){
         window.right= false;
+    }
+    if (document.getElementById('cross4') && window.right===true)
+    {
+        document.getElementById('greenLight4').style.display="block";
+        document.getElementById('blackLight4').style.display="block";
     }
     controlAll();
     document.getElementById('reset').style.display = "block";
@@ -621,13 +632,12 @@ function move15YellowCar(){
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"              })
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"                });
     if(window.cross15blackMoved ){
-        document.getElementById('greenLight').style.display = "block";
-        document.getElementById('blackLight').style.display = "block";
+        setTrafficCrossroad15();
         window.right = true;
     }
-    if(window.cross15greenMoved){
+    if(window.cross15greenMoved)
         window.right = false;
-    }
+
     controlAll();
     document.getElementById('reset').style.display = "block";
 }
@@ -641,14 +651,11 @@ function move15BlackCar(){
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"});
     if(window.cross15yellowMoved){
-        document.getElementById('greenLight').style.display = "block";
-        document.getElementById('blackLight').style.display = "block";
+        setTrafficCrossroad15();
         window.right = false;
     }
-
-    if (window.cross15greenMoved){
+    if (window.cross15greenMoved)
         window.right = false;
-    }
     controlAll();
     document.getElementById('reset').style.display = "block";
 }
@@ -664,20 +671,51 @@ function move15GreenCar(){
         .to(svgGreenCar, 0.6,{ease: "none",y:"-=250"});
     if(window.cross15yellowMoved && window.cross15blackMoved && window.right)
         window.right = true ;
-
     controlAll();
     document.getElementById('reset').style.display = "block";
+}
+
+function setTrafficCrossroad15() {
+    document.getElementById('greenLight').style.display = "block";
+    document.getElementById('greenLight2').style.display = "block";
+    document.getElementById('blackLight').style.display = "block";
+    document.getElementById('blackLight2').style.display = "block";
+    document.getElementById('blackLight3').style.display = "block";
+    document.getElementById('blackLight4').style.display = "block";
+    document.getElementById('redLight').style.display = "block";
+    document.getElementById('redLight2').style.display = "block";
 }
 
 
 //-----------------------------------------------------------------------------------------------------
 
+function clearTrafficCrossroad2(){
+    document.getElementById('greenLight').style.display = "none";
+    document.getElementById('blackLight').style.display = "none";
+    document.getElementById('blackLight2').style.display = "none";
+    document.getElementById('blackLight3').style.display = "none";
+    document.getElementById('redLight').style.display = "none";
+    document.getElementById('redLight2').style.display = "none";
+}
+function clearTrafficCrossroad4() {
+    document.getElementById('greenLight4').style.display="none";
+    document.getElementById('blackLight4').style.display="none";
+}
+
+function clearTrafficCrossroad15() {
+    document.getElementById('greenLight').style.display = "none";
+    document.getElementById('greenLight2').style.display = "none";
+    document.getElementById('blackLight').style.display = "none";
+    document.getElementById('blackLight2').style.display = "none";
+    document.getElementById('blackLight3').style.display = "none";
+    document.getElementById('blackLight4').style.display = "none";
+    document.getElementById('redLight').style.display = "none";
+    document.getElementById('redLight2').style.display = "none";
+}
 
 function displayButtonsLogs() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
-    document.getElementById('greenLight').style.display = "none";
-    document.getElementById('blackLight').style.display = "none";
     document.getElementById('reset').style.display = "block";
     document.getElementById('reset').style.position = "absolute";
     document.getElementById('reset').style.marginTop = "40px";
@@ -702,12 +740,12 @@ function demoCrossroad1() {
 }
 function demoCrossroad2() {
     animation.progress(0).clear();
+    clearTrafficCrossroad2();
+    clearCrossMoved();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
                 move2GreenCar();
-                document.getElementById('greenLight').style.display = "block";
-                document.getElementById('blackLight').style.display = "block";
             }
             move2YellowCar();
         }
@@ -728,6 +766,7 @@ function demoCrossroad3() {
 }
 function demoCrossroad4() {
     animation.progress(0).clear();
+    clearTrafficCrossroad4();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move3to5Tram();
@@ -850,13 +889,12 @@ function demoCrossroad14() {
 }
 function demoCrossroad15() {
     animation.progress(0).clear();
+    clearTrafficCrossroad15();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if(!animation.isActive()){
                 move15BlackCar();
             }
-            document.getElementById('greenLight').style.display = "block";
-            document.getElementById('blackLight').style.display = "block";
             move15YellowCar();
         }
         move15GreenCar();
@@ -927,14 +965,7 @@ function controlAll(){
     }
 }
 
-function resetCrossroad(){
-    document.getElementById('wronglog').style.display = "none";
-    document.getElementById('rightlog').style.display = "none";
-    document.getElementById('rightArrow').style.display = "none";
-    document.getElementById('leftArrow').style.display = "none";
-    document.getElementById('greenLight').style.display = "none";
-    document.getElementById('blackLight').style.display = "none";
-    window.right=true;
+function clearCrossMoved() {
     window.cross1greenMoved = false;
     window.cross1yellowMoved = false;
     window.cross1blackMoved = false;
@@ -967,6 +998,24 @@ function resetCrossroad(){
     window.cross15yellowMoved = false;
     window.cross15blackMoved = false;
     window.cross15greenMoved = false;
+}
+function clearTraffics() {
+    if (document.getElementById("cross2"))
+        clearTrafficCrossroad2();
+    if (document.getElementById("cross4"))
+        clearTrafficCrossroad4();
+    if (document.getElementById("cross15"))
+        clearTrafficCrossroad15();
+}
+
+function resetCrossroad(){
+    clearTraffics();
+    document.getElementById('wronglog').style.display = "none";
+    document.getElementById('rightlog').style.display = "none";
+    document.getElementById('rightArrow').style.display = "none";
+    document.getElementById('leftArrow').style.display = "none";
+    window.right=true;
+    clearCrossMoved();
 
     animation.progress(0).clear();
 }

@@ -312,7 +312,7 @@ article {
 }
 #rightArrow{
     margin-left: 10px;
- left: 510px;
+    left: 510px;
     position: absolute;
     width: 40px;
     display: none;
@@ -322,11 +322,38 @@ article {
     top: -379px;
     left: 119px;
 }
+.blackLight2{
+    top:-383px;
+    left: 451px;
+}
+.blackLight3{
+    top:-91px;
+    left:76px;
+}
+.blackLight4{
+    top:-79px;
+    left:295px;
+}
 .blackLight15{
     top: -128px;
     left: 381px;
 }
-#blackLight, #greenLight{
+.blackLight16{
+    top: -353px;
+    left: 421px;
+}
+.blackLight17{
+    top: -124px;
+    left: 108px;
+}
+.blackLight18{
+    top: -349px;
+    left: 150px;
+}
+
+#blackLight, #blackLight2, #blackLight3,#blackLight4,
+#greenLight,#greenLight2,#greenLight4,
+#redLight,#redLight2{
     width: 21px;
     display: none;
     position: absolute;
@@ -335,12 +362,34 @@ article {
     top: -426px;
     left: 119px;
 }
+.greenLight4{
+    top:-33px;
+    left: 295px;
+}
 .greenLight15{
     top: -82px;
     left: 381px;
 }
-
-
+.greenLight16{
+    top:-395px;
+    left: 150px;
+}
+.redLight{
+    top:-91px;
+    left:122px;
+}
+.redLight2{
+    top:-383px;
+    left:405px;
+}
+.redLight15{
+    top:-353px;
+    left:375px;
+}
+.redLight16{
+    top:-124px;
+    left: 155px;
+}
 #rightlog{
     display: none;
     position: relative;
