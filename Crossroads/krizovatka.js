@@ -102,7 +102,7 @@ function move2GreenCar() {
         .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
     if (window.cross2blackMoved)
         window.right = false;
-    if(window.cross2yellowMoved){
+    if(window.cross2yellowMoved && window.demo ===false){
         //zmena semafora
         setTrafficCrossroad2();
     }
@@ -123,7 +123,7 @@ function move2YellowCar() {
         .to(svgYellowCar,0.6, {ease: "none", y: -150, x: "+=250"});
     if (window.cross2blackMoved)
         window.right = false;
-    if(window.cross2greenMoved){
+    if(window.cross2greenMoved && window.demo === false){
         //zmena semafora
         setTrafficCrossroad2();
     }
@@ -157,7 +157,7 @@ function move3to5Tram() {
     if(window.cross3greenMoved){
         window.right= false;
     }
-    if (document.getElementById('cross4') && window.right===true)
+    if (document.getElementById('cross4') && window.right===true && window.demo === false)
     {
         document.getElementById('greenLight4').style.display="block";
         document.getElementById('blackLight4').style.display="block";
@@ -631,7 +631,7 @@ function move15YellowCar(){
         .to(svgYellowCar, 0.6,{ease: "none",y:-230, x:"-=70", rotation:"-90_short"})
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"              })
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"                });
-    if(window.cross15blackMoved ){
+    if(window.cross15blackMoved && window.demo ===false){
         setTrafficCrossroad15();
         window.right = true;
     }
@@ -650,7 +650,7 @@ function move15BlackCar(){
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"});
-    if(window.cross15yellowMoved){
+    if(window.cross15yellowMoved && window.demo ===false){
         setTrafficCrossroad15();
         window.right = false;
     }
@@ -738,10 +738,15 @@ function demoCrossroad1() {
         displayButtonsLogs();
     }
 }
+window.demo = false;
+
 function demoCrossroad2() {
     animation.progress(0).clear();
     clearTrafficCrossroad2();
     clearCrossMoved();
+    window.demo =true;
+    animation.timeScale(0);
+    setInterval(function(){animation.timeScale(1)},2000);
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
@@ -749,10 +754,11 @@ function demoCrossroad2() {
             }
             move2YellowCar();
         }
+        setInterval(function () {setTrafficCrossroad2();},6000);
         move2BlackCar();
+        window.demo = false;
         displayButtonsLogs();
     }
-
 }
 function demoCrossroad3() {
     animation.progress(0).clear();
@@ -767,11 +773,20 @@ function demoCrossroad3() {
 function demoCrossroad4() {
     animation.progress(0).clear();
     clearTrafficCrossroad4();
+    clearCrossMoved();
+    window.demo =true;
+    animation.timeScale(0);
+    setInterval(function(){animation.timeScale(1)},2000);
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             move3to5Tram();
         }
+        setInterval(function () {
+            document.getElementById('greenLight4').style.display="block";
+            document.getElementById('blackLight4').style.display="block";
+            },6000);
         move3to5GreenCar();
+        window.demo = false;
     }
     displayButtonsLogs();
 }
@@ -890,6 +905,10 @@ function demoCrossroad14() {
 function demoCrossroad15() {
     animation.progress(0).clear();
     clearTrafficCrossroad15();
+    clearCrossMoved();
+    window.demo =true;
+    animation.timeScale(0);
+    setInterval(function(){animation.timeScale(1)},2000);
     if (!animation.isActive()) {
         if (!animation.isActive()) {
             if(!animation.isActive()){
@@ -897,7 +916,9 @@ function demoCrossroad15() {
             }
             move15YellowCar();
         }
+        setInterval(function () {setTrafficCrossroad15();},8000);
         move15GreenCar();
+        window.demo = false;
     }
     displayButtonsLogs();
 }
