@@ -318,6 +318,28 @@ article {
     display: none;
     float:right;
 }
+.blackLight{
+    top: -379px;
+    left: 119px;
+}
+.blackLight15{
+    top: -128px;
+    left: 381px;
+}
+#blackLight, #greenLight{
+    width: 21px;
+    display: none;
+    position: absolute;
+}
+.greenLight{
+    top: -426px;
+    left: 119px;
+}
+.greenLight15{
+    top: -82px;
+    left: 381px;
+}
+
 
 #rightlog{
     display: none;
@@ -349,6 +371,7 @@ article {
 }
 #reset{
     display: none;
+    margin-top: 10px;
     margin: 3px;
     float: left;
     box-sizing: border-box;

@@ -102,6 +102,12 @@ function move2GreenCar() {
         .to(svgGreenCar,0.6, {ease: "none", x: 160, y: "+=250"});
     if (window.cross2blackMoved)
         window.right = false;
+    if(window.cross2yellowMoved){
+        //zmena semafora
+        document.getElementById('greenLight').style.display = "block";
+        document.getElementById('blackLight').style.display = "block";
+    }
+
     controlAll();
     document.getElementById('reset').style.display = "block";
 }
@@ -118,6 +124,11 @@ function move2YellowCar() {
         .to(svgYellowCar,0.6, {ease: "none", y: -150, x: "+=250"});
     if (window.cross2blackMoved)
         window.right = false;
+    if(window.cross2greenMoved){
+        //zmena semafora
+        document.getElementById('greenLight').style.display = "block";
+        document.getElementById('blackLight').style.display = "block";
+    }
     controlAll();
     document.getElementById('reset').style.display = "block";
 }
@@ -610,6 +621,8 @@ function move15YellowCar(){
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"              })
         .to(svgYellowCar, 0.6,{ease: "none",        x:"-=250"                });
     if(window.cross15blackMoved ){
+        document.getElementById('greenLight').style.display = "block";
+        document.getElementById('blackLight').style.display = "block";
         window.right = true;
     }
     if(window.cross15greenMoved){
@@ -627,8 +640,12 @@ function move15BlackCar(){
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"})
         .to(svgBlackCar, 0.6, {ease: "none", y: "-=150"});
-    if(window.cross15yellowMoved)
+    if(window.cross15yellowMoved){
+        document.getElementById('greenLight').style.display = "block";
+        document.getElementById('blackLight').style.display = "block";
         window.right = false;
+    }
+
     if (window.cross15greenMoved){
         window.right = false;
     }
@@ -659,7 +676,13 @@ function move15GreenCar(){
 function displayButtonsLogs() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
+    document.getElementById('greenLight').style.display = "none";
+    document.getElementById('blackLight').style.display = "none";
     document.getElementById('reset').style.display = "block";
+    document.getElementById('reset').style.position = "absolute";
+    document.getElementById('reset').style.marginTop = "40px";
+    document.getElementById('reset').style.marginLeft = "10px";
+    document.getElementById('demoCrossroad').style.display = "none";
     document.getElementById('rightArrow').style.display = "block";
     document.getElementById('leftArrow').style.display = "block";
 }
@@ -683,6 +706,8 @@ function demoCrossroad2() {
         if (!animation.isActive()) {
             if (!animation.isActive()) {
                 move2GreenCar();
+                document.getElementById('greenLight').style.display = "block";
+                document.getElementById('blackLight').style.display = "block";
             }
             move2YellowCar();
         }
@@ -830,6 +855,8 @@ function demoCrossroad15() {
             if(!animation.isActive()){
                 move15BlackCar();
             }
+            document.getElementById('greenLight').style.display = "block";
+            document.getElementById('blackLight').style.display = "block";
             move15YellowCar();
         }
         move15GreenCar();
@@ -900,14 +927,13 @@ function controlAll(){
     }
 }
 
-
-
-
 function resetCrossroad(){
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('rightArrow').style.display = "none";
     document.getElementById('leftArrow').style.display = "none";
+    document.getElementById('greenLight').style.display = "none";
+    document.getElementById('blackLight').style.display = "none";
     window.right=true;
     window.cross1greenMoved = false;
     window.cross1yellowMoved = false;
