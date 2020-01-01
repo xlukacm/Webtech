@@ -16,37 +16,39 @@
 <body>
     <header>
         <a href="../home.html"><img src="../home.png" alt="home" id="logo-home" sizes="32x32"></a>
-        <h1 class="header">Križovatka 9. </h1>
+        <h1 class="centerhead">Križovatka 9. </h1>
     </header>
+    <div class="center">
+        <div class="outer">
+            <article class="krizovatka9">
+                <h6 hidden>Križovatka 9</h6>
+                <div class="tram9">
+                    <img src="cars/elina.png" alt="Elektricka" title="Električka" onclick="moveTram9()" id="tram">
+                </div>
+                <div class="carYellow9">
+                    <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move9YellowCar()" id="svgYellowCar">
+                </div>
+                <div class="carGreen9">
+                    <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move9GreenCar()" id="svgGreenCar">
+                </div>
+            </article>
+        </div>
+        <script src="krizovatka.js"></script>
+        <a  href="krizovatka8.html">
+            <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
+        </a>
+        <a  href="krizovatka10.html">
+            <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
+        </a>
+        <div id="rightlog" class="alert alert-success" role="alert">
+            Správne riešenie
+        </div>
+        <div id="wronglog" class="alert alert-danger" role="alert">
+            Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
+        </div>
+        <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
+        <button id="demoCrossroad" type="button" onclick="demoCrossroad9()" class="btn btn-info">Správne</button>
+    </div>
 
-<div class="outer">
-    <article class="krizovatka9">
-        <h6 hidden>Križovatka 9</h6>
-        <div class="tram9">
-            <img src="cars/elina.png" alt="Elektricka" title="Električka" onclick="moveTram9()" id="tram">
-        </div>
-        <div class="carYellow9">
-            <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move9YellowCar()" id="svgYellowCar">
-        </div>
-        <div class="carGreen9">
-            <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move9GreenCar()" id="svgGreenCar">
-        </div>
-    </article>
-</div>
-<script src="krizovatka.js"></script>
-    <a  href="krizovatka8.html">
-        <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
-    </a>
-    <a  href="krizovatka10.html">
-        <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
-    </a>
-<div id="rightlog" class="alert alert-success" role="alert">
-    Správne riešenie
-</div>
-<div id="wronglog" class="alert alert-danger" role="alert">
-    Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
-</div>
-<button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
-<button id="demoCrossroad" type="button" onclick="demoCrossroad9()" class="btn btn-info">Správne</button>
 </body>
 </html>

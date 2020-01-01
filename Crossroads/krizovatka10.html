@@ -16,35 +16,37 @@
 <body>
     <header>
         <a href="../home.html"><img src="../home.png" alt="home" id="logo-home" sizes="32x32"></a>
-        <h1 class="header">Križovatka 10. </h1>
+        <h1 class="centerhead">Križovatka 10. </h1>
     </header>
 
-<div class="outer">
-    <article class="krizovatka10">
-        <h6 hidden>Križovatka 10</h6>
-        <div class="carYellow10">
-            <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move10YellowCar()" id="svgYellowCar">
+    <div class="center">
+        <div class="outer">
+        <article class="krizovatka10">
+            <h6 hidden>Križovatka 10</h6>
+            <div class="carYellow10">
+                <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move10YellowCar()" id="svgYellowCar">
+            </div>
+            <div class="carGreen10">
+                <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move10GreenCar()" id="svgGreenCar">
+            </div>
+        </article>
+    </div>
+        <script src="krizovatka.js"></script>
+        <a  href="krizovatka9.html">
+            <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
+        </a>
+        <a  href="krizovatka11.html">
+            <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
+        </a>
+        <div id="rightlog" class="alert alert-success" role="alert">
+            Správne riešenie
         </div>
-        <div class="carGreen10">
-            <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move10GreenCar()" id="svgGreenCar">
+        <div id="wronglog" class="alert alert-danger" role="alert">
+            Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
         </div>
-    </article>
-</div>
-<script src="krizovatka.js"></script>
-    <a  href="krizovatka9.html">
-        <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
-    </a>
-    <a  href="krizovatka11.html">
-        <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
-    </a>
-<div id="rightlog" class="alert alert-success" role="alert">
-    Správne riešenie
-</div>
-<div id="wronglog" class="alert alert-danger" role="alert">
-    Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
-</div>
+        <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
+        <button id="demoCrossroad" type="button" onclick="demoCrossroad10()" class="btn btn-info">Správne</button>
+    </div>
 
-<button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
-<button id="demoCrossroad" type="button" onclick="demoCrossroad10()" class="btn btn-info">Správne</button>
 </body>
 </html>

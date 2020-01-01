@@ -16,56 +16,59 @@
 <body>
     <header>
         <a href="../home.html"><img src="../home.png" alt="home" id="logo-home" sizes="32x32"></a>
-        <h1 class="header">Križovatka 2. </h1>
+        <h1 class="centerhead">Križovatka 2. </h1>
     </header>
 
-<div class="outer">
-    <article class="krizovatka2">
-        <h6 id="cross2" hidden>Križovatka 2</h6>
-        <div class="carBlack2">
-            <img src="cars/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move2BlackCar()" id="svgBlackCar">
+    <div class="center">
+        <div class="outer">
+            <article class="krizovatka2">
+                <h6 id="cross2" hidden>Križovatka 2</h6>
+                <div class="carBlack2">
+                    <img src="cars/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move2BlackCar()" id="svgBlackCar">
+                </div>
+                <div class="carYellow2">
+                    <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move2YellowCar()" id="svgYellowCar">
+                </div>
+                <div class="carGreen2" >
+                    <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move2GreenCar()" id="svgGreenCar">
+                </div>
+                <div class="greenLight">
+                    <img src="cars/zelena.png" alt="Zelené svetlo" title="Zelené svetlo"  id="greenLight">
+                </div>
+                <div class="blackLight">
+                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight">
+                </div>
+                <div class="blackLight2">
+                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight2">
+                </div>
+                <div class="blackLight3">
+                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight3">
+                </div>
+                <div class="redLight">
+                    <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight">
+                </div>
+                <div class="redLight2">
+                    <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight2">
+                </div>
+            </article>
         </div>
-        <div class="carYellow2">
-            <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto" onclick="move2YellowCar()" id="svgYellowCar">
+        <script src="krizovatka.js"></script>
+        <a  href="krizovatka1.html">
+            <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
+        </a>
+        <a  href="krizovatka3.html">
+            <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
+        </a>
+        <div id="rightlog" class="alert alert-success" role="alert">
+            Správne riešenie
         </div>
-        <div class="carGreen2" >
-            <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move2GreenCar()" id="svgGreenCar">
+        <div id="wronglog" class="alert alert-danger" role="alert">
+            Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
         </div>
-        <div class="greenLight">
-            <img src="cars/zelena.png" alt="Zelené svetlo" title="Zelené svetlo"  id="greenLight">
-        </div>
-        <div class="blackLight">
-            <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight">
-        </div>
-        <div class="blackLight2">
-            <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight2">
-        </div>
-        <div class="blackLight3">
-            <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight3">
-        </div>
-        <div class="redLight">
-            <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight">
-        </div>
-        <div class="redLight2">
-            <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight2">
-        </div>
-    </article>
-</div>
-    <script src="krizovatka.js"></script>
-    <a  href="krizovatka1.html">
-        <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
-    </a>
-    <a  href="krizovatka3.html">
-        <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
-    </a>
-    <div id="rightlog" class="alert alert-success" role="alert">
-        Správne riešenie
+        <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
+        <button id="demoCrossroad" type="button" onclick="demoCrossroad2()" class="btn btn-info">Správne</button>
     </div>
-    <div id="wronglog" class="alert alert-danger" role="alert">
-        Nesprávne riešenie! Odklikni tlačidlo Správne na správne zobrazenie.
-    </div>
-    <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
-    <button id="demoCrossroad" type="button" onclick="demoCrossroad2()" class="btn btn-info">Správne</button>
+
 
 </body>
 </html>
