@@ -1,6 +1,9 @@
 let svgGreenCar = document.querySelector("#svgGreenCar"); //pomocou Jqery si najdeme v html dokumente idecko auta
+
 let svgBlackCar = document.querySelector("#svgBlackCar");
 let svgYellowCar = document.querySelector("#svgYellowCar");
+let svgYellowCarB = document.querySelector("#svgYellowCarB");
+
 
 let svgTram = document.querySelector("#tram");
 let pedestrian = document.querySelector("#pedestrian1");
@@ -25,7 +28,7 @@ function move1GreenCar(){  //zelene auto
         .to(svgGreenCar,0.6,{ease: "none",   x:140, y:"-=20",  rotation:"-20_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:180, y:"-=30",  rotation:"-40_short"})
         .to(svgGreenCar, 0.6,{ease: "none", x:210, y:"-=40",  rotation:"-70_short"})
-        .to(svgGreenCar, 0.6,{ease: "none",               x:230, y:"-=40", rotation:"-90_short"})
+        .to(svgGreenCar, 0.6,{ease: "none",              x:230, y:"-=40", rotation:"-90_short"})
         .to(svgGreenCar, 0.6,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.6,{ease: "none",                        y:"-=250"});
     //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
@@ -48,6 +51,7 @@ function move1YellowCar() {
         .to(svgYellowCar, 0.5,{ease: "none",   y:-200,x:"-=40", rotation:"-70_short" })
         .to(svgYellowCar, 0.6,{ease: "none",   y:-230,x:"-=40", rotation:"-90_short" })
         .to(svgYellowCar, 0.6,{ease: "none",  x:"-=300"});
+
     if(window.cross1blackMoved && window.cross1greenMoved && window.right){
             window.right = true;
     }

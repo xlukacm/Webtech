@@ -35,18 +35,23 @@
         <div class="carBlack1"  style="z-index: 2">
 <!--            <img src="cars/black-car.png" class="carBlack1" alt="Cierne auto" title="Čierne auto"> id="blackCar">-->
             <img src="cars/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move1BlackCar()" id="svgBlackCar">
-            <img src="cars/black-carBlinker.png" class="blackCar" alt="Cierne auto" title="Čierne auto blinker" id="blackCarBlinker" style="display: none">
         </div>
         <!--            tu napriklad si zadefinujeme zlte auto svgGreenCar a na ONCLICK spravime funkciu vid javascript-->
         <div class="carYellow1">
-            <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move1YellowCar()" id="svgYellowCar">
+            <div id="svgYellowCar">
+                <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move1YellowCar()" id="yellowCar">
+                <img src="cars/yellow-carBlinkerLeft.png" class="yellowCar" alt="Zlte auto" title="Zlte auto blinker" onclick="move1YellowCar()" id="yellowCarB" style="display: none">
+            </div>
         </div>
         <div class="carGreen">
-            <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move1GreenCar()" id="svgGreenCar">
+            <div id="svgGreenCar">
+                <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move1GreenCar()" id="greenCar">
+                <img src="cars/GreenCarLeftBlinker.png" class="greenCar" alt="Zelené auto" title="Zelené auto blinker" onclick="move1GreenCar()" id="greenCarB" style="display: none">
+            </div>
         </div>
     </article>
 <script>
-    // setBlinkre1();
+    setBlinkre1();
 </script>
 </div>
     </div>
