@@ -12,3 +12,25 @@ html, body {
 /*.whiteText{*/
 /*    color:white;*/
 /*}*/
+
+
+/*SKÚŠKA TABUĽKY S KONTAKTMI*/
+th,td{
+    border: 1px solid black;
+    width: 5em;
+}
+
+.bunka{
+    border:none;
+    height: 2em;
+    text-align: center;
+}
+address table{
+    border-spacing: 0.4em;
+    font-style:normal;
+    margin: 0 2.5em 0.8em 0.5em;
+}
+.contact{
+    width: 16px;
+    height: 16px;
+}
