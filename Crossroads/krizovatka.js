@@ -2,10 +2,9 @@ let svgGreenCar = document.querySelector("#svgGreenCar"); //pomocou Jqery si naj
 
 let svgBlackCar = document.querySelector("#svgBlackCar");
 let svgYellowCar = document.querySelector("#svgYellowCar");
-let svgYellowCarB = document.querySelector("#svgYellowCarB");
 
 
-let svgTram = document.querySelector("#tram");
+let svgTram = document.querySelector("#svgTram");
 let pedestrian = document.querySelector("#pedestrian1");
 let pedestrian2 = document.querySelector("#pedestrian2");
 let bike = document.querySelector("#cycle");

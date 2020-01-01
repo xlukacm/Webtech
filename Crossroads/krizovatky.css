@@ -252,6 +252,9 @@ article {
 #tram{
     width: 50px;
 }
+#tramB{
+    width: 50px;
+}
 .tram3{
     top: 280px;
     left: 130px;
@@ -486,4 +489,8 @@ div{
 #svgYellowCar{
     height: 157.74px;
     width: 71.61px;
+}
+
+#svgTram{
+    width: 50px;
 }

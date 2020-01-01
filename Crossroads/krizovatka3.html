@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <script src="blinkre.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,10 @@
             <article class="krizovatka3">
                 <h6 hidden>Križovatka 3</h6>
                 <div class="tram3" >
-                    <img src="cars/elina.png" alt="Elektricka" title="Električka" onclick="move3to5Tram()" id="tram">
+                    <div id="svgTram">
+                        <img src="cars/elina.png" alt="Elektricka" title="Električka" onclick="move3to5Tram()" id="tram">
+                        <img src="cars/elina-rightBlinker.png" alt="Elektricka" title="Električka" onclick="move3to5Tram()" id="tramB" style="display: none">
+                    </div>
                 </div>
                 <div class="carGreen3">
                     <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move3to5GreenCar()" id="svgGreenCar">
@@ -47,7 +51,9 @@
         <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
         <button id="demoCrossroad" type="button" onclick="demoCrossroad3()" class="btn btn-info">Správne</button>
     </div>
-
+    <script>
+        setBlinkre3();
+    </script>
 
 
 </body>
