@@ -1,0 +1,46 @@
+header{color:black;text-align: center;}
+
+body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+}
+
+th,td{
+    border: 1px solid black;
+    width: 5em;
+}
+
+#play{display: none;}
+
+.bunkaTD{
+    border:none;
+    height: 1em;
+    text-align: left;
+}
+.bunkaTH{
+    border: none;
+    text-align: center;
+    padding-bottom: 4px;
+    width: 1.8em;
+}
+address table{
+    border-spacing: 0.4em;
+    font-style:normal;
+    margin: 0;
+    width:100%!important;
+}
+
+#contact{
+    border-top: 1px solid rgba(0,0,0,.5);
+}
+.contact{
+    width: 16px;
+    height: 16px;
+}
+#team{
+    align-content: center;
+}
+#top{
+    display: none;
+}

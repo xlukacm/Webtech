@@ -2,17 +2,6 @@ html, body {
     height: 100%;
     width: 100%;
 }
-/*.background{*/
-/*    background-image: url("Photos/crossfoto.jpg");*/
-/*    background-size: 100% 100%;*/
-/*}*/
-/*.white{*/
-/*    background-color: white;*/
-/*}*/
-/*.whiteText{*/
-/*    color:white;*/
-/*}*/
-
 
 /*SKÚŠKA TABUĽKY S KONTAKTMI*/
 th,td{
@@ -20,17 +9,26 @@ th,td{
     width: 5em;
 }
 
-.bunka{
+.bunkaTD{
     border:none;
     height: 2em;
+    text-align: left;
+}
+.bunkaTH{
+    border: none;
     text-align: center;
+    padding-bottom: 4px;
+    width: 1.5em;
 }
 address table{
     border-spacing: 0.4em;
     font-style:normal;
     margin: 0 2.5em 0.8em 0.5em;
 }
-.contact{
+.contact {
     width: 16px;
     height: 16px;
+}
+hr .isolationContact{
+    border-top: none;
 }
