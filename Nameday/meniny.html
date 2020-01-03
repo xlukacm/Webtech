@@ -31,13 +31,12 @@
         </nav>
     </header>
     <p id="namedayToday"></p>
-    <label>
         <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
-            <input id="namedayInput" type="date" required>
+            <label for="namedayInput"></label><input id="namedayInput" type="date" required>
         </span>
         <button id="namedayButton" onclick="choseMeniny()">Vyhľadať meniny</button> <br>
         <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
-    </label><br>
+    <br>
     <div id="dates">
         <table class="table">
             <tbody>
@@ -76,11 +75,9 @@
             </tbody>
         </table>
     </div> <br>
-    <label>
-        <input id="nameInput" type="text">
+    <label for="nameInput"></label><input id="nameInput" type="text">
         <button id="nameButton" onclick="findDate()">Vyhľadaj</button>
         <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
-    </label>
 
     <div id ="countries">
         <div>Vyberte si zoznam,kde hľadať:</div>
