@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <link rel="stylesheet" type="text/css" href="Crossroads/krizovatky.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/krizovatky.css">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -14,18 +14,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="print.css" media="print">
-
-    <script src="Meniny/meninyJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/print.css" media="print">
+    <script src="JS/today.js"></script>
 
 </head>
 <body>
     <header>
         <div>
-            <script>
-                loadDoc();
-                meninyDnes();
-            </script>
+            <script>loadDocument();</script>
             <p id="namedayToday" style="top: 0;right: 0; float: right"></p>
             <h1 class="jumbotron text-center" id="driveSchool">Autoškola</h1>
         </div>
@@ -43,7 +39,7 @@
                     <a class="nav-item nav-link active" href="home.html">Domov <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="Meniny/meniny.html">Meniny</a>
+                    <a class="nav-item nav-link" href="Nameday/meniny.html">Meniny</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,19 +95,19 @@
 
             <div class="col-sm-4 mb-mb-4 mb-4">
                 <h6 class="text-uppercase font-weight-bold">Patrik M.</h6>
-                <img class="rounded-circle" src="Photos/foto-PM.jpg" alt="PM">
+                <img class="rounded-circle" src="Photos/Team/foto-PM.jpg" alt="PM">
                 <p>Študent vysokej školy. Nezamestnaný. Chudobný.</p>
             </div>
 
             <div class="col-sm-4 mb-mb-4 mb-4">
                 <h6 class="text-uppercase font-weight-bold">Mário L.</h6>
-                <img class="rounded-circle" src="Photos/foto-ML.jpg" alt="ML">
+                <img class="rounded-circle" src="Photos/Team/foto-ML.jpg" alt="ML">
                 <p >Študent vysokej školy. Inteligentný a šikovný animofotografátor.</p>
             </div>
 
             <div class="col-sm-4 mb-mb-4 mb-4">
                 <h6 class="text-uppercase font-weight-bold">Martin M.</h6>
-                <img class="rounded-circle" src="Photos/foto-MM.jpg" alt="MM">
+                <img class="rounded-circle" src="Photos/Team/foto-MM.jpg" alt="MM">
                 <p>Študent vysokej školy. Talentovaný programátor a sci-fi sledovateľ.</p>
             </div>
         </div>
@@ -130,19 +126,19 @@
                                 <table class="text center">
                                     <tr>
                                         <th class="bunkaTH">
-                                            <img src="Photos/mail.png" class="contact" alt="Mail" >
+                                            <img src="Photos/Icons/mail.png" class="contact" alt="Mail" >
                                         </th>
                                         <td class="bunkaTD"><a href="mailto:xmajtanp@is.stuba.sk">Patrik M.</a></td>
                                     </tr>
                                     <tr>
                                         <th class="bunkaTH">
-                                            <img src="Photos/mail.png" class="contact" alt="Mail" >
+                                            <img src="Photos/Icons/mail.png" class="contact" alt="Mail" >
                                         </th>
                                         <td class="bunkaTD"><a href="mailto:xlukacm@is.stuba.sk">Mário L.</a></td>
                                     </tr>
                                     <tr>
                                         <th class="bunkaTH">
-                                            <img src="Photos/mail.png" class="contact" alt="Mail" >
+                                            <img src="Photos/Icons/mail.png" class="contact" alt="Mail" >
                                         </th>
                                         <td class="bunkaTD"><a href="mailto:xmichalem@is.stuba.sk">Martin M.</a></td>
                                     </tr>

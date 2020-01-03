@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>meninyPokus</title>
-    <script src="meninyJS.js"></script>
+    <script src="../JS/meninyJS.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="meniny.css">
+    <link rel="stylesheet" href="../CSS/meniny.css">
 </head>
 
     <body>
@@ -35,7 +35,7 @@
         <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
             <input id="namedayInput" type="date" required>
         </span>
-        <button id="namedayButton" onclick="choseMeniny()">Nájdi meniny v tento deň</button> <br>
+        <button id="namedayButton" onclick="choseMeniny()">Vyhľadať meniny</button> <br>
         <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
     </label><br>
     <div id="dates">
@@ -78,7 +78,7 @@
     </div> <br>
     <label>
         <input id="nameInput" type="text">
-        <button id="nameButton" onclick="findDate()">Nájdi kedy má toto meno meniny</button>
+        <button id="nameButton" onclick="findDate()">Vyhľadaj</button>
         <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
     </label>
 

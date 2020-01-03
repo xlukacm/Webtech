@@ -4,19 +4,19 @@
     <title>Križovatka 14</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="krizovatky.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/krizovatky.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-    <script src="blinkre.js"></script>
+    <script src="../JS/blinkre.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="../home.html"><img src="../home.png" alt="home" id="logo-home"></a>
+        <a href="../home.html"><img src="../Photos/Icons/home.png" alt="home" id="logo-home"></a>
         <h1 class="centerhead">Križovatka 14. </h1>
     </header>
     <div class="center">
@@ -24,32 +24,32 @@
             <article class="krizovatka14">
                 <h6 hidden>Križovatka 14</h6>
                 <div class="pedestrian3">
-                    <img src="cars/human2.PNG" alt="clovek2" title="Človek" onclick="move14Pedestrian2()" id="pedestrian2">
+                    <img src="People/human2.PNG" alt="clovek2" title="Človek" onclick="move14Pedestrian2()" id="pedestrian2">
                 </div>
                 <div class="carBlack14">
-                    <img src="cars/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move14BlackCar()" id="svgBlackCar">
+                    <img src="Vehicles/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move14BlackCar()" id="svgBlackCar">
                 </div>
                 <div class="carYellow14">
                     <div id="svgYellowCar">
-                        <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move14YellowCar()" id="yellowCar">
-                        <img src="cars/yellow-carBlinkerLeft.png" class="yellowCar" alt="Zlte auto" title="Zlte auto blinker" onclick="move14YellowCar()" id="yellowCarB" style="display: none">
+                        <img src="Vehicles/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move14YellowCar()" id="yellowCar">
+                        <img src="Vehicles/yellow-carBlinkerLeft.png" class="yellowCar" alt="Zlte auto" title="Zlte auto blinker" onclick="move14YellowCar()" id="yellowCarB" style="display: none">
                     </div>
                 </div>
                 <div class="carGreen14">
-                    <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move14GreenCar()" id="svgGreenCar">
+                    <img src="Vehicles/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move14GreenCar()" id="svgGreenCar">
                 </div>
             </article>
         </div>
         <div id="InfoAlert" class="alert alert-light" role="alert">
            Pokiaľ nefunguje svetelné značenie, je vodič povinný riadiť sa značením na križovatke, alebo pravidla pravej ruky.
-            <img src="Informaticke%20obrazky/NonSemafor.jpg" alt="Non semafor"  id="infoImg">
+            <img src="InformationLogs/NonSemafor.jpg" alt="Non semafor"  id="infoImg">
         </div>
-        <script src="krizovatka.js"></script>
+        <script src="../JS/krizovatka.js"></script>
         <a  href="krizovatka13.html">
-            <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
+            <img id="leftArrow" src="Others/left-arrow.png" alt="left arrow">
         </a>
         <a  href="krizovatka15.html">
-            <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
+            <img id="rightArrow" src="Others/right-arrow.png" alt="right arrow">
         </a>
         <div id="rightlog" class="alert alert-success" role="alert">
             Správne riešenie

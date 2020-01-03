@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="krizovatky.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/krizovatky.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-    <script src="blinkre.js"></script>
+    <script src="../JS/blinkre.js"></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 <!--SKÚŠKA POZADIA-->
 
     <div class="header">
-        <a href="../home.html"><img src="../home.png" alt="home" id="logo-home"></a>
+        <a href="../home.html"><img src="../Photos/Icons/home.png" alt="home" id="logo-home"></a>
         <h1>Križovatka 2.</h1>
     </div>
 <!--SKÚŠKA POZADIA-->
@@ -36,37 +36,37 @@
             <article class="krizovatka2">
                 <h6 id="cross2" hidden>Križovatka 2</h6>
                 <div class="carBlack2">
-                    <img src="cars/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move2BlackCar()" id="svgBlackCar">
+                    <img src="Vehicles/black-car.png" class="blackCar" alt="Cierne auto" title="Čierne auto" onclick="move2BlackCar()" id="svgBlackCar">
                 </div>
                 <div class="carYellow2">
                     <div id="svgYellowCar">
-                        <img src="cars/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move2YellowCar()" id="yellowCar">
-                        <img src="cars/yellow-carBlinkerRight.png" class="yellowCar" alt="Zlte auto" title="Zlte auto blinker" onclick="move2YellowCar()" id="yellowCarB" style="display: none">
+                        <img src="Vehicles/yellow-car.png" class="yellowCar" alt="Žlté auto" title="Žlté auto " onclick="move2YellowCar()" id="yellowCar">
+                        <img src="Vehicles/yellow-carBlinkerRight.png" class="yellowCar" alt="Zlte auto" title="Zlte auto blinker" onclick="move2YellowCar()" id="yellowCarB" style="display: none">
                     </div>
                 </div>
                 <div class="carGreen2">
                     <div id="svgGreenCar">
-                        <img src="cars/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move2GreenCar()" id="greenCar">
-                        <img src="cars/GreenCarRightBlinker.png" class="greenCar" alt="Zelené auto" title="Zelené auto blinker" onclick="move2GreenCar()" id="greenCarB" style="display: none">
+                        <img src="Vehicles/GreenCar.png" class="greenCar" alt="Zelené auto" title="Zelené auto" onclick="move2GreenCar()" id="greenCar">
+                        <img src="Vehicles/GreenCarRightBlinker.png" class="greenCar" alt="Zelené auto" title="Zelené auto blinker" onclick="move2GreenCar()" id="greenCarB" style="display: none">
                     </div>
                 </div>
                 <div class="greenLight">
-                    <img src="cars/zelena.png" alt="Zelené svetlo" title="Zelené svetlo"  id="greenLight">
+                    <img src="Traffic/zelena.png" alt="Zelené svetlo" title="Zelené svetlo" id="greenLight">
                 </div>
                 <div class="blackLight">
-                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight">
+                    <img src="Traffic/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight">
                 </div>
                 <div class="blackLight2">
-                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight2">
+                    <img src="Traffic/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight2">
                 </div>
                 <div class="blackLight3">
-                    <img src="cars/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight3">
+                    <img src="Traffic/cierna.png" alt="Cierne svetlo" title="Cierne svetlo" id="blackLight3">
                 </div>
                 <div class="redLight">
-                    <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight">
+                    <img src="Traffic/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight">
                 </div>
                 <div class="redLight2">
-                    <img src="cars/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight2">
+                    <img src="Traffic/cervena.png" alt="Cervene svetlo" title="Cervene svetlo" id="redLight2">
                 </div>
             </article>
         </div>
@@ -77,14 +77,14 @@
             je povinný dať prednosť v jazde vozidlám idúcim vo voľnom smere,
             ako aj prednosť chodcom prechádzajúcim vo voľnom smere po priechode pre chodcov a cyklistom prechádzajúcim vo voľnom smere po priechode pre cyklistov,
             pritom ich nesmie ohroziť ani obmedziť; na tento účel je povinný zastaviť vozidlo.
-            <img id="infoImg2" src="Informaticke%20obrazky/zelena-sipka.jpg" alt="zelena sipka"  >
+            <img id="infoImg2" src="InformationLogs/zelena-sipka.jpg" alt="zelena sipka"  >
         </div>
-        <script src="krizovatka.js"></script>
+        <script src="../JS/krizovatka.js"></script>
         <a  href="krizovatka1.html">
-            <img id="leftArrow" src="cars/left-arrow.png" alt="left arrow">
+            <img id="leftArrow" src="Others/left-arrow.png" alt="left arrow">
         </a>
         <a  href="krizovatka3.html">
-            <img id="rightArrow" src="cars/right-arrow.png" alt="right arrow">
+            <img id="rightArrow" src="Others/right-arrow.png" alt="right arrow">
         </a>
         <div id="rightlog" class="alert alert-success" role="alert">
             Správne riešenie
