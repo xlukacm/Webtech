@@ -849,11 +849,11 @@ function demoCrossroad9() {
     animation.progress(0).clear();
     wait();
     if (!animation.isActive()) {
-            if(!animation.isActive()){
-                moveTram9();
-                move9YellowCar();
-            }
-            move9GreenCar();
+        if(!animation.isActive()){
+            moveTram9();
+            move9YellowCar();
+        }
+        move9GreenCar();
     }
     displayButtonsLogs();
 }
