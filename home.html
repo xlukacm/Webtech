@@ -16,11 +16,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
 
+    <script src="Meniny/meninyJS.js"></script>
+
 </head>
 <body>
     <header>
-        <div class="jumbotron text-center" style="margin-bottom:0">
-            <h1>Autoškola</h1>
+        <div>
+            <script>
+                loadDoc();
+                meninyDnes();
+            </script>
+            <p id="namedayToday" style="top: 0;right: 0; float: right"></p>
+            <h1 class="jumbotron text-center" style="margin-bottom:0">Autoškola</h1>
         </div>
     </header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
