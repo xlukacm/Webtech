@@ -945,11 +945,13 @@ function rightLog() {
     document.getElementById('demoCrossroad').style.display = "none";
     document.getElementById('rightArrow').style.display = "block";
     document.getElementById('leftArrow').style.display = "block";
+    document.getElementById('InfoAlert').style.display = "block";
 }
 
 function wrongLog() {
     document.getElementById('wronglog').style.display = "block";
     document.getElementById('demoCrossroad').style.display = "block";
+    document.getElementById('InfoAlert').style.display = "block";
 }
 
 function rightControl() {
