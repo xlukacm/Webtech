@@ -32,3 +32,16 @@ address table{
 hr .isolationContact{
     border-top: none;
 }
+@media screen and (max-width: 600px)
+{
+    #table{
+        width: fit-content;
+    }
+}
+#table {
+    width: fit-content;
+}
+#driveSchool{
+    margin-bottom:0;
+    text-shadow: cyan;
+}
