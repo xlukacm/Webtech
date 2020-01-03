@@ -21,10 +21,81 @@
 </head>
 
 <body>
-    <header>
-        <a href="../home.html"><img src="../Photos/Icons/home.png" alt="home" id="logo-home"></a>
-        <h1 class="centerhead">Križovatka 3. </h1>
-    </header>
+<!--    <header>-->
+<!--&lt;!&ndash;        <a href="../home.html"><img src="../Photos/Icons/home.png" alt="home" id="logo-home"></a>&ndash;&gt;-->
+<!--        <h1 class="centerhead">Križovatka 3. </h1>-->
+<!--    </header>-->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Ukončiť kurz?</h3>
+                </div>
+                <div class="modal-body">
+                    Prajete si ukončiť tento kurz a vrátiť sa na úvodnú stránku?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Nie</button>
+                    <a href="../home.html" class="btn btn-primary" >Áno
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal">
+                    <span class="glyphicon glyphicon-home"></span> Domov
+                </button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Križovatka 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 5</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 6</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 7</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 8</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 9</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 10</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 11</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 12</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 13</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 14</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Križovatka 15</a>
+            </li>
+        </ul>
+    </nav>
 
     <div class="center">
         <div class="outer rounded-lg">
@@ -62,6 +133,7 @@
         <button id="reset" onclick="resetCrossroad()" type="button" class="btn btn-dark">Reset</button>
         <button id="demoCrossroad" type="button" onclick="demoCrossroad3()" class="btn btn-info">Správne</button>
     </div>
+
     <script>
         setBlinkre3();
     </script>

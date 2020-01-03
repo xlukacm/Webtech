@@ -11,6 +11,7 @@ body {
 header{
     box-sizing: border-box;
 }
+nav {width: 100%!important;}
 
 .outer{
     margin: 10px;
