@@ -407,19 +407,25 @@ article {
     display: none;
     float: right;
     box-sizing: border-box;
-    top: 5px;
     left: 560px;
     position: absolute;
     width: 700px;
     border: 2px solid #ccc;
     border-radius: 8px;
-    margin: 15px;
+    margin: 10px;
+    top:0;
     text-align: center;
 }
+
 #infoImg{
     margin: 10px;
     height:400px;
     width:600px;
+}
+#infoImg2{
+    margin: 10px;
+    height:250px;
+    width:300px;
 }
 
 #blackLight, #blackLight2, #blackLight3,#blackLight4,
