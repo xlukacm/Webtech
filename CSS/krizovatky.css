@@ -405,6 +405,7 @@ article {
     height: 600px;
 }
 #InfoAlert{
+    color: black;
     display: none;
     float: right;
     box-sizing: border-box;

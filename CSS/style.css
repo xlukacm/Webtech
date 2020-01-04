@@ -44,3 +44,10 @@ hr .isolationContact{
 #driveSchool{
     margin-bottom:0;
 }
+#namedayToday{
+    top: 0px;
+    right: 15px;
+    margin: 8px;
+    float: right;
+    color: #cccccc;
+}
