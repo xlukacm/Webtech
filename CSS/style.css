@@ -41,8 +41,15 @@ hr .isolationContact{
 #table {
     width: fit-content;
 }
+#head{
+    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    background-color: floralwhite;
+}
 #driveSchool{
-    margin-bottom:0;
+    height: 50px;
+    position: center;
 }
 #namedayToday{
     top: 0px;
@@ -51,3 +58,10 @@ hr .isolationContact{
     float: right;
     color: #cccccc;
 }
+#footerHome{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    position: center;
+    background-color: #e3f2fd;
+}
+/*https://vat.pravda.sk/clovek/clanok/385254-americki-vedci-navrhli-permanentny-kalendar/*/
