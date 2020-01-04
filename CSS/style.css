@@ -2,6 +2,9 @@ html, body {
     height: 100%;
     width: 100%;
 }
+#home{
+    background-color: rgba(174,215,237,0.1);
+}
 
 /*SKÚŠKA TABUĽKY S KONTAKTMI*/
 th,td{
@@ -40,6 +43,9 @@ hr .isolationContact{
 }
 #table {
     width: fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 1%;
 }
 #head{
     padding-top: 10px;
@@ -49,19 +55,17 @@ hr .isolationContact{
 }
 #driveSchool{
     height: 50px;
-    position: center;
 }
 #namedayToday{
-    top: 0px;
+    top: 0;
     right: 15px;
     margin: 8px;
     float: right;
     color: #cccccc;
 }
 #footerHome{
-    padding-top: 40px;
-    padding-bottom: 30px;
-    position: center;
-    background-color: #e3f2fd;
+    padding:1% 0 1% 0;
+    background-color: floralwhite;
+    margin-bottom:0
 }
 /*https://vat.pravda.sk/clovek/clanok/385254-americki-vedci-navrhli-permanentny-kalendar/*/

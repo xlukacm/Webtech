@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="19d217c7-8e03-4d71-8a50-4cbff9a818ff" name="WEBTE ZAD" url="http://147.175.121.202">
-        <fileTransfer host="147.175.121.202" port="22" rootFolder="/public_html/WebtechProjekt" accessType="SFTP">
+      <webServer id="19d217c7-8e03-4d71-8a50-4cbff9a818ff" name="WEBTE ZAD" url="http://147.175.121.202/">
+        <fileTransfer host="147.175.121.202" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

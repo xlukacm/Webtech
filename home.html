@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
 
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/krizovatky.css">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/print.css" media="print">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
     <script src="JS/today.js"></script>
 
 </head>
-<body>
+<body id="home">
     <header>
         <div class="jumbotron text-center" id="head">
             <h1 id="driveSchool">Autoškola</h1>
@@ -89,16 +88,17 @@
     <hr class="featurette-divider">
     <div class="container marketing">
         <div class="row featurette">
-            <div class="col-md-7 order-md-2">
+            <div class="col-md-6 order-md-2">
                 <h2 class="featurette-heading">Neviete, kto má dnes meniny?</h2>
                 <p class="lead">Chcete zistiť, kto má meniny dnes, zajtra či nejaký iný deň? Kliknite na tlačidlo nižšie,
                     zadajte dátum a zistíte, kto oslavuje v daný deň meniny na Slovensku, Česku, Rakúsku, Poľsku či Maďarsku!
-                    Rovnako tak si môžete zadať vaše meno alebo niekoho známeho a zistiť, v ktorý deň oslavujete vy alebo on!</p>
+                    Rovnako tak si môžete zadať vaše meno alebo niekoho známeho a zistiť, v ktorý deň oslavujete vy alebo on!
+                </p>
                 <a id="nameday" href="Nameday/meniny.html" class="btn btn-lg btn-secondary text center">Meniny</a>
             </div>
             <br>
-            <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="Photos/calendary.jpg" alt="Kalendar" width="500" height="500" >
+            <div class="col-md-6 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="Photos/CalendarHeader.jpg" alt="Kalendar" width="500" height="500" >
             </div>
         </div>
     </div>
@@ -128,16 +128,17 @@
     </div>
 
     <p></p>
-    <div id="footerHome" class="jumbotron text-center" style="margin-bottom:0">
-        <footer class="page-footer font-small cyan darken-3">
-            <div class="container-fluid text-center center">
-                <div class="row">
+    <hr class="featurette-divider">
 
+    <div id="footerHome" class="jumbotron text-center">
+        <footer class="page-footer font-small">
+            <div class="container-fluid text-center center">
+                <div class="row center">
                     <div class="col-md-6 mt-md-0 mt-3">
                         <h5 class="text-uppercase font-weight-bold">Chcete nás kontaktovať?</h5>
                         <div id="table" class="text center">
                             <address>
-                                <table class="text center">
+                                <table >
                                     <tr>
                                         <th class="bunkaTH">
                                             <img src="Photos/Icons/mail.png" class="contact" alt="Mail" >
@@ -164,14 +165,14 @@
                     <div class="col-md-6 mb-md-0 mb-3">
                         <h5 class="text-uppercase font-weight-bold">Návštevnosť</h5>
                         <a href="https://www.toplist.cz/stat/1795672/">
-                            <script>
-                                document.write('<img src="https://toplist.cz/count.asp?id=1795672&logo=mc&http='+
-                                    escape(document.referrer)+'&t='+escape(document.title)+
-                                    '&wi='+escape(window.screen.width)+'&he='+escape(window.screen.height)+'&cd='+
-                                    escape(window.screen.colorDepth)+'" width="88" height="60" border=0 alt="TOPlist" />');
+                            <script language="JavaScript" type="text/javascript">
+                            document.write('<img src="https://toplist.cz/count.asp?id=1795672&logo=bc&http='+
+                                escape(document.referrer)+'&t='+escape(document.title)+
+                                '&wi='+escape(window.screen.width)+'&he='+escape(window.screen.height)+'&cd='+
+                                escape(window.screen.colorDepth)+'" width="88" height="120" border=0 alt="TOPlist" />');
                             </script>
-                            <noscript>
-                                <img src="https://toplist.cz/count.asp?id=1795672&logo=mc" alt="TOPlist" width="88" height="60" />
+                            <noscript><img src="https://toplist.cz/count.asp?id=1795672&logo=bc" border="0"
+                                                         alt="TOPlist" width="88" height="120"/>
                             </noscript>
                         </a>
                     </div>
