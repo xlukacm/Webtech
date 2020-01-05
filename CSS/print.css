@@ -30,7 +30,21 @@ address table{
     margin: 0;
     width:100%!important;
 }
-
+#checkList{
+    width: 100%;
+}
+#table{
+    width: fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 1%;
+}
+#team{
+    margin-top: 15%;
+}
+#nameday{
+    display: none;
+}
 #contact{
     border-top: 1px solid rgba(0,0,0,.5);
 }
