@@ -78,6 +78,9 @@ hr .isolationContact{
     float: right;
     color: #cccccc;
 }
+#namedayToday:hover{
+    text-decoration: underline;
+}
 #footerHome{
     padding:1% 0 1% 0;
     background-color: rgba(167,167,167,0.2);
@@ -85,3 +88,138 @@ hr .isolationContact{
 }
 /*https://www.dalat.org/web/wp-content/uploads/2018/04/re-CalendarHeader.jpg*/
 /*https://windowsreport.com/automated-checklist-software/*/
+
+
+
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+[data-tip] {
+    position:relative;
+
+}
+[data-tip]:before {
+    content:'';
+    /* hides the tooltip when not hovered */
+    display:none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1a1a1a;
+    position:absolute;
+    top:30px;
+    left:35px;
+    z-index:8;
+    font-size:0;
+    line-height:0;
+    width:0;
+    height:0;
+}
+[data-tip]:after {
+    display:none;
+    content:attr(data-tip);
+    position:absolute;
+    top:35px;
+    left:0;
+    padding:1px 1px;
+    background:#1a1a1a;
+    color:#fff;
+    z-index:9;
+    width:100%;
+    font-size: 0.7em;
+    height:22px;
+    line-height:18px;
+    border-radius: 3px;
+    white-space:nowrap;
+    word-wrap:normal;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after { display:block; }
+.table{
+    width: 100%!important;
+    height: 100%!important;}
+.table td,tr{
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin:0;
+    text-align: center;
+    padding: 0 0.75em 0 0.75em;
+}
+
+#skIcon{
+    background-position: 20%;
+    float: left;
+}
+.flag-icon-background{
+    background-size: 20px!important;
+
+}
+td.flag-icon-background{
+    width: 22px;
+    height: 22px;
+    padding: 0;
+}

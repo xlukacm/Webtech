@@ -1,10 +1,10 @@
-let xmlDoc;
+let xmlDocNameday;
 
 function loadDoc() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            xmlDoc = this.responseXML;
+            xmlDocNameday = this.responseXML;
             meninyDnes();
             clearDisplay();
         }
@@ -63,11 +63,6 @@ function choseMeniny() {
     }
 }
 
-function meninyDnes() {
-    let date = new Date();
-    document.getElementById("namedayToday").innerText = "Dnes má meniny: " + findToday(date);
-}
-
 function findMeniny(date,states) {
     let month = date.getMonth() + 1;
     let day = date.getDate();
@@ -75,30 +70,14 @@ function findMeniny(date,states) {
     day = addZero(day);
     month = addZero(month);
 
-    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
-        let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
+    for (let j = 0; j < xmlDocNameday.getElementsByTagName("zaznam").length; j++){
+        let tmp = "" + xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
         if (tmp === month+day){
-            if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0]){
-                tmp=xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0].childNodes[0].nodeValue;
+            if (xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0]){
+                tmp=xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName(states)[0].childNodes[0].nodeValue;
                 tmp = tmp.replace(/(?:\r\n|\r|\n)/g, "");
                 return tmp;
             }
-            else return "V tento deň nemá nikto meniny.";
-        }
-    }
-}
-function findToday(date) {
-    let month = date.getMonth() + 1;
-    let day = date.getDate();
-
-    day = addZero(day);
-    month = addZero(month);
-
-    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++){
-        let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
-        if (tmp === month+day){
-            if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0])
-                return xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("SK")[0].childNodes[0].nodeValue;
             else return "V tento deň nemá nikto meniny.";
         }
     }
@@ -121,10 +100,10 @@ function normalizaciaStringu(tmp) {
 }
 
 function findName(text,input) {
-    for (let j = 0; j < xmlDoc.getElementsByTagName("zaznam").length; j++) {
-        if (xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0]) {
+    for (let j = 0; j < xmlDocNameday.getElementsByTagName("zaznam").length; j++) {
+        if (xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0]) {
 
-            let tmp = "" + xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
+            let tmp = "" + xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName(input)[0].childNodes[0].nodeValue;
             tmp = normalizaciaStringu(tmp);
             tmp = tmp.replace(/ /g, "");
             tmp = tmp.replace(" ", "");
@@ -132,7 +111,7 @@ function findName(text,input) {
             tmp = tmp.split(",");
 
             if (tmp.includes(text)) {
-                let x = xmlDoc.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
+                let x = xmlDocNameday.getElementsByTagName("zaznam")[j].getElementsByTagName("den")[0].childNodes[0].nodeValue;
                 x = xmlDateToNormal(x);
                 document.getElementById("datumText").innerText = "Toto meno má meniny " + x + "v " + input+" kalendári.";
                 return 1;
@@ -168,4 +147,16 @@ function findDate() {
     else{
         document.getElementById("datumText").innerText = "Nebol vybraný žiaden kalendár.";
     }
+}
+function openForm() {
+    document.getElementById("namedayInput").value = "";
+    document.getElementById("nameInput").value = "";
+    clearDisplay();
+    document.getElementById("namedayText").style.display="block";
+    document.getElementById("datumText").innerText = "Napíšte meno a stlačte tlačidlo";
+    document.getElementById("popupForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
 }

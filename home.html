@@ -9,7 +9,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/print.css" media="print">
+    <link rel="stylesheet" href="CSS/meniny.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
 
+    <script src="JS/meninyJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -35,9 +38,6 @@
                 <li class="nav-item active">
                     <a class="nav-item nav-link active" href="home.html">Domov <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-item nav-link" href="Nameday/meniny.html">Meniny</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Križovatky
@@ -61,14 +61,98 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="#contact">Kontakt</a>
+                    <a class="nav-item nav-link" href="#namedayDiv" >Meniny</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="#checkListDiv" >Checklist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="#team" >Tím</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="#footerHome">Kontakt</a>
                 </li>
             </ul>
         </div>
         <script>loadDocument();</script>
-        <p id="namedayToday"></p>
+        <p id="namedayToday" onclick="openForm()"></p>
     </nav>
     <p></p>
+
+    <div class="form-popup" id="popupForm">
+        <div class="form-container">
+            <h1>Meniny</h1>
+
+            <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
+            <label for="namedayInput"></label><input id="namedayInput" type="date" required>
+        </span>
+            <button id="namedayButton" onclick="choseMeniny()">Vyhľadať meniny</button> <br>
+            <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
+            <br>
+            <div id="dates">
+                <table class="table">
+                    <tbody>
+                    <tr >
+                        <td class="flag-icon-background flag-icon-sk"></td>
+                        <td ><div id="dateSK"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-sk" ></td>
+                        <td ><div id="dateSKd"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-sk" ></td>
+                        <td ><div id="dateSKsviatky" ></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-cz"></td>
+                        <td ><div id="dateCZ" ></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-cz"></td>
+                        <td ><div id="dateCZsviatky" ></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-hu"></td>
+                        <td ><div id="dateHU" ></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-pl"></td>
+                        <td ><div id="datePL" ></div></td>
+                    </tr>
+                    <tr>
+                        <td class="flag-icon-background flag-icon-at"></td>
+                        <td ><div id="dateAT" ></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div> <br>
+            <label for="nameInput"></label><input id="nameInput" type="text" placeholder="Sem zadaj meno">
+            <button id="nameButton" onclick="findDate()">Vyhľadaj</button>
+            <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
+
+            <div id ="countries">
+                <div>Vyberte si zoznam,kde hľadať:</div>
+                <div>
+                    <label for="SK"></label><input  id="SK" type="checkbox" value="SK" checked >SK
+                    <label for="SKd"></label><input id="SKd" type="checkbox" value="SKd" checked>SKd
+                    <label for="SKsviatky"></label><input id="SKsviatky" type="checkbox" value="SKsviatky" hidden>
+                    <label for="CZ"></label><input id="CZ" type="checkbox" value="CZ" >CZ
+                    <label for="CZsviatky"></label><input id="CZsviatky" type="checkbox" value="CZsviatky" hidden>
+                    <label for="HU"></label><input id="HU" type="checkbox" value="HU" >HU
+                    <label for="PL"></label><input id="PL" type="checkbox" value="PL" >PL
+                    <label for="AT"></label><input id="AT" type="checkbox" value="AT" >AT
+                </div>
+            </div>
+            <script>
+                loadDoc();
+            </script>
+            <button type="button" class="btn cancel" onclick="closeForm()">Zavrieť</button>
+        </div>
+    </div>
+
+
+
     <hr class="featurette-divider">
     <div class="container marketing">
         <div class="row featurette">
@@ -86,7 +170,7 @@
         </div>
     </div>
     <hr class="featurette-divider">
-    <div class="container marketing">
+    <div class="container marketing" id="namedayDiv">
         <div class="row featurette">
             <div class="col-md-6 order-md-2">
                 <h2 class="featurette-heading">Neviete, kto má dnes meniny?</h2>
@@ -94,7 +178,7 @@
                     zadajte dátum a zistíte, kto oslavuje v daný deň meniny na Slovensku, Česku, Rakúsku, Poľsku či Maďarsku!
                     Rovnako tak si môžete zadať vaše meno alebo niekoho známeho a zistiť, v ktorý deň oslavujete vy alebo on!
                 </p>
-                <a id="nameday" href="Nameday/meniny.html" class="btn btn-lg btn-secondary text center">Meniny</a>
+                <button id="nameday" class="btn btn-lg btn-secondary text center" onclick="openForm()">Meniny</button>
             </div>
             <br>
             <div class="col-md-6 order-md-1">
@@ -104,15 +188,13 @@
         </div>
     </div>
     <hr class="featurette-divider">
-    <div class="container marketing">
+    <div class="container marketing" id="checkListDiv">
 
         <div class="row featurette">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Checklist</h2>
-<!--                <table></table> DOKONČIŤ TABUĽKU CHECKLIST-->
                 <div id="tableChecklist">
                     <table id="checkList" class="text center">
-    <!-- , podmienky -->
                         <tr class="center">
                             <th class="bunkaTHChecklist">Mário L.</th>
                             <th class="bunkaTHChecklist">Patrik M.</th>
