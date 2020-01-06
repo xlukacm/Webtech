@@ -42,9 +42,10 @@
 }
 [data-tip]:hover:before,
 [data-tip]:hover:after { display:block; }
-.table{
+
+#dates{
     width: fit-content;
-    height: 17px;}
+}
 .table td,tr{
     border-top: 1px solid #dee2e6;
     border-bottom: 1px solid #dee2e6;
@@ -55,4 +56,22 @@
 #skIcon{
     background-position: 20%;
     float: left;
+}
+td.flag-icon-background{
+    width: 22px;
+    height: 22px;
+    padding: 0;
+}
+#navbarCross{
+    background-color: #e3f2fd;
+}
+#body{
+    margin-left: 1%;
+}
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+    background:#e3f2fd;
 }

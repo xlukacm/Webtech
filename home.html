@@ -83,7 +83,7 @@
         <div class="form-container">
             <h1>Meniny</h1>
 
-            <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
+            <span id="tooltip" data-tip="Dátum musí byť v tvare 01.01.2020!">
             <label for="namedayInput"></label><input id="namedayInput" type="date" required>
         </span>
             <button id="namedayButton" onclick="choseMeniny()">Vyhľadať meniny</button> <br>
@@ -248,7 +248,7 @@
             <div class="col-sm-4 mb-mb-4 mb-4">
                 <h6 class="text-uppercase font-weight-bold">Mário L.</h6>
                 <img class="rounded-circle" src="Photos/Team/foto-ML.jpg" alt="ML">
-                <p >Študent vysokej školy. Inteligentný a šikovný animofotografátor.</p>
+                <p >Študent vysokej školy. Inteligentný a šikovný fotograf.</p>
             </div>
             <div class="col-sm-4 mb-mb-4 mb-4">
                 <h6 class="text-uppercase font-weight-bold">Patrik M.</h6>
@@ -270,7 +270,7 @@
         <footer class="page-footer font-small">
             <div class="container-fluid text-center center">
                 <div class="row center">
-                    <div class="col-md-6 mt-md-0 mt-3">
+                    <div class="col-md-6 mb-md-0 mb-3">
                         <h5 class="text-uppercase font-weight-bold">Chcete nás kontaktovať?</h5>
                         <div id="table" class="text center">
                             <address>
@@ -301,14 +301,14 @@
                     <div class="col-md-6 mb-md-0 mb-3">
                         <h5 class="text-uppercase font-weight-bold">Návštevnosť</h5>
                         <a href="https://www.toplist.cz/stat/1795672/">
-                            <script language="JavaScript" type="text/javascript">
+                            <script >
                             document.write('<img src="https://toplist.cz/count.asp?id=1795672&logo=bc&http='+
                                 escape(document.referrer)+'&t='+escape(document.title)+
                                 '&wi='+escape(window.screen.width)+'&he='+escape(window.screen.height)+'&cd='+
                                 escape(window.screen.colorDepth)+'" width="88" height="120" border=0 alt="TOPlist" />');
                             </script>
-                            <noscript><img src="https://toplist.cz/count.asp?id=1795672&logo=bc" border="0"
-                                                         alt="TOPlist" width="88" height="120"/>
+                            <noscript>
+                                <img src="https://toplist.cz/count.asp?id=1795672&logo=bc" alt="TOPlist" width="88" height="120"/>
                             </noscript>
                         </a>
                     </div>

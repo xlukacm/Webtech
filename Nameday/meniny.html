@@ -20,16 +20,14 @@
 
 
 </head>
-
-    <body>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog"  aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Ukončiť kurz?</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">Ukončiť meniny?</h3>
                 </div>
                 <div class="modal-body">
-                    Prajete si ukončiť tento kurz a vrátiť sa na úvodnú stránku?
+                    Prajete opustiť meniny a vrátiť sa na úvodnú stránku?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Nie</button>
@@ -48,67 +46,74 @@
             </li>
         </ul>
     </nav>
-    <p id="namedayToday"></p>
+    <div id="body">
+        <p id="namedayToday"></p>
         <span data-tip="Dátum musí byť v tvare dd.mm.rrrr!">
             <label for="namedayInput"></label><input id="namedayInput" type="date" required>
         </span>
         <button id="namedayButton" onclick="choseMeniny()">Vyhľadať meniny</button> <br>
         <div id="namedayText">Zvoľte dátum a stlačte tlačidlo</div>
-    <br>
-    <div id="dates">
-        <table class="table">
-            <tbody>
-            <tr >
-                <td class="flag-icon-background flag-icon-sk"></td>
-                <td ><div id="dateSK" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-sk" ></td>
-                <td ><div id="dateSKd" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-sk" ></td>
-                <td ><div id="dateSKsviatky" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-cz"></td>
-                <td ><div id="dateCZ" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-cz"></td>
-                <td ><div id="dateCZsviatky" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-hu"></td>
-                <td ><div id="dateHU" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-pl"></td>
-                <td ><div id="datePL" ></div></td>
-            </tr>
-            <tr>
-                <td class="flag-icon-background flag-icon-at"></td>
-                <td ><div id="dateAT" ></div></td>
-            </tr>
-            </tbody>
-        </table>
-    </div> <br>
-    <label for="nameInput"></label><input id="nameInput" type="text">
-        <button id="nameButton" onclick="findDate()">Vyhľadaj</button>
-        <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
+        <br>
+        <div id="dates">
+            <table class="table">
+                <tbody>
+                <tr >
+                    <td class="flag-icon-background flag-icon-sk"></td>
+                    <td ><div id="dateSK" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-sk" ></td>
+                    <td ><div id="dateSKd" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-sk" ></td>
+                    <td ><div id="dateSKsviatky" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-cz"></td>
+                    <td ><div id="dateCZ" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-cz"></td>
+                    <td ><div id="dateCZsviatky" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-hu"></td>
+                    <td ><div id="dateHU" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-pl"></td>
+                    <td ><div id="datePL" ></div></td>
+                </tr>
+                <tr>
+                    <td class="flag-icon-background flag-icon-at"></td>
+                    <td ><div id="dateAT" ></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div> <br>
+        <label for="nameInput"></label><input id="nameInput" type="text">
+            <button id="nameButton" onclick="findDate()">Vyhľadaj</button>
+            <p id="datumText">Napíšte meno a stlačte tlačidlo</p>
 
-    <div id ="countries">
-        <div>Vyberte si zoznam,kde hľadať:</div>
-            <div>
-                <label for="SK"></label><input  id="SK" type="checkbox" value="SK" checked >SK <div id="skIcon" class="flag-icon-background flag-icon-sk" ></div>
-                <label for="SKd"></label><input id="SKd" type="checkbox" value="SKd" checked>SKd
-                <label for="SKsviatky"></label><input id="SKsviatky" type="checkbox" value="SKsviatky" hidden>
-                <label for="CZ"></label><input id="CZ" type="checkbox" value="CZ" >CZ
-                <label for="CZsviatky"></label><input id="CZsviatky" type="checkbox" value="CZsviatky" hidden>
-                <label for="HU"></label><input id="HU" type="checkbox" value="HU" >HU
-                <label for="PL"></label><input id="PL" type="checkbox" value="PL" >PL
-                <label for="AT"></label><input id="AT" type="checkbox" value="AT" >AT
-            </div>
+        <div id ="countries">
+            <div>Vyberte si zoznam,kde hľadať:</div>
+                <div>
+                    <label for="SK"></label><input  id="SK" type="checkbox" value="SK" checked >SK <div id="skIcon" class="flag-icon-background flag-icon-sk" ></div>
+                    <label for="SKd"></label><input id="SKd" type="checkbox" value="SKd" checked>SKd
+                    <label for="SKsviatky"></label><input id="SKsviatky" type="checkbox" value="SKsviatky" hidden>
+                    <label for="CZ"></label><input id="CZ" type="checkbox" value="CZ" >CZ
+                    <label for="CZsviatky"></label><input id="CZsviatky" type="checkbox" value="CZsviatky" hidden>
+                    <label for="HU"></label><input id="HU" type="checkbox" value="HU" >HU
+                    <label for="PL"></label><input id="PL" type="checkbox" value="PL" >PL
+                    <label for="AT"></label><input id="AT" type="checkbox" value="AT" >AT
+                </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://www.fei.stuba.sk/"> FEI STU</a>
+        </div>
     </div>
     <script>
         loadDoc();
