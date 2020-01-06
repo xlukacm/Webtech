@@ -147,13 +147,41 @@ function findDate() {
         document.getElementById("datumText").innerText = "Nebol vybraný žiaden kalendár.";
     }
 }
+/*
+onload =function() {
+// function controlPopUp() {
+    let PopupWarning = {
+        init: function() {
+            let popups_are_disabled = this.popups_are_disabled();
+            if (popups_are_disabled === true) {
+                this.redirect_to_instruction_page();
+            } else {
+            }
+        },
+        redirect_to_instruction_page: function() {
+            window.location.href = '#popupForm';
+        },
+        redirect_to_action_page: function() {
+        },
+        popups_are_disabled: function() {
+            let popup = window.open("#popupForm", "", "display=none,width=0,height=-1,left=100%,top=100%");
+            if (!popup || popup.closed || typeof popup == 'undefined' || typeof popup.closed == 'undefined') {
+                alert("Máš vypnuté vyskakovanie okien!");
+                return true;
+            }
+            popup.close();
+            return false;
+        },
+    };
+    PopupWarning.init();
+};*/
 function openForm() {
     document.getElementById("namedayInput").value = "";
     document.getElementById("nameInput").value = "";
     clearDisplay();
     document.getElementById("namedayText").style.display="block";
     document.getElementById("datumText").innerText = "Napíšte meno a stlačte tlačidlo";
-    document.getElementById("popupForm").style.display = "block";
+    document.getElementById("popupForm").style.display ="block";
 }
 
 function closeForm() {
