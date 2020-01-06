@@ -10,7 +10,9 @@ body {
     border: 1px solid black;
     width: 5em;
 }
-
+.newRow{
+    display: block;
+}
 .navbar{
     display: none;
 }
@@ -53,21 +55,18 @@ address table{
     padding-top: 1%;
 }
 #team{
-    margin-top: 15%;
+    margin-top: 1%;
+    align-content: center;
 }
 #nameday{
     display: none;
 }
-/*#contact{*/
-/*    border-top: 1px solid rgba(0,0,0,.5);*/
-/*}*/
+
 .contact{
     width: 16px;
     height: 16px;
 }
-#team{
-    align-content: center;
-}
+
 #top{
     display: none;
 }

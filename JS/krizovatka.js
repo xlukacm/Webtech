@@ -18,11 +18,8 @@ let cross1yellowMoved = false;
 let cross1blackMoved = false;
 
 function move1GreenCar(){  //zelene auto
-    //toto je green sock funkcia ktoru volame o riadok nizsie
      window.cross1greenMoved = true;
     animation .set(svgGreenCar, {ease: "none",       x:0})
-    //animacie su jednoduche, spravis autu path skrze x a y suradnice a popritom otacas
-    //vyskusajte si nejaku krizovatku u seba a pomente tieto suradnice a pozerajte ako to bude reagovat auto
         .to(svgGreenCar,0.6,{ease: "none",   x:100})
         .to(svgGreenCar,0.4,{ease: "none",   x:140, y:"-=20",  rotation:"-20_short"})
         .to(svgGreenCar, 0.4,{ease: "none", x:180, y:"-=30",  rotation:"-40_short"})
@@ -30,7 +27,6 @@ function move1GreenCar(){  //zelene auto
         .to(svgGreenCar, 0.4,{ease: "none",              x:230, y:"-=40", rotation:"-90_short"})
         .to(svgGreenCar, 0.5,{ease: "none",                      y:"-=220"})
         .to(svgGreenCar,0.4,{ease: "none",                        y:"-=250"});
-    //POZOR ak sa bude spravat zvlastne, tak vymen x s y, niekedy zalezi od prvotneho natocenia auta
     if (window.cross1blackMoved)
         window.right = true;
     if (window.cross1yellowMoved)
@@ -40,9 +36,7 @@ function move1GreenCar(){  //zelene auto
 }
 
 function move1YellowCar() {
-    //if(cross1greenMoved )
     window.cross1yellowMoved = true;
-    // let animation = gsap.timeline();
     animation .set(svgYellowCar, {ease: "none",     y:0})
         .to(svgYellowCar, 0.6,{ease: "none",   y:-100})
         .to(svgYellowCar, 0.3,{ease: "none",   y:-130,x:"-=20", rotation:"-20_short"})
@@ -60,7 +54,6 @@ function move1YellowCar() {
 
 function move1BlackCar() {
     window.cross1blackMoved = true;
-    // let animation = gsap.timeline();
     animation .set(svgBlackCar, {ease: "none",      y:0})
         .to(svgBlackCar, 0.6,{ease: "none",   y:-180,})
         .to(svgBlackCar, 0.6,{ease: "none",   y:-360, })
