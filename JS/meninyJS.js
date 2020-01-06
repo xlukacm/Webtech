@@ -147,34 +147,65 @@ function findDate() {
         document.getElementById("datumText").innerText = "Nebol vybraný žiaden kalendár.";
     }
 }
+//
+// onload =function() {
+// // function controlPopUp() {
+//     let PopupWarning = {
+//         init: function() {
+//             let popups_are_disabled = this.popups_are_disabled();
+//             if (popups_are_disabled === true) {
+//                 this.redirect_to_instruction_page();
+//             } else {
+//             }
+//         },
+//         redirect_to_instruction_page: function() {
+//             window.location.href = '#popupForm';
+//         },
+//         redirect_to_action_page: function() {
+//         },
+//         popups_are_disabled: function() {
+//             // let popup = window.open("#popupForm", "", "display=none,width=0,height=-1,left=100%,top=100%");
+//             let popup = window.open();
+//             if (!popup || popup.closed || typeof popup == 'undefined' || typeof popup.closed == 'undefined') {
+//                 alert("Máš vypnuté vyskakovanie okien!");
+//                 return true;
+//             }
+//             popup.close();
+//             return false;
+//         },
+//     };
+//     PopupWarning.init();
+// };
+
 /*
-onload =function() {
-// function controlPopUp() {
-    let PopupWarning = {
-        init: function() {
-            let popups_are_disabled = this.popups_are_disabled();
-            if (popups_are_disabled === true) {
-                this.redirect_to_instruction_page();
-            } else {
+function detectPopupBlocker() {
+    let test = window.open(null,"","width=100,height=100");
+    try {
+        test.close();
+    } catch (e) {
+        alert("Pop-ups blocked.");
+    }
+}
+
+// Created by: Simon Willison
+// http://simon.incutio.com/archive/2004/05/26/addLoadEvent
+function addLoadEvent(func) {
+    let oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            if (oldonload) {
+                oldonload();
             }
-        },
-        redirect_to_instruction_page: function() {
-            window.location.href = '#popupForm';
-        },
-        redirect_to_action_page: function() {
-        },
-        popups_are_disabled: function() {
-            let popup = window.open("#popupForm", "", "display=none,width=0,height=-1,left=100%,top=100%");
-            if (!popup || popup.closed || typeof popup == 'undefined' || typeof popup.closed == 'undefined') {
-                alert("Máš vypnuté vyskakovanie okien!");
-                return true;
-            }
-            popup.close();
-            return false;
-        },
-    };
-    PopupWarning.init();
-};*/
+            func();
+        }
+    }
+}
+
+addLoadEvent(detectPopupBlocker);*/
+
+
 function openForm() {
     document.getElementById("namedayInput").value = "";
     document.getElementById("nameInput").value = "";
