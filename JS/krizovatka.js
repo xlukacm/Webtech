@@ -735,6 +735,7 @@ function wait(){
 
 function demoCrossroad1() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -751,6 +752,7 @@ window.demo = false;
 
 function demoCrossroad2() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     clearTrafficCrossroad2();
     clearCrossMoved();
     window.demo =true;
@@ -770,6 +772,7 @@ function demoCrossroad2() {
 }
 function demoCrossroad3() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -781,6 +784,7 @@ function demoCrossroad3() {
 }
 function demoCrossroad4() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     clearTrafficCrossroad4();
     clearCrossMoved();
     window.demo =true;
@@ -799,7 +803,9 @@ function demoCrossroad4() {
     displayButtonsLogs();
 }
 function demoCrossroad5() {
+
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -811,6 +817,7 @@ function demoCrossroad5() {
 }
 function demoCrossroad6() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -822,6 +829,7 @@ function demoCrossroad6() {
 }
 function demoCrossroad7() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -833,6 +841,7 @@ function demoCrossroad7() {
 }
 function demoCrossroad8() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -847,6 +856,7 @@ function demoCrossroad8() {
 }
 function demoCrossroad9() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if(!animation.isActive()){
@@ -859,6 +869,7 @@ function demoCrossroad9() {
 }
 function demoCrossroad10() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -870,6 +881,7 @@ function demoCrossroad10() {
 }
 function demoCrossroad11() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if(!animation.isActive()){
         if (!animation.isActive()) {
@@ -883,6 +895,7 @@ function demoCrossroad11() {
 }
 function demoCrossroad12() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -894,6 +907,7 @@ function demoCrossroad12() {
 }
 function demoCrossroad13() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -905,6 +919,7 @@ function demoCrossroad13() {
 }
 function demoCrossroad14() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     wait();
     if (!animation.isActive()) {
         if (!animation.isActive()) {
@@ -922,6 +937,7 @@ function demoCrossroad14() {
 }
 function demoCrossroad15() {
     animation.progress(0).clear();
+    document.getElementById("footer").style.bottom = "-80px";
     clearTrafficCrossroad15();
     clearCrossMoved();
     window.demo =true;
