@@ -51,6 +51,11 @@ hr .isolationContact{
     #table{
         width: fit-content;
     }
+    #namedayToday{
+        top: auto;
+        right: auto;
+        float: right;
+    }
 }
 #table {
     width: fit-content;
@@ -62,7 +67,6 @@ hr .isolationContact{
     padding-top: 10px;
     margin-bottom: 0;
     padding-bottom: 10px;
-    /*background-color: lightgrey;*/
     background-color: rgba(220,220,220,0.4);
 }
 #tableChecklist{
@@ -158,28 +162,32 @@ hr .isolationContact{
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }
-/*
+
 @-moz-document url-prefix() {
      #table{
-        -moz-box-sizing: border-box;
+        text-align: -moz-center;
     }
-    #tooltip{
-        z-index: auto;
+
+    [data-tip]:after{
+        width: -moz-fit-content!important;
     }
 }
-*/
+
 #dates{
     width:100%!important;
 }
 .table{
     width: 100%!important;
-    height: 100%!important;}
+    height: 100%!important;
+}
+
 .table td,.table tr,.table tbody{
-    border: 1px solid #dee2e6;
+    border: 1px solid rgba(130,133,136,0.5)!important;
     margin:0;
     text-align: center;
     padding: 0 0.75em 0 0.75em;
 }
+
 
 #skIcon{
     background-position: 20%;
