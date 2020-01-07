@@ -31,8 +31,8 @@ function move1GreenCar(){  //zelene auto
         window.right = true;
     if (window.cross1yellowMoved)
         window.right = false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move1YellowCar() {
@@ -48,8 +48,8 @@ function move1YellowCar() {
     if(window.cross1blackMoved && window.cross1greenMoved && window.right){
             window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move1BlackCar() {
@@ -63,8 +63,8 @@ function move1BlackCar() {
     if(window.cross1yellowMoved || window.cross1greenMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 ///2. krizovatka/ 3 auta ///////////////////////////////////////////////////////////////////////////////////
@@ -82,8 +82,8 @@ function move2BlackCar() {
     if(window.cross2yellowMoved && window.cross2greenMoved && window.right){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move2GreenCar() {
@@ -102,9 +102,8 @@ function move2GreenCar() {
         //zmena semafora
         setTrafficCrossroad2();
     }
-
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move2YellowCar() {
@@ -123,8 +122,8 @@ function move2YellowCar() {
         //zmena semafora
         setInterval(setTrafficCrossroad2,4000);
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function setTrafficCrossroad2(){
@@ -160,8 +159,8 @@ function move3to5Tram() {
             document.getElementById('blackLight4').style.display="block";
         },2000);
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move3to5GreenCar(){
     window.cross3greenMoved = true;
@@ -173,8 +172,8 @@ function move3to5GreenCar(){
     if(window.cross3tramMoved){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 ///6. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
 let cross6greenMoved = false;
@@ -197,8 +196,8 @@ function move6GreenCar(){
     if(window.cross6yellowMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move6YellowCar() {
     window.cross6yellowMoved = true;
@@ -220,8 +219,8 @@ function move6YellowCar() {
     if(window.cross6greenMoved){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 ///7. krizovatka/ 2 auta ////////////////////////////////////////////////////////////////////////
 let cross7greenMoved = false;
@@ -238,8 +237,8 @@ function move7YellowCar() {
     if(window.cross7greenMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move7GreenCar() {
     window.cross7greenMoved = true;
@@ -255,8 +254,8 @@ function move7GreenCar() {
     if(window.cross7yellowMoved){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 ///8. krizovatka/ 3 auta /////////////////////////////////////////////////////////////////////////
@@ -278,8 +277,8 @@ function move8BlackCar() {
         window.right=true;
     if (window.cross8greenMoved && window.right)
         window.right=false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move8YellowCar() {
@@ -297,9 +296,8 @@ function move8YellowCar() {
     if(window.cross8blackMoved && window.right){
         window.right= false;
     }
-    controlAll();
-
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move8GreenCar() {
     window.cross8greenMoved = true;
@@ -320,8 +318,8 @@ function move8GreenCar() {
     if(window.cross8yellowMoved && window.cross8blackMoved && window.right){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 
@@ -341,8 +339,8 @@ function move9YellowCar() {
         .to(svgYellowCar, 0.4,{ease: "none",x:"+=90",rotation:"90_short"})
         .to(svgYellowCar, 0.4,{ease: "none",               x:"+=120"})
         .to(svgYellowCar,0.4,{ease: "none",                 x:"+=180"});
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move9GreenCar() {
     window.cross9greenMoved = true;
@@ -357,8 +355,8 @@ function move9GreenCar() {
         .to(svgGreenCar, 0.4, {ease: "none", y: "-=160", rotation: "-90_short"})
         .to(svgGreenCar, 0.4, {ease: "none", y: "-=220"})
         .to(svgGreenCar,0.4, {ease: "none", y: "-=250"});
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function moveTram9(){
     window.cross9tramMoved = true;
@@ -371,8 +369,8 @@ function moveTram9(){
     if(window.cross9greenMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 ///10. krizovatka/ 2 auta  ////////////////////////////////////////////////////////////////////////
@@ -391,8 +389,8 @@ let cross10greenMoved = false;
      if(window.cross10greenMoved){
          window.right = true;
      }
-     controlAll();
      document.getElementById('reset').style.display = "block";
+     controlAll();
 }
 function move10GreenCar() {
     window.cross10greenMoved = true;
@@ -408,8 +406,8 @@ function move10GreenCar() {
     if(window.cross10yellowMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 ///11. krizovatka/ 1 auta / ludia + cyklista ////////////////////////////////////////////////////////////////////////
@@ -429,8 +427,8 @@ function move11GreenCar() {
         .to(svgGreenCar, 0.5,{ease: "none", x:720, })
         .to(svgGreenCar, 0.5,{ease: "none", x:840, });
     window.right = window.cross11ped1Moved && window.cross11bikeMoved && window.cross11ped2Moved;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move11Pedestrian(){
     window.cross11ped1Moved = true;
@@ -438,8 +436,8 @@ function move11Pedestrian(){
         .to(pedestrian,0.6,{ease: "none",   y:100,})
         .to(pedestrian,0.6,{ease: "none",   y:200,})
         .to(pedestrian,0.6,{ease: "none",   y:300,});
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move11Pedestrian2(){
     window.cross11ped2Moved = true;
@@ -447,8 +445,8 @@ function move11Pedestrian2(){
         .to(pedestrian2,0.6,{ease: "none",   y:-100,})
         .to(pedestrian2,0.6,{ease: "none",   y:-200,})
         .to(pedestrian2,0.6,{ease: "none",   y:-300,});
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move11Bike1(){
     window.cross11bikeMoved = true;
@@ -457,8 +455,8 @@ function move11Bike1(){
         .to(bike,0.6,{ease: "none",   y:-200})
         .to(bike, 0.6,{ease: "none",   y:-300, x:20, rotation: "35_short"})
         .to(bike, 0.6,{ease: "none",   y:-340, x:40, rotation: "70_short"});
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 ///6. krizovatka/ 2 auta / kruhovy objazd ////////////////////////////////////////////////////////////////////////
 let cross12greenMoved = false;
@@ -481,8 +479,8 @@ function move12GreenCar(){
     if(window.cross12yellowMoved){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move12YellowCar() {
@@ -505,8 +503,8 @@ function move12YellowCar() {
     if(window.cross12greenMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 let cross13greenMoved = false;
@@ -525,8 +523,8 @@ function move13GreenCar(){
     if(window.cross13bikeMoved){
         window.right = true;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move13Bike2(){
     window.cross13bikeMoved = true;
@@ -542,8 +540,8 @@ function move13Bike2(){
     if(window.cross13greenMoved){
         window.right = false;
     }
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 ///14. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
 let cross14pedMoved = false;
@@ -562,8 +560,8 @@ function move14GreenCar(){
         .to(svgGreenCar, 0.5, {ease: "none", x: 900});
     if (window.cross14yellowMoved)
         window.right = false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move14Pedestrian2(){
     window.cross14pedMoved = true;
@@ -572,8 +570,8 @@ function move14Pedestrian2(){
         .to(pedestrian2, 0.5,{ease: "none",   y:130, });
     if (window.cross14greenMoved)
         window.right = false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move14YellowCar(){
     window.cross14yellowMoved = true;
@@ -588,8 +586,8 @@ function move14YellowCar(){
         .to(svgYellowCar, 0.5,{ease: "none",        x:"-=150"});
     if (window.cross14pedMoved && window.cross14blackMoved && window.cross14greenMoved && window.right)
         window.right = true;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function move14BlackCar() {
@@ -602,8 +600,8 @@ function move14BlackCar() {
         .to(svgBlackCar, 0.5,{ease: "none",   y:-900, });
     if (window.cross14yellowMoved)
         window.right = false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 ///15. krizovatka/  auta /   ////////////////////////////////////////////////////////////////////////
 let cross15blackMoved = false;
@@ -627,8 +625,8 @@ function move15YellowCar(){
     if(window.cross15greenMoved)
         window.right = false;
 
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move15BlackCar(){
     window.cross15blackMoved = true;
@@ -645,8 +643,8 @@ function move15BlackCar(){
     }
     if (window.cross15greenMoved)
         window.right = false;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 function move15GreenCar(){
     window.cross15greenMoved = true;
@@ -660,8 +658,8 @@ function move15GreenCar(){
         .to(svgGreenCar, 0.5,{ease: "none",y:"-=250"});
     if(window.cross15yellowMoved && window.cross15blackMoved && window.right)
         window.right = true ;
-    controlAll();
     document.getElementById('reset').style.display = "block";
+    controlAll();
 }
 
 function setTrafficCrossroad15() {
@@ -705,11 +703,9 @@ function clearTrafficCrossroad15() {
 function displayButtonsLogs() {
     document.getElementById('wronglog').style.display = "none";
     document.getElementById('rightlog').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-    document.getElementById('reset').style.position = "absolute";
-    document.getElementById('reset').style.marginTop = "40px";
-    document.getElementById('reset').style.marginLeft = "10px";
+    document.getElementById('reset').style.display = "none";
     document.getElementById('demoCrossroad').style.display = "none";
+    document.getElementById('InfoAlert').style.display="block";
     document.getElementById('rightArrow').style.display = "block";
     document.getElementById('leftArrow').style.display = "block";
 }
@@ -945,6 +941,7 @@ function demoCrossroad15() {
 function rightLog() {
     document.getElementById('rightlog').style.display = "block";
     document.getElementById('demoCrossroad').style.display = "none";
+    document.getElementById('reset').style.display="none";
     document.getElementById('rightArrow').style.display = "block";
     document.getElementById('leftArrow').style.display = "block";
     document.getElementById('InfoAlert').style.display = "block";
@@ -953,7 +950,7 @@ function rightLog() {
 function wrongLog() {
     document.getElementById('wronglog').style.display = "block";
     document.getElementById('demoCrossroad').style.display = "block";
-    document.getElementById('InfoAlert').style.display = "block";
+    document.getElementById('InfoAlert').style.display = "none";
 }
 
 function rightControl() {
@@ -1056,6 +1053,7 @@ function resetCrossroad(){
     document.getElementById('rightlog').style.display = "none";
     document.getElementById('rightArrow').style.display = "none";
     document.getElementById('leftArrow').style.display = "none";
+    document.getElementById('InfoAlert').style.display = "none";
     window.right=true;
     clearCrossMoved();
 
