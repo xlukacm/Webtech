@@ -1,4 +1,7 @@
 function setBlinkre1(){
+    //tu sa robi to ze funkcia setBlinker1 sa zavola ked sa nacita sranka prvej krizovatky
+    //setInterval robi to ze sa kazdych 1000 ms zavola funkcia ktora tam je
+    //toto sa robi vo vsetkych funkciach ninzsie
     setInterval(yellowBlinker, 1000);
     setInterval(greenBlinker, 1000);
 }
@@ -34,6 +37,9 @@ function setBlinkre15(){
     setInterval(greenBlinker, 1000);
 }
 
+//funkcionalita je otom ze sa menia obrazky, najprv je tam ten z blinkrom a ten bez blinkru nieje zobrazeny
+//ked sa zavola kunkcia tak je pomocna premenna nastavena na 0 a obrazok bez smerovky sa zobrazi a ten zo smerovkou sa schova a pomoc. premenna sa zmeni na 1
+//ked sa zavola znova tak je premenna nastavena na 1 tak sa obrazok zo smerovkamy schova a zobrazi sa ten bez a pomoc. premenna sa nastavy naspat na 0
 let yellowBlinkerOn = 0;
 function yellowBlinker(){
     if (yellowBlinkerOn===0){
